@@ -1,0 +1,42 @@
+{
+  "id": "st-0003",
+  "evaluation_window": [
+    "2024-01-01",
+    "2026-11-25"
+  ],
+  "bars_per_year": 252,
+  "gtaa": {
+    "total_return": 0.239431,
+    "annual_return": 0.077023,
+    "max_drawdown": -0.081601,
+    "sharpe": 1.000051,
+    "trade_count": 16.0,
+    "profit_factor": 5.3197
+  },
+  "bench_equal_weight_monthly": {
+    "total_return": 0.384938,
+    "annual_return": 0.119153,
+    "max_drawdown": -0.105764,
+    "sharpe": 1.277527,
+    "trade_count": 85.0,
+    "profit_factor": 1705.8654
+  },
+  "spy_buy_and_hold": {
+    "code": "SPY.US",
+    "total_return": 0.567591,
+    "annual_return": 0.168121,
+    "max_drawdown": -0.187552,
+    "sharpe": 1.045169,
+    "n_bars": 729,
+    "entry_open": 457.198266,
+    "first_bar": "2024-01-02",
+    "last_bar": "2026-11-25",
+    "convention": "entry at first evaluation bar open, zero costs, same run ohlcv artifact"
+  },
+  "mechanism_claim": "回撤控制：策略回撤 < 等权月度再平衡组合回撤",
+  "gtaa_dd_smaller_than_ew": true,
+  "dd_ratio_gtaa_over_ew": 0.7715,
+  "equity_first": "2024-01-02 00:00:00",
+  "equity_last": "2026-11-25 00:00:00",
+  "verdict": "holds"
+}

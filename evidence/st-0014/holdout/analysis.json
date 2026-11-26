@@ -1,0 +1,250 @@
+{
+  "id": "st-0014",
+  "evaluation_window": [
+    "2024-01-01",
+    "2026-11-25"
+  ],
+  "bars_per_year": 252,
+  "erc": {
+    "total_return": 0.340259,
+    "annual_return": 0.106538,
+    "max_drawdown": -0.051369,
+    "sharpe": 1.568295,
+    "trade_count": 30.0,
+    "profit_factor": 434.3537
+  },
+  "bench_6040_quarterly": {
+    "total_return": 0.350517,
+    "annual_return": 0.109459,
+    "max_drawdown": -0.103917,
+    "sharpe": 1.103422,
+    "trade_count": 13.0,
+    "profit_factor": null
+  },
+  "spy_buy_and_hold": {
+    "code": "SPY.US",
+    "total_return": 0.567591,
+    "annual_return": 0.168121,
+    "max_drawdown": -0.187552,
+    "sharpe": 1.045169,
+    "n_bars": 729,
+    "entry_open": 457.198205,
+    "first_bar": "2024-01-02",
+    "last_bar": "2026-11-25",
+    "convention": "entry at first evaluation bar open, zero costs, same run ohlcv artifact"
+  },
+  "mechanism_claim": "回撤控制：策略回撤 < 60/40 < SPY；ERC 求解收敛",
+  "dd_order_erc_lt_6040_lt_spy": true,
+  "erc_sharpe_ge_6040": true,
+  "erc_solver_all_converged": true,
+  "threshold_zero_triggers": true,
+  "diagnostics": {
+    "solver": {
+      "lookback": 60,
+      "cap": 0.6,
+      "tol": 1e-08,
+      "n_quarter_solves": 13,
+      "all_converged": true,
+      "max_iterations": 15,
+      "cap_triggered_quarters": 4,
+      "rc_share_max_dev_pp": 11.491,
+      "solves": [
+        {
+          "signal_date": "2023-11-30",
+          "iterations": 11,
+          "max_weight_delta": 8.73880495744217e-09,
+          "converged": true,
+          "cap_triggered": false,
+          "rc_share_max_dev_pp": 0.0,
+          "weights": {
+            "SPY.US": 0.270289,
+            "IEF.US": 0.302769,
+            "GLD.US": 0.228658,
+            "DBC.US": 0.198283
+          }
+        },
+        {
+          "signal_date": "2024-02-29",
+          "iterations": 13,
+          "max_weight_delta": 3.088624744851387e-09,
+          "converged": true,
+          "cap_triggered": false,
+          "rc_share_max_dev_pp": 0.0,
+          "weights": {
+            "SPY.US": 0.243079,
+            "IEF.US": 0.336795,
+            "GLD.US": 0.188555,
+            "DBC.US": 0.231572
+          }
+        },
+        {
+          "signal_date": "2024-05-31",
+          "iterations": 13,
+          "max_weight_delta": 3.828853123444276e-09,
+          "converged": true,
+          "cap_triggered": false,
+          "rc_share_max_dev_pp": 0.0,
+          "weights": {
+            "SPY.US": 0.182307,
+            "IEF.US": 0.44775,
+            "GLD.US": 0.141548,
+            "DBC.US": 0.228395
+          }
+        },
+        {
+          "signal_date": "2024-08-30",
+          "iterations": 13,
+          "max_weight_delta": 4.007312204290514e-09,
+          "converged": true,
+          "cap_triggered": false,
+          "rc_share_max_dev_pp": 0.0,
+          "weights": {
+            "SPY.US": 0.209888,
+            "IEF.US": 0.458381,
+            "GLD.US": 0.133346,
+            "DBC.US": 0.198385
+          }
+        },
+        {
+          "signal_date": "2024-11-29",
+          "iterations": 12,
+          "max_weight_delta": 5.600875485622936e-09,
+          "converged": true,
+          "cap_triggered": false,
+          "rc_share_max_dev_pp": 0.0,
+          "weights": {
+            "SPY.US": 0.264909,
+            "IEF.US": 0.472623,
+            "GLD.US": 0.124706,
+            "DBC.US": 0.137762
+          }
+        },
+        {
+          "signal_date": "2025-02-28",
+          "iterations": 12,
+          "max_weight_delta": 7.907831722775427e-09,
+          "converged": true,
+          "cap_triggered": false,
+          "rc_share_max_dev_pp": 0.0,
+          "weights": {
+            "SPY.US": 0.15738,
+            "IEF.US": 0.470617,
+            "GLD.US": 0.151702,
+            "DBC.US": 0.2203
+          }
+        },
+        {
+          "signal_date": "2025-05-30",
+          "iterations": 13,
+          "max_weight_delta": 3.040568741230487e-09,
+          "converged": true,
+          "cap_triggered": true,
+          "rc_share_max_dev_pp": 4.1446,
+          "weights": {
+            "SPY.US": 0.103913,
+            "IEF.US": 0.6,
+            "GLD.US": 0.139884,
+            "DBC.US": 0.156203
+          }
+        },
+        {
+          "signal_date": "2025-08-29",
+          "iterations": 14,
+          "max_weight_delta": 5.018318094407448e-09,
+          "converged": true,
+          "cap_triggered": false,
+          "rc_share_max_dev_pp": 0.0,
+          "weights": {
+            "SPY.US": 0.298166,
+            "IEF.US": 0.391088,
+            "GLD.US": 0.133006,
+            "DBC.US": 0.17774
+          }
+        },
+        {
+          "signal_date": "2025-11-28",
+          "iterations": 12,
+          "max_weight_delta": 6.988840034471977e-09,
+          "converged": true,
+          "cap_triggered": true,
+          "rc_share_max_dev_pp": 6.3625,
+          "weights": {
+            "SPY.US": 0.16777,
+            "IEF.US": 0.6,
+            "GLD.US": 0.073671,
+            "DBC.US": 0.158559
+          }
+        },
+        {
+          "signal_date": "2026-02-27",
+          "iterations": 14,
+          "max_weight_delta": 3.6740448877692344e-09,
+          "converged": true,
+          "cap_triggered": true,
+          "rc_share_max_dev_pp": 11.491,
+          "weights": {
+            "SPY.US": 0.24367,
+            "IEF.US": 0.6,
+            "GLD.US": 0.054883,
+            "DBC.US": 0.101448
+          }
+        },
+        {
+          "signal_date": "2026-05-29",
+          "iterations": 15,
+          "max_weight_delta": 6.4137773980732504e-09,
+          "converged": true,
+          "cap_triggered": false,
+          "rc_share_max_dev_pp": 0.0,
+          "weights": {
+            "SPY.US": 0.213804,
+            "IEF.US": 0.501043,
+            "GLD.US": 0.073826,
+            "DBC.US": 0.211326
+          }
+        },
+        {
+          "signal_date": "2026-08-31",
+          "iterations": 14,
+          "max_weight_delta": 6.42615860524387e-09,
+          "converged": true,
+          "cap_triggered": true,
+          "rc_share_max_dev_pp": 2.0073,
+          "weights": {
+            "SPY.US": 0.160089,
+            "IEF.US": 0.6,
+            "GLD.US": 0.068788,
+            "DBC.US": 0.171123
+          }
+        },
+        {
+          "signal_date": "2026-11-25",
+          "iterations": 13,
+          "max_weight_delta": 3.3283698852581978e-09,
+          "converged": true,
+          "cap_triggered": false,
+          "rc_share_max_dev_pp": 0.0,
+          "weights": {
+            "SPY.US": 0.147141,
+            "IEF.US": 0.545835,
+            "GLD.US": 0.089095,
+            "DBC.US": 0.21793
+          }
+        }
+      ]
+    },
+    "threshold_fixed_point": {
+      "mask_dates": 12,
+      "max_deviation_excl_terminal_mask_signal_pp": 2.9346,
+      "max_deviation_date": "2026-05-19",
+      "trigger_days_ge_10pp": [],
+      "n_triggers": 0,
+      "converged": true,
+      "terminal_forced_liquidation_dev": 0.6,
+      "note": "quarterly-only mask + initial build is the fixed point; zero threshold triggers"
+    }
+  },
+  "equity_first": "2024-01-02 00:00:00",
+  "equity_last": "2026-11-25 00:00:00",
+  "verdict": "holds"
+}

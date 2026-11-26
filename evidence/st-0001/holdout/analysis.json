@@ -1,0 +1,95 @@
+{
+  "id": "st-0001",
+  "evaluation_window": [
+    "2024-01-01",
+    "2026-11-25"
+  ],
+  "markets": {
+    "us": {
+      "run": "st0001-us",
+      "code": "SPY.US",
+      "bars_per_year": 252,
+      "strategy": {
+        "total_return": 0.046573,
+        "annual_return": 0.01586,
+        "max_drawdown": -0.014337,
+        "sharpe": 0.879339,
+        "trade_count": 6.0,
+        "profit_factor": 5.7303
+      },
+      "buy_and_hold": {
+        "code": "SPY.US",
+        "total_return": 0.567591,
+        "annual_return": 0.168121,
+        "max_drawdown": -0.187552,
+        "sharpe": 1.045169,
+        "n_bars": 729,
+        "entry_open": 457.198266,
+        "first_bar": "2024-01-02",
+        "last_bar": "2026-11-25",
+        "convention": "entry at first evaluation bar open, zero costs, same run ohlcv artifact"
+      },
+      "mechanism_drawdown_smaller_than_underlying": true,
+      "equity_first": "2024-01-02 00:00:00",
+      "equity_last": "2026-11-25 00:00:00"
+    },
+    "hk": {
+      "run": "st0001-hk",
+      "code": "0700.HK",
+      "bars_per_year": 252,
+      "strategy": {
+        "total_return": 0.063823,
+        "annual_return": 0.022076,
+        "max_drawdown": -0.035674,
+        "sharpe": 0.69029,
+        "trade_count": 5.0,
+        "profit_factor": 21.4858
+      },
+      "buy_and_hold": {
+        "code": "0700.HK",
+        "total_return": 0.157616,
+        "annual_return": 0.053015,
+        "max_drawdown": -0.49619,
+        "sharpe": 0.333787,
+        "n_bars": 714,
+        "entry_open": 291.461025,
+        "first_bar": "2024-01-02",
+        "last_bar": "2026-11-25",
+        "convention": "entry at first evaluation bar open, zero costs, same run ohlcv artifact"
+      },
+      "mechanism_drawdown_smaller_than_underlying": true,
+      "equity_first": "2024-01-02 00:00:00",
+      "equity_last": "2026-11-25 00:00:00"
+    },
+    "crypto": {
+      "run": "st0001-crypto",
+      "code": "BTC-USDT",
+      "bars_per_year": 365,
+      "strategy": {
+        "total_return": 0.058755,
+        "annual_return": 0.019854,
+        "max_drawdown": -0.069528,
+        "sharpe": 0.393058,
+        "trade_count": 11.0,
+        "profit_factor": 1.6387
+      },
+      "buy_and_hold": {
+        "code": "BTC-USDT",
+        "total_return": 0.417066,
+        "annual_return": 0.127534,
+        "max_drawdown": -0.53328,
+        "sharpe": 0.450205,
+        "n_bars": 1060,
+        "entry_open": 42783.9,
+        "first_bar": "2024-01-01",
+        "last_bar": "2026-11-25",
+        "convention": "entry at first evaluation bar open, zero costs, same run ohlcv artifact"
+      },
+      "mechanism_drawdown_smaller_than_underlying": true,
+      "equity_first": "2024-01-01 16:00:00",
+      "equity_last": "2026-11-25 16:00:00"
+    }
+  },
+  "mechanism_claim": "回避主跌段：策略最大回撤显著小于标的自身回撤（三市场）",
+  "verdict": "holds"
+}
