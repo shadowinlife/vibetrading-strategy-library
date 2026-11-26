@@ -3,6 +3,7 @@ id: st-0013
 type: strategy
 title: 月份效应日历择时（VT seasonal 技能仅多头操作化）
 status: research_only
+vt_artifact_id: art_0230f67c6c76
 markets: [us]
 asset_classes: [equity]
 horizon: 月度（按月份窗口持有）

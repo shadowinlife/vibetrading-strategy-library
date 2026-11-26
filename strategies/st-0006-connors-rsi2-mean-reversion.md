@@ -3,6 +3,7 @@ id: st-0006
 type: strategy
 title: Connors RSI(2) 均值回归（200 日均线过滤，文献操作化）
 status: research_only
+vt_artifact_id: art_0c8cd7ac942e
 markets: [us]
 asset_classes: [equity]
 horizon: 数日（短期均值回归）

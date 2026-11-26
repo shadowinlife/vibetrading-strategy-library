@@ -3,6 +3,7 @@ id: st-0005
 type: strategy
 title: Antonacci 双动量 GEM（美股/非美股/债券，文献操作化）
 status: research_only
+vt_artifact_id: art_8b068c163977
 markets: [us]
 asset_classes: [equity, bond]
 horizon: 月度（12 月动量状态持续期）

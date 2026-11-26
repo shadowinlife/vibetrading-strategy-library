@@ -3,6 +3,7 @@ id: st-0003
 type: strategy
 title: Faber 10 月均线 GTAA 五资产择时（文献操作化）
 status: validated
+vt_artifact_id: art_9fd3b4e601cf
 markets: [us]
 asset_classes: [equity, bond, commodity, reit]
 horizon: 月度（10 月均线状态持续期）

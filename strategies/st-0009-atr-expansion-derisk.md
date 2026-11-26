@@ -3,6 +3,7 @@ id: st-0009
 type: strategy
 title: ATR 与已实现波动率联合扩张降仓（escape-top volatility_atr_expansion 操作化）
 status: research_only
+vt_artifact_id: art_54e4d3fd37ed
 markets: [us, hk, crypto]
 asset_classes: [equity, crypto]
 horizon: 日度信号，数周至数月的仓位状态

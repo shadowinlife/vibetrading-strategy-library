@@ -3,6 +3,7 @@ id: st-0010
 type: strategy
 title: 沪市两融背离触发减仓的 A 股择时（escape-top margin_divergence 免费源操作化）
 status: research_only
+vt_artifact_id: art_a3d7249540c7
 markets: [ashare]
 asset_classes: [equity, index]
 horizon: 日度信号，数周至数月的仓位状态
