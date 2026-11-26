@@ -1,0 +1,14 @@
+{
+  "history": [
+    {
+      "iteration": 1,
+      "mask_dates": 49,
+      "trigger_days": 0,
+      "new_exec_dates": 0,
+      "signal_days_excluded": 48,
+      "max_deviation_excl_terminal_and_signal": 0.048193
+    }
+  ],
+  "final_mask_dates": 49,
+  "converged": true
+}

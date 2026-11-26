@@ -1,0 +1,332 @@
+{
+  "us": {
+    "run": "st0012-us",
+    "evaluation_window": [
+      "2014-09-02",
+      "2026-11-25"
+    ],
+    "engine_metrics": {
+      "total_return": 1.4723474830072805,
+      "annual_return": 0.0769223849440596,
+      "max_drawdown": -0.1668032060061226,
+      "sharpe": 0.8234846550812647,
+      "calmar": 0.4612,
+      "trade_count": 23.0,
+      "profit_factor": 6.9238,
+      "win_rate": 0.5652173913043478,
+      "avg_holding_days": 70.4,
+      "avg_turnover": 0.007477,
+      "total_turnover": 23.013699,
+      "benchmark_return": 3.372322,
+      "rebalance_executed_bars": 0.0,
+      "dropped_target_adjustment_count": 0.0,
+      "position_adjustment": "rebalance",
+      "rebalance_tolerance": 0.0,
+      "unfilled_plan_rejections": 0.0
+    },
+    "strategy_subperiods": {
+      "first_half": {
+        "start": "2014-09-02",
+        "end": "2020-10-13",
+        "total_return": 0.448195,
+        "cagr": 0.062445,
+        "max_drawdown": -0.094404,
+        "sharpe": 0.8286
+      },
+      "second_half": {
+        "start": "2020-10-14",
+        "end": "2026-11-25",
+        "total_return": 0.72193,
+        "cagr": 0.092962,
+        "max_drawdown": -0.166803,
+        "sharpe": 0.8566
+      }
+    },
+    "strategy_year_returns": {
+      "2014": -0.025322,
+      "2015": -0.014494,
+      "2016": 0.04936,
+      "2017": 0.083803,
+      "2018": 0.097928,
+      "2019": 0.087357,
+      "2020": 0.171376,
+      "2021": 0.170435,
+      "2022": -0.0183,
+      "2023": 0.187975,
+      "2024": 0.044725,
+      "2025": 0.149881,
+      "2026": -0.00131
+    },
+    "benchmarks_buy_and_hold": {
+      "SPY.US": {
+        "total_return": 3.380168,
+        "cagr": 0.128372,
+        "max_drawdown": -0.337173,
+        "sharpe": 0.7787,
+        "subperiods": {
+          "first_half": {
+            "start": "2014-09-02",
+            "end": "2020-10-13",
+            "total_return": 0.973603,
+            "cagr": 0.117623,
+            "max_drawdown": -0.337173,
+            "sharpe": 0.7034
+          },
+          "second_half": {
+            "start": "2020-10-14",
+            "end": "2026-11-25",
+            "total_return": 1.23341,
+            "cagr": 0.140461,
+            "max_drawdown": -0.244964,
+            "sharpe": 0.8678
+          }
+        },
+        "convention": "entry at first evaluation bar open, zero costs, same ohlcv artifact"
+      }
+    },
+    "zero_cost_variant": {
+      "engine_metrics": {
+        "total_return": 1.5298725542312177,
+        "annual_return": 0.0789522577285755,
+        "max_drawdown": -0.1668029739639007,
+        "sharpe": 0.8432623937348599,
+        "calmar": 0.4733,
+        "trade_count": 23.0,
+        "profit_factor": 7.495,
+        "win_rate": 0.5652173913043478,
+        "avg_holding_days": 70.4,
+        "avg_turnover": 0.007475,
+        "total_turnover": 23.007951,
+        "benchmark_return": 3.372322,
+        "rebalance_executed_bars": 0.0,
+        "dropped_target_adjustment_count": 0.0,
+        "position_adjustment": "rebalance",
+        "rebalance_tolerance": 0.0,
+        "unfilled_plan_rejections": 0.0
+      },
+      "jitter_cost_total_return_drag": 0.057525,
+      "note": "same signal/mask; costs removed (US slippage 0; crypto commission+slippage 0)"
+    },
+    "n_signal_flips": 48,
+    "fills_outside_mask_and_terminal": [],
+    "data_identity_prep_vs_artifact": {
+      "SPY.US": true
+    },
+    "flip_dates_match_mask_on_artifact_data": true,
+    "forward_return_separation_fwd20": {
+      "low_state": {
+        "n": 784,
+        "mean_fwd20": 0.00517,
+        "nw_lag20": {
+          "n": 784,
+          "mean": 0.00517,
+          "t_nw": 1.5236,
+          "se_nw": 0.003393
+        }
+      },
+      "high_state": {
+        "n": 667,
+        "mean_fwd20": 0.015431,
+        "nw_lag20": {
+          "n": 667,
+          "mean": 0.015431,
+          "t_nw": 2.2696,
+          "se_nw": 0.006799
+        }
+      },
+      "mid_state": {
+        "n": 1607,
+        "mean_fwd20": 0.0118
+      },
+      "low_minus_high_mean": -0.010261,
+      "welch_t_full_overlap": -4.1295,
+      "welch_p_full_overlap": 3.9e-05,
+      "non_overlapping_stride20": {
+        "low_n": 39,
+        "high_n": 31,
+        "low_mean": 0.008328,
+        "high_mean": 0.005266,
+        "welch_t": 0.28,
+        "welch_p": 0.780896,
+        "note": "fixed 20-bar stride from evaluation start -> disjoint forward windows; state assignment at stride dates"
+      },
+      "state_day_fractions": {
+        "low": 0.2564,
+        "high": 0.2181
+      },
+      "declaration": "directional claim weak by skill's own warning (volatility is not direction); overlapping naive t inflated, NW + stride reported"
+    },
+    "window_2022": {
+      "strategy": {
+        "start": "2022-01-03",
+        "end": "2022-12-30",
+        "total_return": -0.0183,
+        "cagr": -0.018514,
+        "max_drawdown": -0.166803,
+        "sharpe": -0.0488
+      },
+      "bh": {
+        "start": "2022-01-03",
+        "end": "2022-12-30",
+        "total_return": -0.186464,
+        "cagr": -0.188438,
+        "max_drawdown": -0.244964,
+        "sharpe": -0.7353
+      }
+    }
+  },
+  "crypto": {
+    "run": "st0012-crypto",
+    "evaluation_window": [
+      "2018-04-20",
+      "2026-11-24"
+    ],
+    "engine_metrics": {
+      "total_return": -0.7962507001695658,
+      "annual_return": -0.1687847656076914,
+      "max_drawdown": -0.8443822221708197,
+      "sharpe": -0.2644747839212467,
+      "calmar": -0.1999,
+      "trade_count": 25.0,
+      "profit_factor": 0.6212,
+      "win_rate": 0.44,
+      "avg_holding_days": 69.0,
+      "avg_turnover": 0.007978,
+      "total_turnover": 25.059276,
+      "benchmark_return": 5.883195,
+      "rebalance_executed_bars": 0.0,
+      "dropped_target_adjustment_count": 0.0,
+      "position_adjustment": "rebalance",
+      "rebalance_tolerance": 0.0,
+      "unfilled_plan_rejections": 0.0
+    },
+    "strategy_subperiods": {
+      "first_half": {
+        "start": "2018-04-20",
+        "end": "2022-08-07",
+        "total_return": -0.75993,
+        "cagr": -0.282471,
+        "max_drawdown": -0.786766,
+        "sharpe": -0.4663
+      },
+      "second_half": {
+        "start": "2022-08-07",
+        "end": "2026-11-24",
+        "total_return": -0.183197,
+        "cagr": -0.045986,
+        "max_drawdown": -0.485634,
+        "sharpe": 0.0003
+      }
+    },
+    "strategy_year_returns": {
+      "2018": -0.560343,
+      "2019": -0.037079,
+      "2020": 0.819798,
+      "2021": -0.164085,
+      "2022": -0.722488,
+      "2023": 0.738051,
+      "2024": 0.014761,
+      "2025": 0.068397,
+      "2026": -0.426312
+    },
+    "benchmarks_buy_and_hold": {
+      "BTC-USDT": {
+        "total_return": 5.614501,
+        "cagr": 0.245781,
+        "max_drawdown": -0.763953,
+        "sharpe": 0.6678,
+        "subperiods": {
+          "first_half": {
+            "start": "2018-04-20",
+            "end": "2022-08-07",
+            "total_return": 1.720215,
+            "cagr": 0.26214,
+            "max_drawdown": -0.722692,
+            "sharpe": 0.6844
+          },
+          "second_half": {
+            "start": "2022-08-07",
+            "end": "2026-11-24",
+            "total_return": 1.431609,
+            "cagr": 0.229633,
+            "max_drawdown": -0.53328,
+            "sharpe": 0.6849
+          }
+        },
+        "convention": "entry at first evaluation bar open, zero costs, same ohlcv artifact"
+      }
+    },
+    "zero_cost_variant": {
+      "engine_metrics": {
+        "total_return": -0.7803818677423002,
+        "annual_return": -0.1615087545939099,
+        "max_drawdown": -0.8394021509385015,
+        "sharpe": -0.2426130423634917,
+        "calmar": -0.1924,
+        "trade_count": 25.0,
+        "profit_factor": 0.6262,
+        "win_rate": 0.44,
+        "avg_holding_days": 69.0,
+        "avg_turnover": 0.007972,
+        "total_turnover": 25.040494,
+        "benchmark_return": 5.883195,
+        "rebalance_executed_bars": 0.0,
+        "dropped_target_adjustment_count": 0.0,
+        "position_adjustment": "rebalance",
+        "rebalance_tolerance": 0.0,
+        "unfilled_plan_rejections": 0.0
+      },
+      "jitter_cost_total_return_drag": 0.015869,
+      "note": "same signal/mask; costs removed (US slippage 0; crypto commission+slippage 0)"
+    },
+    "n_signal_flips": 49,
+    "fills_outside_mask_and_terminal": [],
+    "data_identity_prep_vs_artifact": {
+      "BTC-USDT": true
+    },
+    "flip_dates_match_mask_on_artifact_data": true,
+    "forward_return_separation_fwd20": {
+      "low_state": {
+        "n": 795,
+        "mean_fwd20": -0.006268,
+        "nw_lag20": {
+          "n": 795,
+          "mean": -0.006268,
+          "t_nw": -0.375,
+          "se_nw": 0.016714
+        }
+      },
+      "high_state": {
+        "n": 616,
+        "mean_fwd20": 0.051233,
+        "nw_lag20": {
+          "n": 616,
+          "mean": 0.051233,
+          "t_nw": 2.2723,
+          "se_nw": 0.022547
+        }
+      },
+      "mid_state": {
+        "n": 1710,
+        "mean_fwd20": 0.028717
+      },
+      "low_minus_high_mean": -0.057501,
+      "welch_t_full_overlap": -6.6382,
+      "welch_p_full_overlap": 0.0,
+      "non_overlapping_stride20": {
+        "low_n": 45,
+        "high_n": 34,
+        "low_mean": -0.02161,
+        "high_mean": 0.046546,
+        "welch_t": -2.123,
+        "welch_p": 0.037026,
+        "note": "fixed 20-bar stride from evaluation start -> disjoint forward windows; state assignment at stride dates"
+      },
+      "state_day_fractions": {
+        "low": 0.2547,
+        "high": 0.1974
+      },
+      "declaration": "directional claim weak by skill's own warning (volatility is not direction); overlapping naive t inflated, NW + stride reported"
+    }
+  }
+}
