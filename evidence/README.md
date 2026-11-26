@@ -5,6 +5,7 @@
 
 > batch-1（harvest-validate-b1，2026-11-26）6 条候选验证证据见 [README-batch1.md](README-batch1.md)（st-0003/0005/0006/0009/0010/0013）。
 > batch-2（harvest-validate-b2，2026-11-26）6 条候选验证证据见 [README-batch2.md](README-batch2.md)（st-0004/0007/0008/0011/0012/0014）。
+> holdout 深化（harvest-holdout-001，2026-11-27）3 条 validated 策略保留样本外验证证据见 [README-holdout.md](README-holdout.md)（st-0001/0003/0014，证据阶梯 backtest→holdout）。
 
 ## 目录
 

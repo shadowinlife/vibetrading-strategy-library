@@ -1,0 +1,21 @@
+{
+  "source": "yfinance",
+  "codes": [
+    "0700.HK"
+  ],
+  "start_date": "2022-01-01",
+  "end_date": "2026-11-25",
+  "interval": "1D",
+  "initial_cash": 1000000,
+  "engine": "daily",
+  "position_adjustment": "hold",
+  "hk_lot_sizes": {
+    "0700.HK": 100
+  },
+  "slippage_hk": 0.001,
+  "hk_stamp_tax": 0.001,
+  "hk_commission": 0.00015,
+  "hk_levy": 5.65e-05,
+  "hk_settlement": 2e-05,
+  "evaluation_start_date": "2024-01-01"
+}
