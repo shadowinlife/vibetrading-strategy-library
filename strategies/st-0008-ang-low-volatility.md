@@ -3,6 +3,7 @@ id: st-0008
 type: strategy
 title: 低波动异象截面选股（Ang et al. 2006，总波动率代理操作化）
 status: rejected
+vt_artifact_id: art_524a859ac574
 markets: [us]
 asset_classes: [equity]
 horizon: 月度（1 个月持有，滚动）

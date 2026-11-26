@@ -3,6 +3,7 @@ id: st-0012
 type: strategy
 title: 历史波动率百分位低波建仓（VT volatility 技能仅多头操作化）
 status: research_only
+vt_artifact_id: art_fdcf4ee05adb
 markets: [us, crypto]
 asset_classes: [equity, crypto]
 horizon: 数周至数月（波动率状态持续期）

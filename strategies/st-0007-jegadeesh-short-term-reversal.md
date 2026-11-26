@@ -3,6 +3,7 @@ id: st-0007
 type: strategy
 title: 短期反转 1 月（Jegadeesh 1990，S&P500 仅多头操作化）
 status: research_only
+vt_artifact_id: art_3228369add16
 markets: [us]
 asset_classes: [equity]
 horizon: 1 个月（月度滚动）

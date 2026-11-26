@@ -3,6 +3,7 @@ id: st-0004
 type: strategy
 title: 时间序列动量 12-1（Moskowitz-Ooi-Pedersen 2012，ETF 仅多头操作化）
 status: research_only
+vt_artifact_id: art_c845980d81aa
 markets: [us]
 asset_classes: [equity, bond, commodity, reit, currency]
 horizon: 月度（1 个月持有，滚动）

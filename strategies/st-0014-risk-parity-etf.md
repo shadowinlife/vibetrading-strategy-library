@@ -3,6 +3,7 @@ id: st-0014
 type: strategy
 title: 四资产 ETF 风险平价组合（VT asset-allocation risk_parity 操作化）
 status: validated
+vt_artifact_id: art_12ebbf790ff0
 markets: [us]
 asset_classes: [equity, bond, commodity]
 horizon: 季度再平衡（长期配置）

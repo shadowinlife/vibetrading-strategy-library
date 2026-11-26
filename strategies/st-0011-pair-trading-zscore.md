@@ -3,6 +3,7 @@ id: st-0011
 type: strategy
 title: 配对交易比值 Z-score 均值回归（VT pair-trading 技能操作化）
 status: rejected
+vt_artifact_id: art_5d125bf93669
 markets: [us, crypto]
 asset_classes: [equity, crypto]
 horizon: 数日至数周（单笔持有至比值回归）
