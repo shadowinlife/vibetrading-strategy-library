@@ -3,6 +3,7 @@ id: in-0003
 type: indicator
 title: 成交集中度与两融余额背离（A 股）
 status: research_only
+vt_artifact_id: art_9f05c5ff897b
 markets: [ashare]
 asset_classes: [equity]
 horizon: 日度

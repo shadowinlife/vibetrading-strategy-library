@@ -3,6 +3,7 @@ id: in-0002
 type: indicator
 title: 股市总市值/GDP（巴菲特指标）
 status: validated
+vt_artifact_id: art_8b8bd090044a
 markets: [us, ashare, hk]
 asset_classes: [equity]
 horizon: 年度 GDP + 日度市值，长期解读

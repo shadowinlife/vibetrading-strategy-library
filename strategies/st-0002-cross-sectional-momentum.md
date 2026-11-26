@@ -3,6 +3,7 @@ id: st-0002
 type: strategy
 title: 截面动量（12-1 月）
 status: research_only
+vt_artifact_id: art_b8d077aa5958
 markets: [us, hk]
 asset_classes: [equity]
 horizon: 3–12 个月（经典 6 个月）

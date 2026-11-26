@@ -3,6 +3,7 @@ id: in-0004
 type: indicator
 title: 港美股活跃股票成交/市值集中度统计
 status: validated
+vt_artifact_id: art_019863434b5b
 markets: [hk, us]
 asset_classes: [equity]
 horizon: 日度

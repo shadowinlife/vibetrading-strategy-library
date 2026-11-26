@@ -3,6 +3,7 @@ id: in-0001
 type: indicator
 title: 行业 PE/PB/股息率及其历史分位
 status: validated
+vt_artifact_id: art_859dfc5c8a58
 markets: [ashare, hk, us]
 asset_classes: [equity]
 horizon: 日度计算，中长期解读
