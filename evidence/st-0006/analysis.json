@@ -1,0 +1,840 @@
+{
+  "variants": {
+    "st0006-main": {
+      "run": "st0006-main",
+      "evaluation_window": [
+        "2014-09-02",
+        "2026-11-25"
+      ],
+      "engine_metrics": {
+        "total_return": 0.2373483499828121,
+        "annual_return": 0.0175890923893327,
+        "max_drawdown": -0.1799339965927969,
+        "sharpe": 0.3497550568857707,
+        "calmar": 0.0978,
+        "trade_count": 303.0,
+        "profit_factor": 1.3717,
+        "win_rate": 0.6732673267326733,
+        "avg_holding_days": 3.3,
+        "benchmark_return": 3.467074,
+        "benchmark_kind": "equal_weight",
+        "benchmark_label": "equal-weight basket of 3 symbols",
+        "rebalance_executed_bars": 0.0,
+        "dropped_target_adjustment_count": 0.0,
+        "position_adjustment": "hold",
+        "rebalance_tolerance": 0.0
+      },
+      "strategy_subperiods": {
+        "first_half": {
+          "start": "2014-09-02",
+          "end": "2020-10-13",
+          "total_return": -0.039177,
+          "cagr": -0.006516,
+          "max_drawdown": -0.179934,
+          "sharpe": -0.0846
+        },
+        "second_half": {
+          "start": "2020-10-14",
+          "end": "2026-11-25",
+          "total_return": 0.2878,
+          "cagr": 0.04224,
+          "max_drawdown": -0.057292,
+          "sharpe": 0.851
+        }
+      },
+      "strategy_year_returns": {
+        "2014": 0.016678,
+        "2015": 0.039421,
+        "2016": 0.010037,
+        "2017": 0.037967,
+        "2018": -0.08404,
+        "2019": -0.029569,
+        "2020": 0.003341,
+        "2021": 0.084448,
+        "2022": -0.021881,
+        "2023": -0.006977,
+        "2024": 0.101469,
+        "2025": 0.052094,
+        "2026": 0.036055
+      },
+      "benchmarks_buy_and_hold": {
+        "SPY.US": {
+          "total_return": 3.380168,
+          "cagr": 0.128372,
+          "max_drawdown": -0.337173,
+          "sharpe": 0.7787,
+          "subperiods": {
+            "first_half": {
+              "start": "2014-09-02",
+              "end": "2020-10-13",
+              "total_return": 0.973603,
+              "cagr": 0.117623,
+              "max_drawdown": -0.337173,
+              "sharpe": 0.7033
+            },
+            "second_half": {
+              "start": "2020-10-14",
+              "end": "2026-11-25",
+              "total_return": 1.23341,
+              "cagr": 0.140461,
+              "max_drawdown": -0.244964,
+              "sharpe": 0.8678
+            }
+          },
+          "convention": "entry at first evaluation bar open, zero costs, same ohlcv artifact"
+        },
+        "QQQ.US": {
+          "total_return": 5.945576,
+          "cagr": 0.171719,
+          "max_drawdown": -0.351187,
+          "sharpe": 0.8322,
+          "subperiods": {
+            "first_half": {
+              "start": "2014-09-02",
+              "end": "2020-10-13",
+              "total_return": 2.115172,
+              "cagr": 0.204255,
+              "max_drawdown": -0.285593,
+              "sharpe": 0.9866
+            },
+            "second_half": {
+              "start": "2020-10-14",
+              "end": "2026-11-25",
+              "total_return": 1.248376,
+              "cagr": 0.141708,
+              "max_drawdown": -0.351187,
+              "sharpe": 0.6963
+            }
+          },
+          "convention": "entry at first evaluation bar open, zero costs, same ohlcv artifact"
+        },
+        "IWM.US": {
+          "total_return": 1.684969,
+          "cagr": 0.084109,
+          "max_drawdown": -0.411333,
+          "sharpe": 0.4761,
+          "subperiods": {
+            "first_half": {
+              "start": "2014-09-02",
+              "end": "2020-10-13",
+              "total_return": 0.512869,
+              "cagr": 0.070065,
+              "max_drawdown": -0.411333,
+              "sharpe": 0.4194
+            },
+            "second_half": {
+              "start": "2020-10-14",
+              "end": "2026-11-25",
+              "total_return": 0.792491,
+              "cagr": 0.100165,
+              "max_drawdown": -0.319116,
+              "sharpe": 0.5392
+            }
+          },
+          "convention": "entry at first evaluation bar open, zero costs, same ohlcv artifact"
+        }
+      },
+      "trade_level_stats": {
+        "n_closed_trades": 303,
+        "mean_trade_return": 0.002234,
+        "t_vs_zero": 1.9463,
+        "p": 0.052545,
+        "caveat": "trade returns overlap in calendar time across sleeves; naive t"
+      },
+      "cost_sensitivity": {
+        "slippage_5bps_total_return": 0.237348,
+        "slippage_10bps_total_return": 0.118496,
+        "drag_5bps_to_10bps": 0.118852,
+        "note": "zero-commission convention; 10bps/side doubles the round-1 cost assumption"
+      }
+    },
+    "st0006-thr5": {
+      "run": "st0006-thr5",
+      "evaluation_window": [
+        "2014-09-02",
+        "2026-11-25"
+      ],
+      "engine_metrics": {
+        "total_return": 0.2222313285182284,
+        "annual_return": 0.0165655009464902,
+        "max_drawdown": -0.1224982358450032,
+        "sharpe": 0.4158909000795705,
+        "calmar": 0.1352,
+        "trade_count": 166.0,
+        "profit_factor": 1.6013,
+        "win_rate": 0.7048192771084337,
+        "avg_holding_days": 2.9,
+        "benchmark_return": 3.467038,
+        "benchmark_kind": "equal_weight",
+        "benchmark_label": "equal-weight basket of 3 symbols",
+        "rebalance_executed_bars": 0.0,
+        "dropped_target_adjustment_count": 0.0,
+        "position_adjustment": "hold",
+        "rebalance_tolerance": 0.0
+      },
+      "strategy_subperiods": {
+        "first_half": {
+          "start": "2014-09-02",
+          "end": "2020-10-13",
+          "total_return": -0.016405,
+          "cagr": -0.002702,
+          "max_drawdown": -0.122498,
+          "sharpe": -0.0324
+        },
+        "second_half": {
+          "start": "2020-10-14",
+          "end": "2026-11-25",
+          "total_return": 0.242616,
+          "cagr": 0.036169,
+          "max_drawdown": -0.037849,
+          "sharpe": 1.0604
+        }
+      },
+      "strategy_year_returns": {
+        "2014": 0.024216,
+        "2015": 0.016646,
+        "2016": 0.007898,
+        "2017": 0.020977,
+        "2018": -0.035269,
+        "2019": 0.003563,
+        "2020": -0.025318,
+        "2021": 0.077839,
+        "2022": -0.001799,
+        "2023": -0.012659,
+        "2024": 0.069968,
+        "2025": 0.020407,
+        "2026": 0.044855
+      },
+      "benchmarks_buy_and_hold": {
+        "SPY.US": {
+          "total_return": 3.380167,
+          "cagr": 0.128372,
+          "max_drawdown": -0.337173,
+          "sharpe": 0.7787,
+          "subperiods": {
+            "first_half": {
+              "start": "2014-09-02",
+              "end": "2020-10-13",
+              "total_return": 0.973602,
+              "cagr": 0.117623,
+              "max_drawdown": -0.337173,
+              "sharpe": 0.7034
+            },
+            "second_half": {
+              "start": "2020-10-14",
+              "end": "2026-11-25",
+              "total_return": 1.23341,
+              "cagr": 0.140461,
+              "max_drawdown": -0.244964,
+              "sharpe": 0.8678
+            }
+          },
+          "convention": "entry at first evaluation bar open, zero costs, same ohlcv artifact"
+        },
+        "QQQ.US": {
+          "total_return": 5.945578,
+          "cagr": 0.171719,
+          "max_drawdown": -0.351187,
+          "sharpe": 0.8322,
+          "subperiods": {
+            "first_half": {
+              "start": "2014-09-02",
+              "end": "2020-10-13",
+              "total_return": 2.115172,
+              "cagr": 0.204255,
+              "max_drawdown": -0.285594,
+              "sharpe": 0.9866
+            },
+            "second_half": {
+              "start": "2020-10-14",
+              "end": "2026-11-25",
+              "total_return": 1.248376,
+              "cagr": 0.141708,
+              "max_drawdown": -0.351187,
+              "sharpe": 0.6963
+            }
+          },
+          "convention": "entry at first evaluation bar open, zero costs, same ohlcv artifact"
+        },
+        "IWM.US": {
+          "total_return": 1.684969,
+          "cagr": 0.084109,
+          "max_drawdown": -0.411333,
+          "sharpe": 0.4761,
+          "subperiods": {
+            "first_half": {
+              "start": "2014-09-02",
+              "end": "2020-10-13",
+              "total_return": 0.512869,
+              "cagr": 0.070064,
+              "max_drawdown": -0.411333,
+              "sharpe": 0.4194
+            },
+            "second_half": {
+              "start": "2020-10-14",
+              "end": "2026-11-25",
+              "total_return": 0.792491,
+              "cagr": 0.100165,
+              "max_drawdown": -0.319116,
+              "sharpe": 0.5392
+            }
+          },
+          "convention": "entry at first evaluation bar open, zero costs, same ohlcv artifact"
+        }
+      }
+    },
+    "st0006-exit90": {
+      "run": "st0006-exit90",
+      "evaluation_window": [
+        "2014-09-02",
+        "2026-11-25"
+      ],
+      "engine_metrics": {
+        "total_return": 0.7402361290719626,
+        "annual_return": 0.0464028537453393,
+        "max_drawdown": -0.1743968267360293,
+        "sharpe": 0.5988052807405357,
+        "calmar": 0.2661,
+        "trade_count": 227.0,
+        "profit_factor": 1.7465,
+        "win_rate": 0.7400881057268722,
+        "avg_holding_days": 11.0,
+        "benchmark_return": 3.467039,
+        "benchmark_kind": "equal_weight",
+        "benchmark_label": "equal-weight basket of 3 symbols",
+        "rebalance_executed_bars": 0.0,
+        "dropped_target_adjustment_count": 0.0,
+        "position_adjustment": "hold",
+        "rebalance_tolerance": 0.0
+      },
+      "strategy_subperiods": {
+        "first_half": {
+          "start": "2014-09-02",
+          "end": "2020-10-13",
+          "total_return": 0.121557,
+          "cagr": 0.018941,
+          "max_drawdown": -0.174397,
+          "sharpe": 0.2749
+        },
+        "second_half": {
+          "start": "2020-10-14",
+          "end": "2026-11-25",
+          "total_return": 0.551626,
+          "cagr": 0.074501,
+          "max_drawdown": -0.070461,
+          "sharpe": 0.9137
+        }
+      },
+      "strategy_year_returns": {
+        "2014": -0.012385,
+        "2015": 0.049407,
+        "2016": 0.038437,
+        "2017": 0.085987,
+        "2018": 0.030138,
+        "2019": -0.03516,
+        "2020": 0.00517,
+        "2021": 0.17172,
+        "2022": -0.046172,
+        "2023": 0.015491,
+        "2024": 0.175375,
+        "2025": 0.088769,
+        "2026": 0.026575
+      },
+      "benchmarks_buy_and_hold": {
+        "SPY.US": {
+          "total_return": 3.380168,
+          "cagr": 0.128372,
+          "max_drawdown": -0.337172,
+          "sharpe": 0.7787,
+          "subperiods": {
+            "first_half": {
+              "start": "2014-09-02",
+              "end": "2020-10-13",
+              "total_return": 0.973603,
+              "cagr": 0.117623,
+              "max_drawdown": -0.337172,
+              "sharpe": 0.7034
+            },
+            "second_half": {
+              "start": "2020-10-14",
+              "end": "2026-11-25",
+              "total_return": 1.23341,
+              "cagr": 0.140461,
+              "max_drawdown": -0.244964,
+              "sharpe": 0.8678
+            }
+          },
+          "convention": "entry at first evaluation bar open, zero costs, same ohlcv artifact"
+        },
+        "QQQ.US": {
+          "total_return": 5.945576,
+          "cagr": 0.171719,
+          "max_drawdown": -0.351187,
+          "sharpe": 0.8322,
+          "subperiods": {
+            "first_half": {
+              "start": "2014-09-02",
+              "end": "2020-10-13",
+              "total_return": 2.115173,
+              "cagr": 0.204255,
+              "max_drawdown": -0.285594,
+              "sharpe": 0.9866
+            },
+            "second_half": {
+              "start": "2020-10-14",
+              "end": "2026-11-25",
+              "total_return": 1.248376,
+              "cagr": 0.141708,
+              "max_drawdown": -0.351187,
+              "sharpe": 0.6963
+            }
+          },
+          "convention": "entry at first evaluation bar open, zero costs, same ohlcv artifact"
+        },
+        "IWM.US": {
+          "total_return": 1.684969,
+          "cagr": 0.084109,
+          "max_drawdown": -0.411333,
+          "sharpe": 0.4761,
+          "subperiods": {
+            "first_half": {
+              "start": "2014-09-02",
+              "end": "2020-10-13",
+              "total_return": 0.512869,
+              "cagr": 0.070065,
+              "max_drawdown": -0.411333,
+              "sharpe": 0.4194
+            },
+            "second_half": {
+              "start": "2020-10-14",
+              "end": "2026-11-25",
+              "total_return": 0.79249,
+              "cagr": 0.100165,
+              "max_drawdown": -0.319116,
+              "sharpe": 0.5392
+            }
+          },
+          "convention": "entry at first evaluation bar open, zero costs, same ohlcv artifact"
+        }
+      }
+    },
+    "st0006-nofilter": {
+      "run": "st0006-nofilter",
+      "evaluation_window": [
+        "2014-09-02",
+        "2026-11-25"
+      ],
+      "engine_metrics": {
+        "total_return": 0.4187097877195207,
+        "annual_return": 0.0290482311170652,
+        "max_drawdown": -0.2982419796687373,
+        "sharpe": 0.3154279249647462,
+        "calmar": 0.0974,
+        "trade_count": 426.0,
+        "profit_factor": 1.3925,
+        "win_rate": 0.6619718309859155,
+        "avg_holding_days": 3.7,
+        "benchmark_return": 3.466973,
+        "benchmark_kind": "equal_weight",
+        "benchmark_label": "equal-weight basket of 3 symbols",
+        "rebalance_executed_bars": 0.0,
+        "dropped_target_adjustment_count": 0.0,
+        "position_adjustment": "hold",
+        "rebalance_tolerance": 0.0
+      },
+      "strategy_subperiods": {
+        "first_half": {
+          "start": "2014-09-02",
+          "end": "2020-10-13",
+          "total_return": -0.021707,
+          "cagr": -0.003583,
+          "max_drawdown": -0.298242,
+          "sharpe": 0.0325
+        },
+        "second_half": {
+          "start": "2020-10-14",
+          "end": "2026-11-25",
+          "total_return": 0.45019,
+          "cagr": 0.062684,
+          "max_drawdown": -0.096164,
+          "sharpe": 0.6785
+        }
+      },
+      "strategy_year_returns": {
+        "2014": 0.024095,
+        "2015": 0.069611,
+        "2016": 0.014,
+        "2017": 0.040347,
+        "2018": -0.109288,
+        "2019": 0.039984,
+        "2020": -0.060137,
+        "2021": 0.100717,
+        "2022": 0.006344,
+        "2023": 0.01941,
+        "2024": 0.101469,
+        "2025": 0.096477,
+        "2026": 0.044245
+      },
+      "benchmarks_buy_and_hold": {
+        "SPY.US": {
+          "total_return": 3.380167,
+          "cagr": 0.128372,
+          "max_drawdown": -0.337173,
+          "sharpe": 0.7786,
+          "subperiods": {
+            "first_half": {
+              "start": "2014-09-02",
+              "end": "2020-10-13",
+              "total_return": 0.973602,
+              "cagr": 0.117623,
+              "max_drawdown": -0.337173,
+              "sharpe": 0.7033
+            },
+            "second_half": {
+              "start": "2020-10-14",
+              "end": "2026-11-25",
+              "total_return": 1.23341,
+              "cagr": 0.140461,
+              "max_drawdown": -0.244964,
+              "sharpe": 0.8678
+            }
+          },
+          "convention": "entry at first evaluation bar open, zero costs, same ohlcv artifact"
+        },
+        "QQQ.US": {
+          "total_return": 5.945576,
+          "cagr": 0.171719,
+          "max_drawdown": -0.351187,
+          "sharpe": 0.8322,
+          "subperiods": {
+            "first_half": {
+              "start": "2014-09-02",
+              "end": "2020-10-13",
+              "total_return": 2.115171,
+              "cagr": 0.204255,
+              "max_drawdown": -0.285594,
+              "sharpe": 0.9866
+            },
+            "second_half": {
+              "start": "2020-10-14",
+              "end": "2026-11-25",
+              "total_return": 1.248376,
+              "cagr": 0.141708,
+              "max_drawdown": -0.351187,
+              "sharpe": 0.6963
+            }
+          },
+          "convention": "entry at first evaluation bar open, zero costs, same ohlcv artifact"
+        },
+        "IWM.US": {
+          "total_return": 1.684968,
+          "cagr": 0.084109,
+          "max_drawdown": -0.411333,
+          "sharpe": 0.4764,
+          "subperiods": {
+            "first_half": {
+              "start": "2014-09-02",
+              "end": "2020-10-13",
+              "total_return": 0.512869,
+              "cagr": 0.070064,
+              "max_drawdown": -0.411333,
+              "sharpe": 0.4198
+            },
+            "second_half": {
+              "start": "2020-10-14",
+              "end": "2026-11-25",
+              "total_return": 0.79249,
+              "cagr": 0.100165,
+              "max_drawdown": -0.319116,
+              "sharpe": 0.5392
+            }
+          },
+          "convention": "entry at first evaluation bar open, zero costs, same ohlcv artifact"
+        }
+      }
+    },
+    "st0006-main-10bps": {
+      "run": "st0006-main-10bps",
+      "evaluation_window": [
+        "2014-09-02",
+        "2026-11-25"
+      ],
+      "engine_metrics": {
+        "total_return": 0.1184961870640828,
+        "annual_return": 0.0092105284328753,
+        "max_drawdown": -0.1920293242290959,
+        "sharpe": 0.1967449190118151,
+        "calmar": 0.048,
+        "trade_count": 303.0,
+        "profit_factor": 1.1844,
+        "win_rate": 0.6600660066006601,
+        "avg_holding_days": 3.3,
+        "benchmark_return": 3.467076,
+        "benchmark_kind": "equal_weight",
+        "benchmark_label": "equal-weight basket of 3 symbols",
+        "rebalance_executed_bars": 0.0,
+        "dropped_target_adjustment_count": 0.0,
+        "position_adjustment": "hold",
+        "rebalance_tolerance": 0.0
+      },
+      "strategy_subperiods": {
+        "first_half": {
+          "start": "2014-09-02",
+          "end": "2020-10-13",
+          "total_return": -0.082339,
+          "cagr": -0.013957,
+          "max_drawdown": -0.192029,
+          "sharpe": -0.2151
+        },
+        "second_half": {
+          "start": "2020-10-14",
+          "end": "2026-11-25",
+          "total_return": 0.218856,
+          "cagr": 0.032902,
+          "max_drawdown": -0.063362,
+          "sharpe": 0.6712
+        }
+      },
+      "strategy_year_returns": {
+        "2014": 0.014299,
+        "2015": 0.028757,
+        "2016": 0.004004,
+        "2017": 0.028833,
+        "2018": -0.090864,
+        "2019": -0.034721,
+        "2020": -0.003831,
+        "2021": 0.073113,
+        "2022": -0.023174,
+        "2023": -0.015548,
+        "2024": 0.088692,
+        "2025": 0.043166,
+        "2026": 0.024203
+      },
+      "benchmarks_buy_and_hold": {
+        "SPY.US": {
+          "total_return": 3.380167,
+          "cagr": 0.128372,
+          "max_drawdown": -0.337173,
+          "sharpe": 0.7786,
+          "subperiods": {
+            "first_half": {
+              "start": "2014-09-02",
+              "end": "2020-10-13",
+              "total_return": 0.973602,
+              "cagr": 0.117623,
+              "max_drawdown": -0.337173,
+              "sharpe": 0.7033
+            },
+            "second_half": {
+              "start": "2020-10-14",
+              "end": "2026-11-25",
+              "total_return": 1.23341,
+              "cagr": 0.140461,
+              "max_drawdown": -0.244964,
+              "sharpe": 0.8678
+            }
+          },
+          "convention": "entry at first evaluation bar open, zero costs, same ohlcv artifact"
+        },
+        "QQQ.US": {
+          "total_return": 5.945576,
+          "cagr": 0.171719,
+          "max_drawdown": -0.351187,
+          "sharpe": 0.8322,
+          "subperiods": {
+            "first_half": {
+              "start": "2014-09-02",
+              "end": "2020-10-13",
+              "total_return": 2.115172,
+              "cagr": 0.204255,
+              "max_drawdown": -0.285594,
+              "sharpe": 0.9866
+            },
+            "second_half": {
+              "start": "2020-10-14",
+              "end": "2026-11-25",
+              "total_return": 1.248376,
+              "cagr": 0.141708,
+              "max_drawdown": -0.351187,
+              "sharpe": 0.6963
+            }
+          },
+          "convention": "entry at first evaluation bar open, zero costs, same ohlcv artifact"
+        },
+        "IWM.US": {
+          "total_return": 1.684969,
+          "cagr": 0.084109,
+          "max_drawdown": -0.411333,
+          "sharpe": 0.4761,
+          "subperiods": {
+            "first_half": {
+              "start": "2014-09-02",
+              "end": "2020-10-13",
+              "total_return": 0.51287,
+              "cagr": 0.070065,
+              "max_drawdown": -0.411333,
+              "sharpe": 0.4194
+            },
+            "second_half": {
+              "start": "2020-10-14",
+              "end": "2026-11-25",
+              "total_return": 0.79249,
+              "cagr": 0.100165,
+              "max_drawdown": -0.319116,
+              "sharpe": 0.5392
+            }
+          },
+          "convention": "entry at first evaluation bar open, zero costs, same ohlcv artifact"
+        }
+      }
+    }
+  },
+  "headline": {
+    "run": "st0006-main",
+    "evaluation_window": [
+      "2014-09-02",
+      "2026-11-25"
+    ],
+    "engine_metrics": {
+      "total_return": 0.2373483499828121,
+      "annual_return": 0.0175890923893327,
+      "max_drawdown": -0.1799339965927969,
+      "sharpe": 0.3497550568857707,
+      "calmar": 0.0978,
+      "trade_count": 303.0,
+      "profit_factor": 1.3717,
+      "win_rate": 0.6732673267326733,
+      "avg_holding_days": 3.3,
+      "benchmark_return": 3.467074,
+      "benchmark_kind": "equal_weight",
+      "benchmark_label": "equal-weight basket of 3 symbols",
+      "rebalance_executed_bars": 0.0,
+      "dropped_target_adjustment_count": 0.0,
+      "position_adjustment": "hold",
+      "rebalance_tolerance": 0.0
+    },
+    "strategy_subperiods": {
+      "first_half": {
+        "start": "2014-09-02",
+        "end": "2020-10-13",
+        "total_return": -0.039177,
+        "cagr": -0.006516,
+        "max_drawdown": -0.179934,
+        "sharpe": -0.0846
+      },
+      "second_half": {
+        "start": "2020-10-14",
+        "end": "2026-11-25",
+        "total_return": 0.2878,
+        "cagr": 0.04224,
+        "max_drawdown": -0.057292,
+        "sharpe": 0.851
+      }
+    },
+    "strategy_year_returns": {
+      "2014": 0.016678,
+      "2015": 0.039421,
+      "2016": 0.010037,
+      "2017": 0.037967,
+      "2018": -0.08404,
+      "2019": -0.029569,
+      "2020": 0.003341,
+      "2021": 0.084448,
+      "2022": -0.021881,
+      "2023": -0.006977,
+      "2024": 0.101469,
+      "2025": 0.052094,
+      "2026": 0.036055
+    },
+    "benchmarks_buy_and_hold": {
+      "SPY.US": {
+        "total_return": 3.380168,
+        "cagr": 0.128372,
+        "max_drawdown": -0.337173,
+        "sharpe": 0.7787,
+        "subperiods": {
+          "first_half": {
+            "start": "2014-09-02",
+            "end": "2020-10-13",
+            "total_return": 0.973603,
+            "cagr": 0.117623,
+            "max_drawdown": -0.337173,
+            "sharpe": 0.7033
+          },
+          "second_half": {
+            "start": "2020-10-14",
+            "end": "2026-11-25",
+            "total_return": 1.23341,
+            "cagr": 0.140461,
+            "max_drawdown": -0.244964,
+            "sharpe": 0.8678
+          }
+        },
+        "convention": "entry at first evaluation bar open, zero costs, same ohlcv artifact"
+      },
+      "QQQ.US": {
+        "total_return": 5.945576,
+        "cagr": 0.171719,
+        "max_drawdown": -0.351187,
+        "sharpe": 0.8322,
+        "subperiods": {
+          "first_half": {
+            "start": "2014-09-02",
+            "end": "2020-10-13",
+            "total_return": 2.115172,
+            "cagr": 0.204255,
+            "max_drawdown": -0.285593,
+            "sharpe": 0.9866
+          },
+          "second_half": {
+            "start": "2020-10-14",
+            "end": "2026-11-25",
+            "total_return": 1.248376,
+            "cagr": 0.141708,
+            "max_drawdown": -0.351187,
+            "sharpe": 0.6963
+          }
+        },
+        "convention": "entry at first evaluation bar open, zero costs, same ohlcv artifact"
+      },
+      "IWM.US": {
+        "total_return": 1.684969,
+        "cagr": 0.084109,
+        "max_drawdown": -0.411333,
+        "sharpe": 0.4761,
+        "subperiods": {
+          "first_half": {
+            "start": "2014-09-02",
+            "end": "2020-10-13",
+            "total_return": 0.512869,
+            "cagr": 0.070065,
+            "max_drawdown": -0.411333,
+            "sharpe": 0.4194
+          },
+          "second_half": {
+            "start": "2020-10-14",
+            "end": "2026-11-25",
+            "total_return": 0.792491,
+            "cagr": 0.100165,
+            "max_drawdown": -0.319116,
+            "sharpe": 0.5392
+          }
+        },
+        "convention": "entry at first evaluation bar open, zero costs, same ohlcv artifact"
+      }
+    },
+    "trade_level_stats": {
+      "n_closed_trades": 303,
+      "mean_trade_return": 0.002234,
+      "t_vs_zero": 1.9463,
+      "p": 0.052545,
+      "caveat": "trade returns overlap in calendar time across sleeves; naive t"
+    },
+    "cost_sensitivity": {
+      "slippage_5bps_total_return": 0.237348,
+      "slippage_10bps_total_return": 0.118496,
+      "drag_5bps_to_10bps": 0.118852,
+      "note": "zero-commission convention; 10bps/side doubles the round-1 cost assumption"
+    }
+  }
+}

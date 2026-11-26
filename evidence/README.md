@@ -3,6 +3,8 @@
 验证流水线恢复后的首轮 9 条种子条目验证证据。任务：library-validate-001。
 判定汇总见各条目 frontmatter 的 `status` 与 `evidence`；本目录存放可复核的原始输出与脚本。
 
+> batch-1（harvest-validate-b1，2026-11-26）6 条候选验证证据见 [README-batch1.md](README-batch1.md)（st-0003/0005/0006/0009/0010/0013）。
+
 ## 目录
 
 | 子目录 | 条目 | 内容 |

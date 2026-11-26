@@ -1,0 +1,87 @@
+---
+id: st-0003
+type: strategy
+title: Faber 10 月均线 GTAA 五资产择时（文献操作化）
+status: validated
+vt_artifact_id: art_9fd3b4e601cf
+markets: [us]
+asset_classes: [equity, bond, commodity, reit]
+horizon: 月度（10 月均线状态持续期）
+related: [st-0001]
+sources:
+  - title: "Faber, M. T. (2007). A Quantitative Approach to Tactical Asset Allocation. The Journal of Wealth Management 9(4): 69-79（Crossref 卷期页码；作者 PDF 页眉写 Spring 2007，差异已注明）"
+    url: https://doi.org/10.3905/jwm.2007.674809
+    date: 2007-01
+  - title: "Faber SSRN 962461 作者公开 PDF（2013-02 更新版，规则与五资产宇宙逐字读取来源；2007 印刷版未读）"
+    url: https://mebfaber.com/wp-content/uploads/2016/05/SSRN-id962461.pdf
+    date: 2013-02
+entry_rules: 五资产 ETF 池 SPY/EFA/IEF/GSG/VNQ 各 20%  sleeve；每月最后一个交易日收盘，任一资产收盘价 > 其 10 月 SMA（过去 10 个月末收盘均值）则该 sleeve 次月首个交易日开盘持有该资产，否则该 sleeve 转为现金；各资产独立判断，只做多，不加杠杆。
+exit_rules: 月末收盘价 < 10 月 SMA 时该 sleeve 次月首个交易日开盘清仓转现金；无月内止损止盈（文献规则仅月末更新）；暖机期（前 10 个月末）SMA 未定义，该 sleeve 持现金。
+position_sizing: 五等份 sleeve 各 20% 资金（文献 GTAA 等权），每份要么满仓该资产要么现金；组合总仓位 0–100% 随信号变化；不加杠杆、不摊平、单资产上限即其 20% sleeve。
+signal_definition: "SMA10_m = mean(月末收盘_{m-9..m})；state(asset, m) = long 若 close_m > SMA10_m，否则 cash；信号在 m 月最后交易日收盘计算，m+1 月首个交易日开盘成交（原文为月末收盘成交，1 bar 执行差为操作化默认）。ETF 代理：SPY=S&P500、EFA=MSCI EAFE、IEF=7-10 年美债（原文 10 年美债指数）、GSG=S&P GSCI 商品（原文 GSCI）、VNQ=美国 REITs（原文 NAREIT，指数口径差异已注明）。"
+intended_use: 跨资产长期择时框架：10 月均线过滤各资产熊市段，用于美股账户五资产配置的回撤控制决策参考。
+limitations: 已验证（2026-11-26，batch-1 backtest 阶段证据，未做 holdout/shadow/live）：真实数据逐字回测证实机制按规则运行、回撤控制显著——五资产 GTAA 2014-09→2026-11 累计 +72.17%、年化 4.55%、最大回撤 -12.42%、Sharpe 0.64、66 笔、盈利因子 2.90；同期等权月度再平衡买入持有 +103.98%（回撤 -28.16%、Sharpe 0.56）、SPY 买入持有 +338.02%（回撤 -33.72%）——绝对收益大幅跑输等权买入持有（价值在回撤控制而非收益最大化，同 st-0001）；2022 股债双杀子周期策略 -4.45%（回撤 -10.64%）vs 等权 -10.43%/SPY -18.65%，熊市回避获支持；前后半段均正（+9.77%/+57.28%）。已知缺陷（保留）：文献规则读取自作者 2013 更新 PDF 而非 2007 印刷版（原版未读）；ETF 代理与原文指数口径不同（IEF 7-10 年 vs 10 年、VNQ vs NAREIT、GSG 含展期损耗），代理误差未测；执行时点为次月首日开盘而非原文月末收盘，1 bar 差未量化；10 月窗口未做敏感性（6/12 月变体未测）；现金 sleeve 收益按 0 计（未建模货币基金收益，低估策略相对收益）；五资产相关性在危机期趋同，分散效果可能失效；平均仓位 66.4%（现金拖累）。结论只适用于有界版本（五 ETF 代理/10 月窗口/次日开盘执行/现金零收益），不外推到原始指数口径、其他均线窗口、月末收盘执行。
+evidence:
+  - summary: "美股五资产 GTAA（SPY/EFA/IEF/GSG/VNQ 各 20% sleeve）2014-09-02→2026-11-25 逐字回测（10 月 SMA 月末信号、次月首日开盘成交、5bps/边滑点零佣金、现金收益按 0）：累计 +72.17%、年化 4.55%、最大回撤 -12.42%、Sharpe 0.64、66 笔、盈利因子 2.90；同期等权月度再平衡买入持有 +103.98%（回撤 -28.16%）、SPY 买入持有 +338.02%——绝对收益跑输但回撤不足等权一半"
+    artifact: evidence/st-0003/metrics-gtaa.csv
+    date: 2026-11-26
+  - summary: "等权月度再平衡买入持有基准（同窗口同成本，VT rebalance_mask=MS）：累计 +103.98%、年化 6.01%、最大回撤 -28.16%、Sharpe 0.56；GTAA 回撤 -12.42% 为其 44%，Sharpe 0.64 略高"
+    artifact: evidence/st-0003/metrics-bench-ew.csv
+    date: 2026-11-26
+  - summary: "子周期与 2022 股债双杀：前后半段均正（+9.77%/+57.28%）；2022 策略 -4.45%（回撤 -10.64%）vs 等权 -10.43%（回撤 -18.75%）/SPY -18.65%（回撤 -24.50%），熊市回避获支持；平均仓位 66.4%；含各资产买入持有对照与日历年收益"
+    artifact: evidence/st-0003/analysis.json
+    date: 2026-11-26
+created: 2026-11-26
+updated: 2026-11-26
+---
+
+# Faber 10 月均线 GTAA 五资产择时（文献操作化）
+
+**验证声明：已于 2026-11-26 完成 batch-1 独立验证（backtest 阶段），status=validated，证据见 frontmatter evidence 与 [evidence/st-0003/](../evidence/st-0003/)。验证证实 10 月均线过滤机制按规则运行、回撤控制显著（回撤不足等权买入持有的一半、2022 股债双杀回避获支持）；但绝对收益大幅跑输等权买入持有与 SPY，引用时必须连同 limitations 一起引用。**
+
+来源经 librarian 实际抓取核对：DOI 10.3905/jwm.2007.674809 解析至 Crossref 元数据（9(4):69-79，2007-01-31）；规则文本逐字读取自作者公开 PDF（mebfaber.com，2013-02 更新版，页首载 SSRN abstract=962461）。原文 BUY RULE："Buy when monthly price > 10-month SMA"；SELL RULE："Sell and move to cash when monthly price < 10-month SMA"；"The model is only updated once a month on the last day of the month"。
+
+## 验证记录（2026-11-26）
+
+- **方法**：按 entry_rules/exit_rules/position_sizing/signal_definition 逐字实现——每月最后一个交易日收盘计算各资产 10 月 SMA（过去 10 个月末收盘均值），收盘 > SMA 则该 sleeve 次月持有（20%），否则现金；各资产独立、只做多、无杠杆；暖机（前 10 个月末）SMA 未定义持现金。VT 官方日线引擎（`backtest.runner`），信号收盘计算、次日开盘成交（引擎内置 1 bar 延迟，月末决策恰在次月首个交易日开盘执行），`position_adjustment=hold`（目标仅在月末翻转，月内无交易）。现金收益按 0（条目操作化默认）。
+- **标的与窗口**：SPY/EFA/IEF/GSG/VNQ（yfinance 复权日线；流动性最好的五资产 ETF 代理，口径差异见 limitations）。评估窗口 2014-09-02→2026-11-25（约 12.2 年；数据自 2013-06 供 10 月暖机，evaluation_start_date=2014-09-01）。成本 US 5bps/边滑点零佣金（首轮惯例）。
+- **结果**：累计 +72.17%、年化 4.55%、最大回撤 -12.42%、Sharpe 0.64、66 笔、盈利因子 2.90、平均仓位 66.4%。对照：等权月度再平衡买入持有 +103.98%（年化 6.01%、回撤 -28.16%、Sharpe 0.56）；SPY 买入持有 +338.02%（回撤 -33.72%）。**绝对收益跑输两个基准**；回撤控制显著（GTAA 回撤为等权的 44%），Sharpe 略高于等权。
+- **子周期**：前后半段均正（+9.77%/+57.28%，Sharpe 0.28/0.92）；2022 股债双杀策略 -4.45%（回撤 -10.64%）vs 等权 -10.43%（回撤 -18.75%）/SPY -18.65%（回撤 -24.50%）——"过滤熊市段"获支持（2022 商品 GSG +23.6% 独涨，均线保留商品 sleeve、股票/债券/REITs sleeve 转现金）。
+- **判定**：validated（机制/回撤控制类主张获真实数据支持）；证据阶梯停留在 backtest 阶段，未做 holdout/shadow/live；绝对收益跑输如实记录，价值在回撤控制而非收益最大化。局限见 frontmatter limitations。
+
+## 规则详述
+
+- **信号定义**：每月末计算各资产 10 月 SMA（过去 10 个月末收盘的简单均值）；月末收盘 > SMA10 → 该资产下月持有；< SMA10 → 下月现金。各资产独立判断（原文："either long the asset class or in cash with its 20% allocation"）。
+- **宇宙（文献五资产 → ETF 代理）**：原文 GTAA 五资产为 S&P500（美大盘）、MSCI EAFE（外国发达）、美国 10 年国债、GSCI 商品、NAREIT REITs，等权各 20%。有界代理：SPY / EFA / IEF / GSG / VNQ（均 yfinance 复权日线已实证可用类；IEF 为 7-10 年、VNQ 为 MSCI 美国 REIT 指数，与原文指数口径差异显式声明）。
+- **入场/出场**：月末收盘定信号，次月首个交易日开盘成交（VT 引擎次日开盘惯例；原文月末收盘成交，差异为操作化默认）。无月内止损止盈。
+- **暖机**：前 10 个月末 SMA 未定义 → 现金。
+- **仓位**：五 sleeve 各 20%，每份 long/cash 两态；组合仓位 0–100%；无杠杆。
+- **成本与窗口**：US 滑点 5bps/边零佣金（首轮惯例）；2014-09→2026-11（约 12 年，GSG 2006 上市全覆盖）；现金收益按 0 计。
+- **对照基准**：五资产等权买入持有（月度再平衡）与 SPY 买入持有。
+
+## 默认边界条件（操作化）
+
+| 原始主张（文献） | 有界版本（本条目） | 默认值依据 |
+| --- | --- | --- |
+| 月末收盘 > 10 月 SMA 买入，< 卖出现金 | 同规则 | 文献默认值（作者 PDF 逐字读取） |
+| 五资产：S&P500/EAFE/10 年美债/GSCI/NAREIT | SPY/EFA/IEF/GSG/VNQ | 操作化默认（指数→流动性 ETF 代理；IEF/VNQ 口径差异声明） |
+| 等权各 20%，独立 long/cash | 同 | 文献默认值 |
+| 月末收盘成交 | 次月首日开盘成交 | 首轮验证惯例（次日开盘成交）；1 bar 差为操作化默认 |
+| 现金收益未注明 | 按 0 计 | 操作化默认 |
+| 评估窗口未注明 | 2014-09→2026-11 | 首轮验证惯例（st-0001 同窗口） |
+
+**验证结论只适用于上述有界版本，不外推到原始模糊主张**（不外推到原文指数口径、不外推到其他均线窗口、不外推到月末收盘执行）。
+
+## 适用场景
+
+- 美股账户跨资产长期配置（股/债/商品/REITs），追求熊市回避与回撤控制。
+- 数据条件：五 ETF yfinance 日线已实证可用类；需 10 个月暖机。
+- 与 st-0001（双均线趋势）同族但跨资产；验证建议对照等权买入持有，子周期含 2022 股债双杀。
+
+## 风险
+
+- **代理误差**：ETF 与原文指数口径不同（债券久期、REIT 指数、商品展期），回测结果不可直接等同于文献结论。
+- **鞭打与滞后**：10 月均线在震荡市频繁翻转（st-0001 已证实均线类鞭打失效模式）；V 型反弹回吐。
+- **危机相关性**：五资产危机期同跌，均线同时转现金后同时踏空反弹。
+- **参数敏感**：10 月为文献默认，6/12 月变体结果可能不同；未做敏感性前不得宣称参数稳健。
+- **执行差**：次日开盘 vs 月末收盘的 1 bar 差在跳空月显著；成本敏感性未测。

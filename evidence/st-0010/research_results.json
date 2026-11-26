@@ -1,0 +1,131 @@
+{
+  "entry": "st-0010",
+  "grade": "research (index not tradable; no T+1/lots/limits; index units)",
+  "cost_per_side": 0.0005,
+  "data": {
+    "margin_snapshot": "st0010_sse_margin_snapshot_20261126.csv (archived 2026-11-26, 2000 rows)",
+    "margin_window": [
+      "2018-08-24",
+      "2026-11-25"
+    ],
+    "index_source": "sina sh000001 daily (akshare index_zh_daily_sina)",
+    "signal_first_defined": "2019-02-26",
+    "divergence_days": 244
+  },
+  "simulation": {
+    "window": [
+      "2018-08-24",
+      "2026-11-26"
+    ],
+    "strategy": {
+      "total_return": 0.359234,
+      "cagr": 0.037869,
+      "max_drawdown": -0.247237,
+      "sharpe": 0.3199,
+      "n_bars": 2001
+    },
+    "fees_total": 60885.53,
+    "transitions_executed": 175,
+    "terminal_liquidation_fee": 682.91,
+    "buy_and_hold_index": {
+      "total_return": 0.273849,
+      "cagr": 0.029746,
+      "max_drawdown": -0.272701,
+      "sharpe": 0.2648,
+      "n_bars": 2001
+    },
+    "subperiods": {
+      "first_half": {
+        "start": "2018-08-24",
+        "end": "2022-10-10",
+        "total_return": 0.187374,
+        "cagr": 0.042475,
+        "max_drawdown": -0.217521,
+        "sharpe": 0.3354,
+        "n_bars": 998
+      },
+      "second_half": {
+        "start": "2022-10-10",
+        "end": "2026-11-26",
+        "total_return": 0.144739,
+        "cagr": 0.033283,
+        "max_drawdown": -0.188766,
+        "sharpe": 0.3038,
+        "n_bars": 1004
+      }
+    },
+    "bh_subperiods": {
+      "first_half": {
+        "start": "2018-08-24",
+        "end": "2022-10-10",
+        "total_return": 0.089658,
+        "cagr": 0.021015,
+        "max_drawdown": -0.223113,
+        "sharpe": 0.2103,
+        "n_bars": 998
+      },
+      "second_half": {
+        "start": "2022-10-10",
+        "end": "2026-11-26",
+        "total_return": 0.169036,
+        "cagr": 0.038552,
+        "max_drawdown": -0.20407,
+        "sharpe": 0.3315,
+        "n_bars": 1004
+      }
+    },
+    "note": "strategy buys at first open 2018-08-24; B&H same entry, zero costs; terminal liquidation fee applied to strategy only"
+  },
+  "event_study": {
+    "fwd20": {
+      "n_events": 244,
+      "event_mean": -0.003112,
+      "baseline_mean_all_non_trigger": 0.005963,
+      "naive_welch_t": -3.268,
+      "naive_p": 0.001192,
+      "naive_caveat": "overlapping forward windows inflate significance; not evidence on its own",
+      "non_overlapping": {
+        "n_events": 14,
+        "n_controls": 33,
+        "event_mean": 0.020264,
+        "control_mean": -0.000746,
+        "welch_t": 1.9794,
+        "p": 0.060919,
+        "spacing": ">=60 trading days between selected events (greedy)"
+      },
+      "newey_west": {
+        "beta_div_dummy": -0.009075,
+        "t": -1.6191,
+        "se": 0.005605,
+        "lag": 20,
+        "n_obs": 1941,
+        "note": "OLS fwd-return ~ divergence dummy, Bartlett HAC, lag=horizon"
+      }
+    },
+    "fwd60": {
+      "n_events": 244,
+      "event_mean": -0.017977,
+      "baseline_mean_all_non_trigger": 0.017726,
+      "naive_welch_t": -11.1877,
+      "naive_p": 0.0,
+      "naive_caveat": "overlapping forward windows inflate significance; not evidence on its own",
+      "non_overlapping": {
+        "n_events": 14,
+        "n_controls": 33,
+        "event_mean": -0.007792,
+        "control_mean": 0.010779,
+        "welch_t": -0.9318,
+        "p": 0.359543,
+        "spacing": ">=60 trading days between selected events (greedy)"
+      },
+      "newey_west": {
+        "beta_div_dummy": -0.035703,
+        "t": -2.9764,
+        "se": 0.011995,
+        "lag": 60,
+        "n_obs": 1941,
+        "note": "OLS fwd-return ~ divergence dummy, Bartlett HAC, lag=horizon"
+      }
+    }
+  }
+}

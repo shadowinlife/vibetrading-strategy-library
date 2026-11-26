@@ -1,0 +1,587 @@
+{
+  "us": {
+    "sma": {
+      "run": "st0009-us-sma",
+      "evaluation_window": [
+        "2016-08-25",
+        "2026-11-25"
+      ],
+      "engine_metrics": {
+        "total_return": 2.386677877142149,
+        "annual_return": 0.1266408672349699,
+        "max_drawdown": -0.2481672944420484,
+        "sharpe": 0.9150189647205744,
+        "calmar": 0.5103,
+        "trade_count": 16.0,
+        "profit_factor": 49.2332,
+        "win_rate": 0.875,
+        "avg_holding_days": 264.5,
+        "benchmark_return": 2.879811,
+        "benchmark_kind": "equal_weight",
+        "benchmark_label": "equal-weight basket (SPY.US)",
+        "rebalance_executed_bars": 30.0,
+        "dropped_target_adjustment_count": 0.0,
+        "position_adjustment": "rebalance",
+        "rebalance_tolerance": 0.0
+      },
+      "strategy_subperiods": {
+        "first_half": {
+          "start": "2016-08-25",
+          "end": "2021-10-08",
+          "total_return": 0.925697,
+          "cagr": 0.136543,
+          "max_drawdown": -0.248167,
+          "sharpe": 1.0121
+        },
+        "second_half": {
+          "start": "2021-10-11",
+          "end": "2026-11-25",
+          "total_return": 0.769943,
+          "cagr": 0.117907,
+          "max_drawdown": -0.189444,
+          "sharpe": 0.8355
+        }
+      },
+      "strategy_year_returns": {
+        "2016": 0.038049,
+        "2017": 0.207814,
+        "2018": -0.029661,
+        "2019": 0.245061,
+        "2020": 0.049006,
+        "2021": 0.304979,
+        "2022": -0.162214,
+        "2023": 0.267023,
+        "2024": 0.259624,
+        "2025": 0.146415,
+        "2026": 0.056733
+      },
+      "benchmarks_buy_and_hold": {
+        "SPY.US": {
+          "total_return": 2.874464,
+          "cagr": 0.141257,
+          "max_drawdown": -0.337173,
+          "sharpe": 0.8261,
+          "subperiods": {
+            "first_half": {
+              "start": "2016-08-25",
+              "end": "2021-10-08",
+              "total_return": 1.213918,
+              "cagr": 0.167931,
+              "max_drawdown": -0.337173,
+              "sharpe": 0.9296
+            },
+            "second_half": {
+              "start": "2021-10-11",
+              "end": "2026-11-25",
+              "total_return": 0.762811,
+              "cagr": 0.117026,
+              "max_drawdown": -0.244964,
+              "sharpe": 0.7246
+            }
+          },
+          "convention": "entry at first evaluation bar open, zero costs, same ohlcv artifact"
+        }
+      }
+    },
+    "wilder": {
+      "run": "st0009-us-wilder",
+      "evaluation_window": [
+        "2016-08-25",
+        "2026-11-25"
+      ],
+      "engine_metrics": {
+        "total_return": 2.398679377842452,
+        "annual_return": 0.1270305143834806,
+        "max_drawdown": -0.2481688153983088,
+        "sharpe": 0.9119917096773206,
+        "calmar": 0.5119,
+        "trade_count": 18.0,
+        "profit_factor": 175.1516,
+        "win_rate": 0.8888888888888888,
+        "avg_holding_days": 227.8,
+        "benchmark_return": 2.879812,
+        "benchmark_kind": "equal_weight",
+        "benchmark_label": "equal-weight basket (SPY.US)",
+        "rebalance_executed_bars": 34.0,
+        "dropped_target_adjustment_count": 0.0,
+        "position_adjustment": "rebalance",
+        "rebalance_tolerance": 0.0
+      },
+      "strategy_subperiods": {
+        "first_half": {
+          "start": "2016-08-25",
+          "end": "2021-10-08",
+          "total_return": 0.911684,
+          "cagr": 0.134923,
+          "max_drawdown": -0.248169,
+          "sharpe": 0.994
+        },
+        "second_half": {
+          "start": "2021-10-11",
+          "end": "2026-11-25",
+          "total_return": 0.789234,
+          "cagr": 0.120275,
+          "max_drawdown": -0.203435,
+          "sharpe": 0.846
+        }
+      },
+      "strategy_year_returns": {
+        "2016": 0.03805,
+        "2017": 0.207814,
+        "2018": -0.023809,
+        "2019": 0.244225,
+        "2020": 0.035824,
+        "2021": 0.304979,
+        "2022": -0.151622,
+        "2023": 0.267025,
+        "2024": 0.258897,
+        "2025": 0.145104,
+        "2026": 0.056732
+      },
+      "benchmarks_buy_and_hold": {
+        "SPY.US": {
+          "total_return": 2.874465,
+          "cagr": 0.141257,
+          "max_drawdown": -0.337173,
+          "sharpe": 0.8261,
+          "subperiods": {
+            "first_half": {
+              "start": "2016-08-25",
+              "end": "2021-10-08",
+              "total_return": 1.213918,
+              "cagr": 0.167931,
+              "max_drawdown": -0.337173,
+              "sharpe": 0.9296
+            },
+            "second_half": {
+              "start": "2021-10-11",
+              "end": "2026-11-25",
+              "total_return": 0.762811,
+              "cagr": 0.117026,
+              "max_drawdown": -0.244964,
+              "sharpe": 0.7246
+            }
+          },
+          "convention": "entry at first evaluation bar open, zero costs, same ohlcv artifact"
+        }
+      }
+    },
+    "sma_vs_wilder_delta_total_return": -0.012002,
+    "data_identity_prep_vs_artifact": true,
+    "flip_dates_match_mask_on_artifact_data": true,
+    "fills_outside_mask_and_terminal": [],
+    "expansion_fraction_of_eval_bars": 0.1881,
+    "drawdown_strategy_vs_bh": {
+      "strategy_sma": -0.2481672944420484,
+      "strategy_wilder": -0.2481688153983088,
+      "buy_and_hold": -0.337173
+    },
+    "window_2022": {
+      "strategy_sma": {
+        "start": "2022-01-03",
+        "end": "2022-12-30",
+        "total_return": -0.162214,
+        "cagr": -0.163958,
+        "max_drawdown": -0.189444,
+        "sharpe": -0.8276
+      },
+      "bh": {
+        "start": "2022-01-03",
+        "end": "2022-12-30",
+        "total_return": -0.186464,
+        "cagr": -0.188438,
+        "max_drawdown": -0.244964,
+        "sharpe": -0.7353
+      }
+    },
+    "warmup_note": "warmup_bars=500 deducted; ATR percentile needs 500 defined ATR20 values (first defined bar 519); undefined-signal bars hold 1.0 per entry"
+  },
+  "hk": {
+    "sma": {
+      "run": "st0009-hk-sma",
+      "evaluation_window": [
+        "2016-09-09",
+        "2026-11-26"
+      ],
+      "engine_metrics": {
+        "total_return": 0.5555371631732402,
+        "annual_return": 0.0452644650657272,
+        "max_drawdown": -0.6907947649216215,
+        "sharpe": 0.2974982801979082,
+        "calmar": 0.0655,
+        "trade_count": 21.0,
+        "profit_factor": 1.3276,
+        "win_rate": 0.5714285714285714,
+        "avg_holding_days": 203.9,
+        "benchmark_return": 0.820598,
+        "benchmark_kind": "equal_weight",
+        "benchmark_label": "equal-weight basket (0700.HK)",
+        "rebalance_executed_bars": 40.0,
+        "dropped_target_adjustment_count": 0.0,
+        "position_adjustment": "rebalance",
+        "rebalance_tolerance": 0.0
+      },
+      "strategy_subperiods": {
+        "first_half": {
+          "start": "2016-09-09",
+          "end": "2021-10-18",
+          "total_return": 0.978624,
+          "cagr": 0.142987,
+          "max_drawdown": -0.400373,
+          "sharpe": 0.6305
+        },
+        "second_half": {
+          "start": "2021-10-18",
+          "end": "2026-11-26",
+          "total_return": -0.209153,
+          "cagr": -0.044915,
+          "max_drawdown": -0.564397,
+          "sharpe": 0.0524
+        }
+      },
+      "strategy_year_returns": {
+        "2016": -0.112145,
+        "2017": 1.057013,
+        "2018": -0.260312,
+        "2019": 0.226752,
+        "2020": 0.443314,
+        "2021": -0.252561,
+        "2022": -0.199771,
+        "2023": -0.096043,
+        "2024": 0.417614,
+        "2025": 0.396893,
+        "2026": -0.43805
+      },
+      "benchmarks_buy_and_hold": {
+        "0700.HK": {
+          "total_return": 0.82741,
+          "cagr": 0.060815,
+          "max_drawdown": -0.727956,
+          "sharpe": 0.3466,
+          "subperiods": {
+            "first_half": {
+              "start": "2016-09-09",
+              "end": "2021-10-18",
+              "total_return": 1.356875,
+              "cagr": 0.182824,
+              "max_drawdown": -0.467368,
+              "sharpe": 0.6823
+            },
+            "second_half": {
+              "start": "2021-10-18",
+              "end": "2026-11-26",
+              "total_return": -0.224647,
+              "cagr": -0.048609,
+              "max_drawdown": -0.59194,
+              "sharpe": 0.0555
+            }
+          },
+          "convention": "entry at first evaluation bar open, zero costs, same ohlcv artifact"
+        }
+      }
+    },
+    "wilder": {
+      "run": "st0009-hk-wilder",
+      "evaluation_window": [
+        "2016-09-09",
+        "2026-11-26"
+      ],
+      "engine_metrics": {
+        "total_return": 0.4045086006424061,
+        "annual_return": 0.0346221436098121,
+        "max_drawdown": -0.6903269011673708,
+        "sharpe": 0.2656593680120361,
+        "calmar": 0.0502,
+        "trade_count": 20.0,
+        "profit_factor": 1.2805,
+        "win_rate": 0.55,
+        "avg_holding_days": 214.5,
+        "benchmark_return": 0.820598,
+        "benchmark_kind": "equal_weight",
+        "benchmark_label": "equal-weight basket (0700.HK)",
+        "rebalance_executed_bars": 38.0,
+        "dropped_target_adjustment_count": 0.0,
+        "position_adjustment": "rebalance",
+        "rebalance_tolerance": 0.0
+      },
+      "strategy_subperiods": {
+        "first_half": {
+          "start": "2016-09-09",
+          "end": "2021-10-18",
+          "total_return": 0.850146,
+          "cagr": 0.128056,
+          "max_drawdown": -0.403693,
+          "sharpe": 0.5887
+        },
+        "second_half": {
+          "start": "2021-10-18",
+          "end": "2026-11-26",
+          "total_return": -0.236351,
+          "cagr": -0.051439,
+          "max_drawdown": -0.573703,
+          "sharpe": 0.034
+        }
+      },
+      "strategy_year_returns": {
+        "2016": -0.112145,
+        "2017": 1.057013,
+        "2018": -0.281251,
+        "2019": 0.22864,
+        "2020": 0.365486,
+        "2021": -0.236444,
+        "2022": -0.217844,
+        "2023": -0.095921,
+        "2024": 0.417032,
+        "2025": 0.383948,
+        "2026": -0.43973
+      },
+      "benchmarks_buy_and_hold": {
+        "0700.HK": {
+          "total_return": 0.827411,
+          "cagr": 0.060815,
+          "max_drawdown": -0.727956,
+          "sharpe": 0.3466,
+          "subperiods": {
+            "first_half": {
+              "start": "2016-09-09",
+              "end": "2021-10-18",
+              "total_return": 1.356875,
+              "cagr": 0.182824,
+              "max_drawdown": -0.467368,
+              "sharpe": 0.6823
+            },
+            "second_half": {
+              "start": "2021-10-18",
+              "end": "2026-11-26",
+              "total_return": -0.224647,
+              "cagr": -0.048609,
+              "max_drawdown": -0.59194,
+              "sharpe": 0.0555
+            }
+          },
+          "convention": "entry at first evaluation bar open, zero costs, same ohlcv artifact"
+        }
+      }
+    },
+    "sma_vs_wilder_delta_total_return": 0.151029,
+    "data_identity_prep_vs_artifact": true,
+    "flip_dates_match_mask_on_artifact_data": true,
+    "fills_outside_mask_and_terminal": [],
+    "expansion_fraction_of_eval_bars": 0.1602,
+    "drawdown_strategy_vs_bh": {
+      "strategy_sma": -0.6907947649216215,
+      "strategy_wilder": -0.6903269011673708,
+      "buy_and_hold": -0.727956
+    },
+    "window_2022": {
+      "strategy_sma": {
+        "start": "2022-01-03",
+        "end": "2022-12-30",
+        "total_return": -0.199771,
+        "cagr": -0.201868,
+        "max_drawdown": -0.555442,
+        "sharpe": -0.189
+      },
+      "bh": {
+        "start": "2022-01-03",
+        "end": "2022-12-30",
+        "total_return": -0.237944,
+        "cagr": -0.240378,
+        "max_drawdown": -0.583413,
+        "sharpe": -0.253
+      }
+    },
+    "warmup_note": "warmup_bars=500 deducted; ATR percentile needs 500 defined ATR20 values (first defined bar 519); undefined-signal bars hold 1.0 per entry"
+  },
+  "crypto": {
+    "sma": {
+      "run": "st0009-crypto-sma",
+      "evaluation_window": [
+        "2019-04-15",
+        "2026-11-24"
+      ],
+      "engine_metrics": {
+        "total_return": 9.788744954916872,
+        "annual_return": 0.3663913770012577,
+        "max_drawdown": -0.7639531813416353,
+        "sharpe": 0.8435537996377891,
+        "calmar": 0.4796,
+        "trade_count": 12.0,
+        "profit_factor": 4.8791,
+        "win_rate": 0.9166666666666666,
+        "avg_holding_days": 381.8,
+        "benchmark_return": 10.364547,
+        "benchmark_kind": "equal_weight",
+        "benchmark_label": "equal-weight basket (BTC-USDT)",
+        "rebalance_executed_bars": 22.0,
+        "dropped_target_adjustment_count": 0.0,
+        "position_adjustment": "rebalance",
+        "rebalance_tolerance": 0.0
+      },
+      "strategy_subperiods": {
+        "first_half": {
+          "start": "2019-04-15",
+          "end": "2023-02-03",
+          "total_return": 3.651807,
+          "cagr": 0.497721,
+          "max_drawdown": -0.763953,
+          "sharpe": 0.9511
+        },
+        "second_half": {
+          "start": "2023-02-03",
+          "end": "2026-11-24",
+          "total_return": 1.351784,
+          "cagr": 0.251965,
+          "max_drawdown": -0.53398,
+          "sharpe": 0.732
+        }
+      },
+      "strategy_year_returns": {
+        "2019": 0.610768,
+        "2020": 2.945262,
+        "2021": 0.377726,
+        "2022": -0.65023,
+        "2023": 1.55641,
+        "2024": 0.976348,
+        "2025": -0.087508,
+        "2026": -0.348487
+      },
+      "benchmarks_buy_and_hold": {
+        "BTC-USDT": {
+          "total_return": 10.506657,
+          "cagr": 0.378455,
+          "max_drawdown": -0.763953,
+          "sharpe": 0.8385,
+          "subperiods": {
+            "first_half": {
+              "start": "2019-04-15",
+              "end": "2023-02-03",
+              "total_return": 3.619317,
+              "cagr": 0.494965,
+              "max_drawdown": -0.763953,
+              "sharpe": 0.9229
+            },
+            "second_half": {
+              "start": "2023-02-03",
+              "end": "2026-11-24",
+              "total_return": 1.490986,
+              "cagr": 0.271026,
+              "max_drawdown": -0.53328,
+              "sharpe": 0.7611
+            }
+          },
+          "convention": "entry at first evaluation bar open, zero costs, same ohlcv artifact"
+        }
+      }
+    },
+    "wilder": {
+      "run": "st0009-crypto-wilder",
+      "evaluation_window": [
+        "2019-04-15",
+        "2026-11-24"
+      ],
+      "engine_metrics": {
+        "total_return": 9.21457655363669,
+        "annual_return": 0.3566190309024353,
+        "max_drawdown": -0.7639531820238105,
+        "sharpe": 0.8319219453928771,
+        "calmar": 0.4668,
+        "trade_count": 15.0,
+        "profit_factor": 3.7404,
+        "win_rate": 0.7333333333333333,
+        "avg_holding_days": 303.8,
+        "benchmark_return": 10.364547,
+        "benchmark_kind": "equal_weight",
+        "benchmark_label": "equal-weight basket (BTC-USDT)",
+        "rebalance_executed_bars": 28.0,
+        "dropped_target_adjustment_count": 0.0,
+        "position_adjustment": "rebalance",
+        "rebalance_tolerance": 0.0
+      },
+      "strategy_subperiods": {
+        "first_half": {
+          "start": "2019-04-15",
+          "end": "2023-02-03",
+          "total_return": 3.422825,
+          "cagr": 0.477986,
+          "max_drawdown": -0.763953,
+          "sharpe": 0.9322
+        },
+        "second_half": {
+          "start": "2023-02-03",
+          "end": "2026-11-24",
+          "total_return": 1.341903,
+          "cagr": 0.25058,
+          "max_drawdown": -0.53398,
+          "sharpe": 0.7304
+        }
+      },
+      "strategy_year_returns": {
+        "2019": 0.585841,
+        "2020": 2.881711,
+        "2021": 0.35228,
+        "2022": -0.65023,
+        "2023": 1.55641,
+        "2024": 0.968044,
+        "2025": -0.087508,
+        "2026": -0.348487
+      },
+      "benchmarks_buy_and_hold": {
+        "BTC-USDT": {
+          "total_return": 10.506657,
+          "cagr": 0.378455,
+          "max_drawdown": -0.763953,
+          "sharpe": 0.8385,
+          "subperiods": {
+            "first_half": {
+              "start": "2019-04-15",
+              "end": "2023-02-03",
+              "total_return": 3.619317,
+              "cagr": 0.494965,
+              "max_drawdown": -0.763953,
+              "sharpe": 0.9229
+            },
+            "second_half": {
+              "start": "2023-02-03",
+              "end": "2026-11-24",
+              "total_return": 1.490986,
+              "cagr": 0.271026,
+              "max_drawdown": -0.53328,
+              "sharpe": 0.7611
+            }
+          },
+          "convention": "entry at first evaluation bar open, zero costs, same ohlcv artifact"
+        }
+      }
+    },
+    "sma_vs_wilder_delta_total_return": 0.574168,
+    "data_identity_prep_vs_artifact": true,
+    "flip_dates_match_mask_on_artifact_data": true,
+    "fills_outside_mask_and_terminal": [],
+    "expansion_fraction_of_eval_bars": 0.1018,
+    "drawdown_strategy_vs_bh": {
+      "strategy_sma": -0.7639531813416353,
+      "strategy_wilder": -0.7639531820238105,
+      "buy_and_hold": -0.763953
+    },
+    "window_2022": {
+      "strategy_sma": {
+        "start": "2022-01-01",
+        "end": "2022-12-31",
+        "total_return": -0.65023,
+        "cagr": -0.65149,
+        "max_drawdown": -0.659924,
+        "sharpe": -1.4314
+      },
+      "bh": {
+        "start": "2022-01-01",
+        "end": "2022-12-31",
+        "total_return": -0.65023,
+        "cagr": -0.65149,
+        "max_drawdown": -0.659924,
+        "sharpe": -1.4314
+      }
+    },
+    "warmup_note": "warmup_bars=500 deducted; ATR percentile needs 500 defined ATR20 values (first defined bar 519); undefined-signal bars hold 1.0 per entry"
+  }
+}

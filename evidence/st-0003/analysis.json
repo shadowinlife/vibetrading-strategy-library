@@ -1,0 +1,298 @@
+{
+  "run": "st0003-gtaa",
+  "evaluation_window": [
+    "2014-09-02",
+    "2026-11-25"
+  ],
+  "engine_metrics": {
+    "total_return": 0.7216794234817008,
+    "annual_return": 0.045484819619493,
+    "max_drawdown": -0.1242422418892472,
+    "sharpe": 0.6355931949575496,
+    "calmar": 0.3661,
+    "trade_count": 66.0,
+    "profit_factor": 2.8974,
+    "win_rate": 0.3939393939393939,
+    "avg_holding_days": 154.7,
+    "benchmark_return": 1.068466,
+    "benchmark_kind": "equal_weight",
+    "benchmark_label": "equal-weight basket of 5 symbols",
+    "rebalance_executed_bars": 0.0,
+    "dropped_target_adjustment_count": 0.0,
+    "position_adjustment": "hold",
+    "rebalance_tolerance": 0.0
+  },
+  "strategy_subperiods": {
+    "first_half": {
+      "start": "2014-09-02",
+      "end": "2020-10-13",
+      "total_return": 0.097652,
+      "cagr": 0.015357,
+      "max_drawdown": -0.094016,
+      "sharpe": 0.2756
+    },
+    "second_half": {
+      "start": "2020-10-14",
+      "end": "2026-11-25",
+      "total_return": 0.57283,
+      "cagr": 0.076889,
+      "max_drawdown": -0.124242,
+      "sharpe": 0.9201
+    }
+  },
+  "strategy_year_returns": {
+    "2014": 0.017504,
+    "2015": -0.041457,
+    "2016": 0.01313,
+    "2017": 0.102524,
+    "2018": -0.027477,
+    "2019": 0.044133,
+    "2020": 0.047452,
+    "2021": 0.251635,
+    "2022": -0.044531,
+    "2023": 0.016236,
+    "2024": 0.057732,
+    "2025": 0.089475,
+    "2026": 0.072035
+  },
+  "benchmarks_buy_and_hold": {
+    "SPY.US": {
+      "total_return": 3.380168,
+      "cagr": 0.128372,
+      "max_drawdown": -0.337173,
+      "sharpe": 0.7787,
+      "subperiods": {
+        "first_half": {
+          "start": "2014-09-02",
+          "end": "2020-10-13",
+          "total_return": 0.973603,
+          "cagr": 0.117623,
+          "max_drawdown": -0.337173,
+          "sharpe": 0.7034
+        },
+        "second_half": {
+          "start": "2020-10-14",
+          "end": "2026-11-25",
+          "total_return": 1.23341,
+          "cagr": 0.140461,
+          "max_drawdown": -0.244964,
+          "sharpe": 0.8678
+        }
+      },
+      "convention": "entry at first evaluation bar open, zero costs, same ohlcv artifact"
+    },
+    "GSG.US": {
+      "total_return": 0.04987,
+      "cagr": 0.003987,
+      "max_drawdown": -0.74624,
+      "sharpe": 0.1301,
+      "subperiods": {
+        "first_half": {
+          "start": "2014-09-02",
+          "end": "2020-10-13",
+          "total_return": -0.646373,
+          "cagr": -0.156362,
+          "max_drawdown": -0.74624,
+          "sharpe": -0.6536
+        },
+        "second_half": {
+          "start": "2020-10-14",
+          "end": "2026-11-25",
+          "total_return": 1.939256,
+          "cagr": 0.192859,
+          "max_drawdown": -0.291192,
+          "sharpe": 0.9034
+        }
+      },
+      "convention": "entry at first evaluation bar open, zero costs, same ohlcv artifact"
+    },
+    "VNQ.US": {
+      "total_return": 1.018526,
+      "cagr": 0.059111,
+      "max_drawdown": -0.423982,
+      "sharpe": 0.3886,
+      "subperiods": {
+        "first_half": {
+          "start": "2014-09-02",
+          "end": "2020-10-13",
+          "total_return": 0.374873,
+          "cagr": 0.053454,
+          "max_drawdown": -0.423982,
+          "sharpe": 0.3515
+        },
+        "second_half": {
+          "start": "2020-10-14",
+          "end": "2026-11-25",
+          "total_return": 0.486284,
+          "cagr": 0.066966,
+          "max_drawdown": -0.344785,
+          "sharpe": 0.4458
+        }
+      },
+      "convention": "entry at first evaluation bar open, zero costs, same ohlcv artifact"
+    },
+    "EFA.US": {
+      "total_return": 1.106107,
+      "cagr": 0.062796,
+      "max_drawdown": -0.341934,
+      "sharpe": 0.4419,
+      "subperiods": {
+        "first_half": {
+          "start": "2014-09-02",
+          "end": "2020-10-13",
+          "total_return": 0.157743,
+          "cagr": 0.024248,
+          "max_drawdown": -0.341934,
+          "sharpe": 0.2243
+        },
+        "second_half": {
+          "start": "2020-10-14",
+          "end": "2026-11-25",
+          "total_return": 0.822218,
+          "cagr": 0.103129,
+          "max_drawdown": -0.295318,
+          "sharpe": 0.6847
+        }
+      },
+      "convention": "entry at first evaluation bar open, zero costs, same ohlcv artifact"
+    },
+    "IEF.US": {
+      "total_return": 0.168793,
+      "cagr": 0.012835,
+      "max_drawdown": -0.239248,
+      "sharpe": 0.2287,
+      "subperiods": {
+        "first_half": {
+          "start": "2014-09-02",
+          "end": "2020-10-13",
+          "total_return": 0.307306,
+          "cagr": 0.044806,
+          "max_drawdown": -0.088175,
+          "sharpe": 0.8104
+        },
+        "second_half": {
+          "start": "2020-10-14",
+          "end": "2026-11-25",
+          "total_return": -0.106247,
+          "cagr": -0.018205,
+          "max_drawdown": -0.23022,
+          "sharpe": -0.2157
+        }
+      },
+      "convention": "entry at first evaluation bar open, zero costs, same ohlcv artifact"
+    }
+  },
+  "benchmark_ew_monthly_rebalanced": {
+    "engine_metrics": {
+      "total_return": 1.039827809889739,
+      "annual_return": 0.0601000059483616,
+      "max_drawdown": -0.2815870586448509,
+      "sharpe": 0.5568204469669492,
+      "calmar": 0.2134,
+      "trade_count": 366.0,
+      "profit_factor": 13.5066,
+      "win_rate": 0.8114754098360656,
+      "avg_holding_days": 949.4,
+      "benchmark_return": 1.068574,
+      "benchmark_kind": "equal_weight",
+      "benchmark_label": "equal-weight basket of 5 symbols",
+      "rebalance_executed_bars": 146.0,
+      "dropped_target_adjustment_count": 0.0,
+      "position_adjustment": "rebalance",
+      "rebalance_tolerance": 0.0
+    },
+    "subperiods": {
+      "first_half": {
+        "start": "2014-09-02",
+        "end": "2020-10-13",
+        "total_return": 0.132162,
+        "cagr": 0.020511,
+        "max_drawdown": -0.281587,
+        "sharpe": 0.2259
+      },
+      "second_half": {
+        "start": "2020-10-14",
+        "end": "2026-11-25",
+        "total_return": 0.810467,
+        "cagr": 0.101962,
+        "max_drawdown": -0.187451,
+        "sharpe": 0.9454
+      }
+    },
+    "year_returns": {
+      "2014": -0.056177,
+      "2015": -0.063187,
+      "2016": 0.08089,
+      "2017": 0.113749,
+      "2018": -0.073279,
+      "2019": 0.216964,
+      "2020": 0.018858,
+      "2021": 0.237979,
+      "2022": -0.10432,
+      "2023": 0.113529,
+      "2024": 0.088005,
+      "2025": 0.132915,
+      "2026": 0.122812
+    }
+  },
+  "window_2022": {
+    "strategy": {
+      "start": "2022-01-03",
+      "end": "2022-12-30",
+      "total_return": -0.044531,
+      "cagr": -0.045044,
+      "max_drawdown": -0.106365,
+      "sharpe": -0.4008
+    },
+    "ew_benchmark": {
+      "start": "2022-01-03",
+      "end": "2022-12-30",
+      "total_return": -0.10432,
+      "cagr": -0.105481,
+      "max_drawdown": -0.187451,
+      "sharpe": -0.6012
+    },
+    "bh_SPY.US": {
+      "start": "2022-01-03",
+      "end": "2022-12-30",
+      "total_return": -0.186464,
+      "cagr": -0.188438,
+      "max_drawdown": -0.244964,
+      "sharpe": -0.7353
+    },
+    "bh_GSG.US": {
+      "start": "2022-01-03",
+      "end": "2022-12-30",
+      "total_return": 0.235739,
+      "cagr": 0.238822,
+      "max_drawdown": -0.245634,
+      "sharpe": 0.8313
+    },
+    "bh_VNQ.US": {
+      "start": "2022-01-03",
+      "end": "2022-12-30",
+      "total_return": -0.256681,
+      "cagr": -0.259272,
+      "max_drawdown": -0.323381,
+      "sharpe": -1.0835
+    },
+    "bh_EFA.US": {
+      "start": "2022-01-03",
+      "end": "2022-12-30",
+      "total_return": -0.149373,
+      "cagr": -0.150992,
+      "max_drawdown": -0.287362,
+      "sharpe": -0.6144
+    },
+    "bh_IEF.US": {
+      "start": "2022-01-03",
+      "end": "2022-12-30",
+      "total_return": -0.143584,
+      "cagr": -0.145145,
+      "max_drawdown": -0.174109,
+      "sharpe": -1.4838
+    }
+  },
+  "avg_target_invested_fraction": 0.6636,
+  "cash_yield_assumption": 0.0
+}
