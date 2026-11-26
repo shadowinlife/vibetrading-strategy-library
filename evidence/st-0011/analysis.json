@@ -1,0 +1,615 @@
+{
+  "us_stateful": {
+    "run": "st0011-us-stateful",
+    "evaluation_window": [
+      "2014-09-02",
+      "2026-11-25"
+    ],
+    "engine_metrics": {
+      "total_return": -0.1975809033119329,
+      "annual_return": -0.0178604451675231,
+      "max_drawdown": -0.2650588292901981,
+      "sharpe": -0.2875158765425853,
+      "calmar": -0.0674,
+      "trade_count": 104.0,
+      "profit_factor": 0.8215,
+      "win_rate": 0.5192307692307693,
+      "avg_holding_days": 27.9,
+      "avg_turnover": 0.0171,
+      "total_turnover": 52.634372,
+      "benchmark_return": 1.872914,
+      "rebalance_executed_bars": 0.0,
+      "dropped_target_adjustment_count": 0.0,
+      "position_adjustment": "rebalance",
+      "rebalance_tolerance": 0.0,
+      "unfilled_plan_rejections": 0.0
+    },
+    "strategy_subperiods": {
+      "first_half": {
+        "start": "2014-09-02",
+        "end": "2020-10-13",
+        "total_return": 0.010508,
+        "cagr": 0.001711,
+        "max_drawdown": -0.121648,
+        "sharpe": 0.0585
+      },
+      "second_half": {
+        "start": "2020-10-14",
+        "end": "2026-11-25",
+        "total_return": -0.205925,
+        "cagr": -0.037013,
+        "max_drawdown": -0.265059,
+        "sharpe": -0.6171
+      }
+    },
+    "strategy_year_returns": {
+      "2014": 0.024782,
+      "2015": 0.019355,
+      "2016": -0.020444,
+      "2017": -0.026628,
+      "2018": 0.027467,
+      "2019": -0.029016,
+      "2020": 0.034255,
+      "2021": 0.030178,
+      "2022": -0.065622,
+      "2023": 0.000885,
+      "2024": 0.028289,
+      "2025": -0.104325,
+      "2026": -0.124974
+    },
+    "benchmarks_buy_and_hold": {
+      "KO.US": {
+        "total_return": 2.428573,
+        "cagr": 0.105998,
+        "max_drawdown": -0.369875,
+        "sharpe": 0.6536,
+        "subperiods": {
+          "first_half": {
+            "start": "2014-09-02",
+            "end": "2020-10-13",
+            "total_return": 0.477449,
+            "cagr": 0.065926,
+            "max_drawdown": -0.369875,
+            "sharpe": 0.4321
+          },
+          "second_half": {
+            "start": "2020-10-14",
+            "end": "2026-11-25",
+            "total_return": 1.325235,
+            "cagr": 0.148002,
+            "max_drawdown": -0.172748,
+            "sharpe": 0.9097
+          }
+        },
+        "convention": "entry at first evaluation bar open, zero costs, same ohlcv artifact"
+      },
+      "PEP.US": {
+        "total_return": 1.261732,
+        "cagr": 0.069009,
+        "max_drawdown": -0.303227,
+        "sharpe": 0.4448,
+        "subperiods": {
+          "first_half": {
+            "start": "2014-09-02",
+            "end": "2020-10-13",
+            "total_return": 0.862879,
+            "cagr": 0.107118,
+            "max_drawdown": -0.288171,
+            "sharpe": 0.6141
+          },
+          "second_half": {
+            "start": "2020-10-14",
+            "end": "2026-11-25",
+            "total_return": 0.222795,
+            "cagr": 0.033447,
+            "max_drawdown": -0.303227,
+            "sharpe": 0.2706
+          }
+        },
+        "convention": "entry at first evaluation bar open, zero costs, same ohlcv artifact"
+      }
+    },
+    "pair_roundtrip_stats": {
+      "n_roundtrips": 52,
+      "mean_pair_return": -0.003887,
+      "t_vs_zero": -1.0886,
+      "p": 0.281437,
+      "win_rate": 0.5769,
+      "note": "one pair position at a time -> roundtrips sequential and non-overlapping; pair return = mean of two leg returns (50/50); borrow/funding costs NOT included"
+    },
+    "state_occupancy": {
+      "long_pair_fraction": 0.1894,
+      "short_pair_fraction": 0.282,
+      "flat_fraction": 0.5286
+    },
+    "fills_outside_mask_and_terminal": [],
+    "data_identity_prep_vs_artifact": {
+      "KO.US": true,
+      "PEP.US": true
+    },
+    "flip_dates_match_mask_on_artifact_data": true,
+    "n_signal_flips": 116,
+    "forced_exit_60bar_count": 6,
+    "total_exit_signals": 57
+  },
+  "us_stateless": {
+    "run": "st0011-us-stateless",
+    "evaluation_window": [
+      "2014-09-02",
+      "2026-11-25"
+    ],
+    "engine_metrics": {
+      "total_return": 0.0081371504817353,
+      "annual_return": 0.0006637237538162,
+      "max_drawdown": -0.1106500715531615,
+      "sharpe": 0.0364122815041221,
+      "calmar": 0.006,
+      "trade_count": 230.0,
+      "profit_factor": 1.0085,
+      "win_rate": 0.5304347826086957,
+      "avg_holding_days": 3.8,
+      "avg_turnover": 0.037398,
+      "total_turnover": 115.110352,
+      "benchmark_return": 1.872914,
+      "rebalance_executed_bars": 0.0,
+      "dropped_target_adjustment_count": 0.0,
+      "position_adjustment": "rebalance",
+      "rebalance_tolerance": 0.0,
+      "unfilled_plan_rejections": 0.0
+    },
+    "strategy_subperiods": {
+      "first_half": {
+        "start": "2014-09-02",
+        "end": "2020-10-13",
+        "total_return": 0.016543,
+        "cagr": 0.002687,
+        "max_drawdown": -0.057169,
+        "sharpe": 0.0929
+      },
+      "second_half": {
+        "start": "2020-10-14",
+        "end": "2026-11-25",
+        "total_return": -0.00827,
+        "cagr": -0.001357,
+        "max_drawdown": -0.11065,
+        "sharpe": -0.0245
+      }
+    },
+    "strategy_year_returns": {
+      "2014": 0.017035,
+      "2015": 0.03179,
+      "2016": -0.005882,
+      "2017": -0.005581,
+      "2018": -0.013246,
+      "2019": -0.02038,
+      "2020": 0.034748,
+      "2021": 0.020252,
+      "2022": -0.020355,
+      "2023": -0.009819,
+      "2024": -0.00235,
+      "2025": -0.032863,
+      "2026": 0.017309
+    },
+    "benchmarks_buy_and_hold": {
+      "KO.US": {
+        "total_return": 2.428573,
+        "cagr": 0.105998,
+        "max_drawdown": -0.369875,
+        "sharpe": 0.6536,
+        "subperiods": {
+          "first_half": {
+            "start": "2014-09-02",
+            "end": "2020-10-13",
+            "total_return": 0.477449,
+            "cagr": 0.065926,
+            "max_drawdown": -0.369875,
+            "sharpe": 0.4321
+          },
+          "second_half": {
+            "start": "2020-10-14",
+            "end": "2026-11-25",
+            "total_return": 1.325235,
+            "cagr": 0.148002,
+            "max_drawdown": -0.172748,
+            "sharpe": 0.9097
+          }
+        },
+        "convention": "entry at first evaluation bar open, zero costs, same ohlcv artifact"
+      },
+      "PEP.US": {
+        "total_return": 1.261732,
+        "cagr": 0.069009,
+        "max_drawdown": -0.303227,
+        "sharpe": 0.4448,
+        "subperiods": {
+          "first_half": {
+            "start": "2014-09-02",
+            "end": "2020-10-13",
+            "total_return": 0.862879,
+            "cagr": 0.107118,
+            "max_drawdown": -0.288171,
+            "sharpe": 0.6141
+          },
+          "second_half": {
+            "start": "2020-10-14",
+            "end": "2026-11-25",
+            "total_return": 0.222795,
+            "cagr": 0.033447,
+            "max_drawdown": -0.303227,
+            "sharpe": 0.2706
+          }
+        },
+        "convention": "entry at first evaluation bar open, zero costs, same ohlcv artifact"
+      }
+    },
+    "pair_roundtrip_stats": {
+      "n_roundtrips": 115,
+      "mean_pair_return": 0.00011,
+      "t_vs_zero": 0.1368,
+      "p": 0.891444,
+      "win_rate": 0.5217,
+      "note": "one pair position at a time -> roundtrips sequential and non-overlapping; pair return = mean of two leg returns (50/50); borrow/funding costs NOT included"
+    },
+    "state_occupancy": {
+      "long_pair_fraction": 0.0595,
+      "short_pair_fraction": 0.0835,
+      "flat_fraction": 0.8571
+    },
+    "fills_outside_mask_and_terminal": [],
+    "data_identity_prep_vs_artifact": {
+      "KO.US": true,
+      "PEP.US": true
+    },
+    "flip_dates_match_mask_on_artifact_data": true,
+    "n_signal_flips": 250
+  },
+  "crypto_stateful": {
+    "run": "st0011-crypto-stateful",
+    "evaluation_window": [
+      "2018-01-30",
+      "2026-11-24"
+    ],
+    "engine_metrics": {
+      "total_return": -0.6658049760303772,
+      "annual_return": -0.1167976267500873,
+      "max_drawdown": -0.6823796659462275,
+      "sharpe": -0.4528187312470085,
+      "calmar": -0.1712,
+      "trade_count": 94.0,
+      "profit_factor": 0.7953,
+      "win_rate": 0.5,
+      "avg_holding_days": 32.3,
+      "avg_turnover": 0.015012,
+      "total_turnover": 48.352766,
+      "benchmark_return": 2.601692,
+      "rebalance_executed_bars": 0.0,
+      "dropped_target_adjustment_count": 0.0,
+      "position_adjustment": "rebalance",
+      "rebalance_tolerance": 0.0,
+      "unfilled_plan_rejections": 0.0
+    },
+    "strategy_subperiods": {
+      "first_half": {
+        "start": "2018-01-30",
+        "end": "2022-06-28",
+        "total_return": -0.43329,
+        "cagr": -0.120883,
+        "max_drawdown": -0.630011,
+        "sharpe": -0.3323
+      },
+      "second_half": {
+        "start": "2022-06-28",
+        "end": "2026-11-24",
+        "total_return": -0.410289,
+        "cagr": -0.112913,
+        "max_drawdown": -0.507974,
+        "sharpe": -0.732
+      }
+    },
+    "strategy_year_returns": {
+      "2018": -0.283068,
+      "2019": -0.016762,
+      "2020": -0.157986,
+      "2021": 0.070895,
+      "2022": -0.083173,
+      "2023": 0.006727,
+      "2024": 0.045015,
+      "2025": -0.33517,
+      "2026": -0.119349
+    },
+    "benchmarks_buy_and_hold": {
+      "BTC-USDT": {
+        "total_return": 4.817178,
+        "cagr": 0.221076,
+        "max_drawdown": -0.763953,
+        "sharpe": 0.6331,
+        "subperiods": {
+          "first_half": {
+            "start": "2018-01-30",
+            "end": "2022-06-28",
+            "total_return": 1.003201,
+            "cagr": 0.170712,
+            "max_drawdown": -0.724322,
+            "sharpe": 0.5823
+          },
+          "second_half": {
+            "start": "2022-06-28",
+            "end": "2026-11-24",
+            "total_return": 1.903942,
+            "cagr": 0.273606,
+            "max_drawdown": -0.53328,
+            "sharpe": 0.7584
+          }
+        },
+        "convention": "entry at first evaluation bar open, zero costs, same ohlcv artifact"
+      },
+      "ETH-USDT": {
+        "total_return": 0.495533,
+        "cagr": 0.046712,
+        "max_drawdown": -0.925427,
+        "sharpe": 0.4532,
+        "subperiods": {
+          "first_half": {
+            "start": "2018-01-30",
+            "end": "2022-06-28",
+            "total_return": 0.010758,
+            "cagr": 0.002431,
+            "max_drawdown": -0.925427,
+            "sharpe": 0.4709
+          },
+          "second_half": {
+            "start": "2022-06-28",
+            "end": "2026-11-24",
+            "total_return": 0.479614,
+            "cagr": 0.09295,
+            "max_drawdown": -0.674785,
+            "sharpe": 0.45
+          }
+        },
+        "convention": "entry at first evaluation bar open, zero costs, same ohlcv artifact"
+      }
+    },
+    "pair_roundtrip_stats": {
+      "n_roundtrips": 47,
+      "mean_pair_return": -0.018043,
+      "t_vs_zero": -1.6718,
+      "p": 0.101357,
+      "win_rate": 0.5319,
+      "note": "one pair position at a time -> roundtrips sequential and non-overlapping; pair return = mean of two leg returns (50/50); borrow/funding costs NOT included"
+    },
+    "state_occupancy": {
+      "long_pair_fraction": 0.1475,
+      "short_pair_fraction": 0.3244,
+      "flat_fraction": 0.5281
+    },
+    "fills_outside_mask_and_terminal": [],
+    "data_identity_prep_vs_artifact": {
+      "BTC-USDT": true,
+      "ETH-USDT": true
+    },
+    "flip_dates_match_mask_on_artifact_data": true,
+    "n_signal_flips": 93,
+    "forced_exit_60bar_count": 6,
+    "total_exit_signals": 46
+  },
+  "crypto_stateless": {
+    "run": "st0011-crypto-stateless",
+    "evaluation_window": [
+      "2018-01-30",
+      "2026-11-24"
+    ],
+    "engine_metrics": {
+      "total_return": -0.6924150008745065,
+      "annual_return": -0.1250629605209825,
+      "max_drawdown": -0.7066799234189867,
+      "sharpe": -1.0808102541707263,
+      "calmar": -0.177,
+      "trade_count": 202.0,
+      "profit_factor": 0.7122,
+      "win_rate": 0.504950495049505,
+      "avg_holding_days": 5.0,
+      "avg_turnover": 0.031785,
+      "total_turnover": 102.380483,
+      "benchmark_return": 2.601692,
+      "rebalance_executed_bars": 0.0,
+      "dropped_target_adjustment_count": 0.0,
+      "position_adjustment": "rebalance",
+      "rebalance_tolerance": 0.0,
+      "unfilled_plan_rejections": 0.0
+    },
+    "strategy_subperiods": {
+      "first_half": {
+        "start": "2018-01-30",
+        "end": "2022-06-28",
+        "total_return": -0.613641,
+        "cagr": -0.194059,
+        "max_drawdown": -0.623071,
+        "sharpe": -1.376
+      },
+      "second_half": {
+        "start": "2022-06-28",
+        "end": "2026-11-24",
+        "total_return": -0.203888,
+        "cagr": -0.050413,
+        "max_drawdown": -0.260727,
+        "sharpe": -0.6677
+      }
+    },
+    "strategy_year_returns": {
+      "2018": -0.247425,
+      "2019": -0.044759,
+      "2020": -0.225043,
+      "2021": -0.270985,
+      "2022": -0.017876,
+      "2023": -0.101381,
+      "2024": -0.003706,
+      "2025": -0.114438,
+      "2026": -0.027387
+    },
+    "benchmarks_buy_and_hold": {
+      "BTC-USDT": {
+        "total_return": 4.817178,
+        "cagr": 0.221076,
+        "max_drawdown": -0.763953,
+        "sharpe": 0.6331,
+        "subperiods": {
+          "first_half": {
+            "start": "2018-01-30",
+            "end": "2022-06-28",
+            "total_return": 1.003201,
+            "cagr": 0.170712,
+            "max_drawdown": -0.724322,
+            "sharpe": 0.5823
+          },
+          "second_half": {
+            "start": "2022-06-28",
+            "end": "2026-11-24",
+            "total_return": 1.903942,
+            "cagr": 0.273606,
+            "max_drawdown": -0.53328,
+            "sharpe": 0.7584
+          }
+        },
+        "convention": "entry at first evaluation bar open, zero costs, same ohlcv artifact"
+      },
+      "ETH-USDT": {
+        "total_return": 0.495533,
+        "cagr": 0.046712,
+        "max_drawdown": -0.925427,
+        "sharpe": 0.4532,
+        "subperiods": {
+          "first_half": {
+            "start": "2018-01-30",
+            "end": "2022-06-28",
+            "total_return": 0.010758,
+            "cagr": 0.002431,
+            "max_drawdown": -0.925427,
+            "sharpe": 0.4709
+          },
+          "second_half": {
+            "start": "2022-06-28",
+            "end": "2026-11-24",
+            "total_return": 0.479614,
+            "cagr": 0.09295,
+            "max_drawdown": -0.674785,
+            "sharpe": 0.45
+          }
+        },
+        "convention": "entry at first evaluation bar open, zero costs, same ohlcv artifact"
+      }
+    },
+    "pair_roundtrip_stats": {
+      "n_roundtrips": 101,
+      "mean_pair_return": -0.008832,
+      "t_vs_zero": -2.3479,
+      "p": 0.020849,
+      "win_rate": 0.5743,
+      "note": "one pair position at a time -> roundtrips sequential and non-overlapping; pair return = mean of two leg returns (50/50); borrow/funding costs NOT included"
+    },
+    "state_occupancy": {
+      "long_pair_fraction": 0.0404,
+      "short_pair_fraction": 0.1174,
+      "flat_fraction": 0.8423
+    },
+    "fills_outside_mask_and_terminal": [],
+    "data_identity_prep_vs_artifact": {
+      "BTC-USDT": true,
+      "ETH-USDT": true
+    },
+    "flip_dates_match_mask_on_artifact_data": true,
+    "n_signal_flips": 202
+  },
+  "us_cointegration": {
+    "full_history": {
+      "n_obs": 3384,
+      "hedge_beta": 0.894227,
+      "r_squared": 0.832847,
+      "adf_t_residual": 0.264,
+      "adf_lag_aic": 0,
+      "adf_nobs": 3383,
+      "eg_critical_values": {
+        "1pct": -3.337,
+        "5pct": -2.782,
+        "10pct": -2.486
+      },
+      "cointegrated_at_5pct": false,
+      "note": "manual Engle-Granger; asymptotic EG critical values (2 vars, constant); statsmodels unavailable in venv",
+      "window": [
+        "2013-06-03",
+        "2026-11-25"
+      ]
+    },
+    "evaluation_window": {
+      "n_obs": 3076,
+      "hedge_beta": 0.94275,
+      "r_squared": 0.79958,
+      "adf_t_residual": 0.315,
+      "adf_lag_aic": 0,
+      "adf_nobs": 3075,
+      "eg_critical_values": {
+        "1pct": -3.337,
+        "5pct": -2.782,
+        "10pct": -2.486
+      },
+      "cointegrated_at_5pct": false,
+      "note": "manual Engle-Granger; asymptotic EG critical values (2 vars, constant); statsmodels unavailable in venv",
+      "window": [
+        "2014-09-02",
+        "2026-11-25"
+      ]
+    },
+    "daily_return_correlation": 0.704794,
+    "declaration": "correlation != cointegration; ratio may drift structurally (entry limitation)"
+  },
+  "crypto_cointegration": {
+    "full_history": {
+      "n_obs": 3281,
+      "hedge_beta": 0.816701,
+      "r_squared": 0.84306,
+      "adf_t_residual": -1.4221,
+      "adf_lag_aic": 4,
+      "adf_nobs": 3276,
+      "eg_critical_values": {
+        "1pct": -3.337,
+        "5pct": -2.782,
+        "10pct": -2.486
+      },
+      "cointegrated_at_5pct": false,
+      "note": "manual Engle-Granger; asymptotic EG critical values (2 vars, constant); statsmodels unavailable in venv",
+      "window": [
+        "2017-12-01",
+        "2026-11-24"
+      ]
+    },
+    "evaluation_window": {
+      "n_obs": 3221,
+      "hedge_beta": 0.816243,
+      "r_squared": 0.847079,
+      "adf_t_residual": -2.46,
+      "adf_lag_aic": 1,
+      "adf_nobs": 3219,
+      "eg_critical_values": {
+        "1pct": -3.337,
+        "5pct": -2.782,
+        "10pct": -2.486
+      },
+      "cointegrated_at_5pct": false,
+      "note": "manual Engle-Granger; asymptotic EG critical values (2 vars, constant); statsmodels unavailable in venv",
+      "window": [
+        "2018-01-30",
+        "2026-11-24"
+      ]
+    },
+    "daily_return_correlation": 0.787427,
+    "declaration": "correlation != cointegration; ratio may drift structurally (entry limitation)"
+  },
+  "semantics_delta": {
+    "us_total_return_stateful_minus_stateless": -0.205718,
+    "us_trade_count_stateful": 104.0,
+    "us_trade_count_stateless": 230.0,
+    "crypto_total_return_stateful_minus_stateless": 0.02661,
+    "crypto_trade_count_stateful": 94.0,
+    "crypto_trade_count_stateless": 202.0,
+    "declaration": "skill text state-machine vs example stateless code are different strategies; results not interchangeable"
+  }
+}

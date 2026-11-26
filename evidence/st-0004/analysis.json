@@ -1,0 +1,437 @@
+{
+  "run": "st0004-tsmom-long",
+  "evaluation_window": [
+    "2014-09-02",
+    "2026-11-25"
+  ],
+  "engine_metrics": {
+    "total_return": 1.0157716272775432,
+    "annual_return": 0.0590708655697189,
+    "max_drawdown": -0.1720497075849668,
+    "sharpe": 0.7332923900530904,
+    "calmar": 0.3433,
+    "trade_count": 403.0,
+    "profit_factor": 2.7837,
+    "win_rate": 0.8014888337468983,
+    "avg_holding_days": 124.6,
+    "avg_turnover": 0.00846,
+    "total_turnover": 26.038622,
+    "benchmark_return": 1.05632,
+    "rebalance_executed_bars": 145.0,
+    "dropped_target_adjustment_count": 0.0,
+    "position_adjustment": "rebalance",
+    "rebalance_tolerance": 0.0,
+    "unfilled_plan_rejections": 0.0
+  },
+  "strategy_subperiods": {
+    "first_half": {
+      "start": "2014-09-02",
+      "end": "2020-10-13",
+      "total_return": 0.182259,
+      "cagr": 0.027764,
+      "max_drawdown": -0.163329,
+      "sharpe": 0.4051
+    },
+    "second_half": {
+      "start": "2020-10-14",
+      "end": "2026-11-25",
+      "total_return": 0.712174,
+      "cagr": 0.091946,
+      "max_drawdown": -0.17205,
+      "sharpe": 1.0183
+    }
+  },
+  "strategy_year_returns": {
+    "2014": 0.007421,
+    "2015": 0.009399,
+    "2016": 0.003473,
+    "2017": 0.148077,
+    "2018": -0.117833,
+    "2019": 0.105969,
+    "2020": 0.067541,
+    "2021": 0.151948,
+    "2022": -0.058715,
+    "2023": 0.010806,
+    "2024": 0.109685,
+    "2025": 0.215881,
+    "2026": 0.096651
+  },
+  "benchmarks_buy_and_hold": {
+    "GLD.US": {
+      "total_return": 1.691739,
+      "cagr": 0.084332,
+      "max_drawdown": -0.348921,
+      "sharpe": 0.5741,
+      "subperiods": {
+        "first_half": {
+          "start": "2014-09-02",
+          "end": "2020-10-13",
+          "total_return": 0.460912,
+          "cagr": 0.063965,
+          "max_drawdown": -0.197477,
+          "sharpe": 0.5101
+        },
+        "second_half": {
+          "start": "2020-10-14",
+          "end": "2026-11-25",
+          "total_return": 0.836821,
+          "cagr": 0.10457,
+          "max_drawdown": -0.348921,
+          "sharpe": 0.6295
+        }
+      },
+      "convention": "entry at first evaluation bar open, zero costs, same ohlcv artifact"
+    },
+    "SPY.US": {
+      "total_return": 3.380168,
+      "cagr": 0.128372,
+      "max_drawdown": -0.337173,
+      "sharpe": 0.7787,
+      "subperiods": {
+        "first_half": {
+          "start": "2014-09-02",
+          "end": "2020-10-13",
+          "total_return": 0.973603,
+          "cagr": 0.117623,
+          "max_drawdown": -0.337173,
+          "sharpe": 0.7034
+        },
+        "second_half": {
+          "start": "2020-10-14",
+          "end": "2026-11-25",
+          "total_return": 1.23341,
+          "cagr": 0.140461,
+          "max_drawdown": -0.244964,
+          "sharpe": 0.8678
+        }
+      },
+      "convention": "entry at first evaluation bar open, zero costs, same ohlcv artifact"
+    },
+    "VNQ.US": {
+      "total_return": 1.018526,
+      "cagr": 0.059111,
+      "max_drawdown": -0.423982,
+      "sharpe": 0.3886,
+      "subperiods": {
+        "first_half": {
+          "start": "2014-09-02",
+          "end": "2020-10-13",
+          "total_return": 0.374874,
+          "cagr": 0.053454,
+          "max_drawdown": -0.423982,
+          "sharpe": 0.3515
+        },
+        "second_half": {
+          "start": "2020-10-14",
+          "end": "2026-11-25",
+          "total_return": 0.486284,
+          "cagr": 0.066966,
+          "max_drawdown": -0.344785,
+          "sharpe": 0.4458
+        }
+      },
+      "convention": "entry at first evaluation bar open, zero costs, same ohlcv artifact"
+    },
+    "EFA.US": {
+      "total_return": 1.106107,
+      "cagr": 0.062796,
+      "max_drawdown": -0.341934,
+      "sharpe": 0.4419,
+      "subperiods": {
+        "first_half": {
+          "start": "2014-09-02",
+          "end": "2020-10-13",
+          "total_return": 0.157743,
+          "cagr": 0.024248,
+          "max_drawdown": -0.341934,
+          "sharpe": 0.2243
+        },
+        "second_half": {
+          "start": "2020-10-14",
+          "end": "2026-11-25",
+          "total_return": 0.822218,
+          "cagr": 0.103129,
+          "max_drawdown": -0.295318,
+          "sharpe": 0.6851
+        }
+      },
+      "convention": "entry at first evaluation bar open, zero costs, same ohlcv artifact"
+    },
+    "EEM.US": {
+      "total_return": 0.632607,
+      "cagr": 0.040894,
+      "max_drawdown": -0.398223,
+      "sharpe": 0.296,
+      "subperiods": {
+        "first_half": {
+          "start": "2014-09-02",
+          "end": "2020-10-13",
+          "total_return": 0.16769,
+          "cagr": 0.025682,
+          "max_drawdown": -0.382021,
+          "sharpe": 0.2262
+        },
+        "second_half": {
+          "start": "2020-10-14",
+          "end": "2026-11-25",
+          "total_return": 0.407629,
+          "cagr": 0.057519,
+          "max_drawdown": -0.398223,
+          "sharpe": 0.3778
+        }
+      },
+      "convention": "entry at first evaluation bar open, zero costs, same ohlcv artifact"
+    },
+    "DBC.US": {
+      "total_return": 0.403369,
+      "cagr": 0.028096,
+      "max_drawdown": -0.563715,
+      "sharpe": 0.2446,
+      "subperiods": {
+        "first_half": {
+          "start": "2014-09-02",
+          "end": "2020-10-13",
+          "total_return": -0.448053,
+          "cagr": -0.092634,
+          "max_drawdown": -0.563715,
+          "sharpe": -0.4987
+        },
+        "second_half": {
+          "start": "2020-10-14",
+          "end": "2026-11-25",
+          "total_return": 1.525401,
+          "cagr": 0.163614,
+          "max_drawdown": -0.273399,
+          "sharpe": 0.8901
+        }
+      },
+      "convention": "entry at first evaluation bar open, zero costs, same ohlcv artifact"
+    },
+    "BIL.US": {
+      "total_return": 0.262019,
+      "cagr": 0.01921,
+      "max_drawdown": -0.002086,
+      "sharpe": 7.2609,
+      "subperiods": {
+        "first_half": {
+          "start": "2014-09-02",
+          "end": "2020-10-13",
+          "total_return": 0.048872,
+          "cagr": 0.007835,
+          "max_drawdown": -0.001967,
+          "sharpe": 3.1083
+        },
+        "second_half": {
+          "start": "2020-10-14",
+          "end": "2026-11-25",
+          "total_return": 0.203215,
+          "cagr": 0.030722,
+          "max_drawdown": -0.00142,
+          "sharpe": 11.9346
+        }
+      },
+      "convention": "entry at first evaluation bar open, zero costs, same ohlcv artifact"
+    },
+    "UUP.US": {
+      "total_return": 0.603988,
+      "cagr": 0.03939,
+      "max_drawdown": -0.1424,
+      "sharpe": 0.5736,
+      "subperiods": {
+        "first_half": {
+          "start": "2014-09-02",
+          "end": "2020-10-13",
+          "total_return": 0.180051,
+          "cagr": 0.02745,
+          "max_drawdown": -0.132892,
+          "sharpe": 0.401
+        },
+        "second_half": {
+          "start": "2020-10-14",
+          "end": "2026-11-25",
+          "total_return": 0.362489,
+          "cagr": 0.051896,
+          "max_drawdown": -0.10369,
+          "sharpe": 0.7658
+        }
+      },
+      "convention": "entry at first evaluation bar open, zero costs, same ohlcv artifact"
+    },
+    "IEF.US": {
+      "total_return": 0.168793,
+      "cagr": 0.012835,
+      "max_drawdown": -0.239248,
+      "sharpe": 0.2287,
+      "subperiods": {
+        "first_half": {
+          "start": "2014-09-02",
+          "end": "2020-10-13",
+          "total_return": 0.307306,
+          "cagr": 0.044806,
+          "max_drawdown": -0.088174,
+          "sharpe": 0.8104
+        },
+        "second_half": {
+          "start": "2020-10-14",
+          "end": "2026-11-25",
+          "total_return": -0.106248,
+          "cagr": -0.018205,
+          "max_drawdown": -0.230221,
+          "sharpe": -0.2157
+        }
+      },
+      "convention": "entry at first evaluation bar open, zero costs, same ohlcv artifact"
+    }
+  },
+  "benchmark_ew_monthly_rebalanced": {
+    "engine_metrics": {
+      "total_return": 1.1295349889604784,
+      "annual_return": 0.0638419618466856,
+      "max_drawdown": -0.2042422850131691,
+      "sharpe": 0.6925041608390007,
+      "calmar": 0.3126,
+      "trade_count": 574.0,
+      "profit_factor": 30.9768,
+      "win_rate": 0.8449477351916377,
+      "avg_holding_days": 906.9,
+      "avg_turnover": 0.000946,
+      "total_turnover": 2.912555,
+      "benchmark_return": 1.171578,
+      "rebalance_executed_bars": 146.0,
+      "dropped_target_adjustment_count": 0.0,
+      "position_adjustment": "rebalance",
+      "rebalance_tolerance": 0.0,
+      "unfilled_plan_rejections": 0.0
+    },
+    "subperiods": {
+      "first_half": {
+        "start": "2014-09-02",
+        "end": "2020-10-13",
+        "total_return": 0.263279,
+        "cagr": 0.038968,
+        "max_drawdown": -0.204242,
+        "sharpe": 0.435
+      },
+      "second_half": {
+        "start": "2020-10-14",
+        "end": "2026-11-25",
+        "total_return": 0.693975,
+        "cagr": 0.090039,
+        "max_drawdown": -0.150477,
+        "sharpe": 0.979
+      }
+    },
+    "year_returns": {
+      "2014": -0.039835,
+      "2015": -0.054107,
+      "2016": 0.092859,
+      "2017": 0.114418,
+      "2018": -0.058094,
+      "2019": 0.181263,
+      "2020": 0.076403,
+      "2021": 0.140046,
+      "2022": -0.084514,
+      "2023": 0.099085,
+      "2024": 0.106001,
+      "2025": 0.187665,
+      "2026": 0.05599
+    }
+  },
+  "research_sensitivity_long_short": {
+    "engine_metrics": {
+      "total_return": -0.0550631665396021,
+      "annual_return": -0.0046262293486432,
+      "max_drawdown": -0.2966363993344148,
+      "sharpe": -0.0217233230466453,
+      "calmar": -0.0156,
+      "trade_count": 634.0,
+      "profit_factor": 0.9424,
+      "win_rate": 0.6435331230283912,
+      "avg_holding_days": 120.0,
+      "avg_turnover": 0.011152,
+      "total_turnover": 34.326158,
+      "benchmark_return": 1.05632,
+      "rebalance_executed_bars": 143.0,
+      "dropped_target_adjustment_count": 0.0,
+      "position_adjustment": "rebalance",
+      "rebalance_tolerance": 0.0,
+      "unfilled_plan_rejections": 31.0
+    },
+    "subperiods": {
+      "first_half": {
+        "start": "2014-09-02",
+        "end": "2020-10-13",
+        "total_return": -0.172677,
+        "cagr": -0.03053,
+        "max_drawdown": -0.283822,
+        "sharpe": -0.3801
+      },
+      "second_half": {
+        "start": "2020-10-14",
+        "end": "2026-11-25",
+        "total_return": 0.14141,
+        "cagr": 0.02187,
+        "max_drawdown": -0.182678,
+        "sharpe": 0.3126
+      }
+    },
+    "delta_total_return_vs_long_only": -1.070835,
+    "declaration": "research-grade sensitivity: short leg borrow cost/availability NOT modeled; not the entry's bounded version"
+  },
+  "window_2022": {
+    "strategy_long": {
+      "start": "2022-01-03",
+      "end": "2022-12-30",
+      "total_return": -0.058715,
+      "cagr": -0.059386,
+      "max_drawdown": -0.096937,
+      "sharpe": -0.6496
+    },
+    "strategy_ls": {
+      "start": "2022-01-03",
+      "end": "2022-12-30",
+      "total_return": 0.025537,
+      "cagr": 0.025842,
+      "max_drawdown": -0.101859,
+      "sharpe": 0.2821
+    },
+    "ew_benchmark": {
+      "start": "2022-01-03",
+      "end": "2022-12-30",
+      "total_return": -0.084514,
+      "cagr": -0.085465,
+      "max_drawdown": -0.150477,
+      "sharpe": -0.6652
+    },
+    "bh_SPY": {
+      "start": "2022-01-03",
+      "end": "2022-12-30",
+      "total_return": -0.186464,
+      "cagr": -0.188438,
+      "max_drawdown": -0.244964,
+      "sharpe": -0.7353
+    }
+  },
+  "avg_target_invested_fraction": 0.9709,
+  "cap_bound_months_with_cash_residual": 11,
+  "cash_yield_assumption": 0.0,
+  "data_identity_prep_vs_artifact": {
+    "GLD.US": true,
+    "SPY.US": true,
+    "VNQ.US": true,
+    "EFA.US": true,
+    "EEM.US": true,
+    "DBC.US": true,
+    "BIL.US": true,
+    "UUP.US": true,
+    "IEF.US": true
+  },
+  "monthly_diff_vs_ew_benchmark": {
+    "n_months": 146,
+    "mean_monthly_diff": -0.000455,
+    "nw_lag1_t": -0.2894,
+    "nw_lag3_t": -0.3018,
+    "naive_t": -0.2927,
+    "note": "TSMOM long-only minus 8-asset EW monthly-rebalanced benchmark; monthly non-overlapping; NW guards serial correlation"
+  }
+}
