@@ -148,9 +148,9 @@ python3 -m unittest discover -s tests -v
 ## 引导技能与镜像集成
 
 - [skills/strategy-library/SKILL.md](skills/strategy-library/SKILL.md)：镜像 agent 的查库协议，回答任何金融分析或投资类问题前先检索本库。
-- [docs/agents-patch.md](docs/agents-patch.md)：可直接插入镜像 AGENTS.md 的强制章节，覆盖路由、组合协议与状态引用纪律。
+- [docs/agents-patch.md](docs/agents-patch.md)：可直接插入镜像 AGENTS.md 的强制章节（路由义务、库位置、分工）；完整组合协议与引用纪律在 SKILL.md，补丁不重复。
 
-库位置约定：镜像内为 `/opt/strategy-library`；环境变量 `STRATEGY_LIBRARY_PATH` 存在时，以其指向的目录为库根目录。
+库位置解析顺序：① 环境变量 `STRATEGY_LIBRARY_PATH` 指向的目录；② 技能包自带的 `library/` 子目录（把本库整体放入 `skills/strategy-library/library/` 即可随技能分发，镜像 delta 构建友好）；③ 镜像约定路径 `/opt/strategy-library`。
 
 ## 诚实声明
 

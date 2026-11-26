@@ -23,10 +23,12 @@ description: |
 库位置按以下顺序确定：
 
 1. 环境变量 `STRATEGY_LIBRARY_PATH` 指向的目录。
-2. 未设置时使用镜像约定路径 `/opt/strategy-library`。
+2. 本技能包自带的 `library/` 子目录（技能加载时给出的 Base directory 下的 `library/`），存在则优先使用。
+3. 镜像约定路径 `/opt/strategy-library`。
 
 ```bash
-LIB="${STRATEGY_LIBRARY_PATH:-/opt/strategy-library}"
+LIB="${STRATEGY_LIBRARY_PATH:-<本技能 Base directory>/library}"
+[ -d "$LIB" ] || LIB=/opt/strategy-library
 cd "$LIB"
 
 python3 library.py search 拥挤 波动      # 多词 AND
