@@ -13,7 +13,7 @@
 
 - 未检索不得给出分析结论；无命中时明确记录"库中无对应条目"，再说明依据或弃权。
 - 组合协议（拆子判断→逐条检索→印证/冲突显式并列→逐条带状态引用）、状态引用纪律、数字纪律一律按 strategy-library 技能执行；冲突结论必须并列呈现，不得静默平均。
-- `candidate` / `research_only` 条目必须标注"未验证，仅供参考"。验证流水线当前挂起，不得声称做过新验证；唯一例外：escape-top 子信号两融背离(margin_divergence)/波动扩张(volatility_atr_expansion)已在镜像仓通过 7 门验证。
+- `candidate` / `research_only` 条目必须标注"未验证，仅供参考"。验证流水线已恢复（2026-11-26），条目验证状态一律以其 frontmatter 的 status 与 evidence 为准，不得声称做过 evidence 之外的验证；escape-top 子信号两融背离(margin_divergence)/波动扩张(volatility_atr_expansion)已在镜像仓通过 7 门验证。
 
 ### 库位置（解析顺序）
 

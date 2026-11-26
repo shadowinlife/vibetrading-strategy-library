@@ -1,0 +1,144 @@
+{
+  "us": {
+    "run_dir": "<run-dir-removed>",
+    "n_codes_with_data": 503,
+    "evaluation_start": "2014-08-01",
+    "evaluation_end": "2026-11-25",
+    "full": {
+      "start": "2014-08-01",
+      "end": "2026-11-25",
+      "total_return": 10.208334,
+      "cagr": 0.216765,
+      "max_drawdown": -0.356882,
+      "sharpe": 0.9355
+    },
+    "first_half": {
+      "start": "2014-08-01",
+      "end": "2020-09-25",
+      "total_return": 1.748692,
+      "cagr": 0.178637,
+      "max_drawdown": -0.356882,
+      "sharpe": 0.857
+    },
+    "second_half": {
+      "start": "2020-09-28",
+      "end": "2026-11-25",
+      "total_return": 3.015929,
+      "cagr": 0.253309,
+      "max_drawdown": -0.305335,
+      "sharpe": 0.9987
+    },
+    "calendar_year_returns": {
+      "2014": 0.100079,
+      "2015": 0.091157,
+      "2016": 0.110248,
+      "2017": 0.309959,
+      "2018": -0.038231,
+      "2019": 0.359466,
+      "2020": 0.397701,
+      "2021": 0.2929,
+      "2022": -0.043707,
+      "2023": 0.266989,
+      "2024": 0.598852,
+      "2025": 0.385968,
+      "2026": 0.01915
+    },
+    "decile_spread_test": {
+      "months": 153,
+      "first_month": "2014-02-28",
+      "last_month": "2026-10-31",
+      "mean_monthly_winners": 0.017518,
+      "mean_monthly_losers": 0.016424,
+      "mean_monthly_spread": 0.001095,
+      "spread_tstat_naive": 0.203,
+      "spread_positive_months_pct": 51.63,
+      "first_half_mean_spread": 0.000686,
+      "second_half_mean_spread": 0.001498,
+      "note": "naive t-stat ignores overlap/autocorrelation; research-level signal test, no costs"
+    },
+    "decile_spread_test_h6": {
+      "months": 148,
+      "first_month": "2014-02-28",
+      "last_month": "2026-05-31",
+      "mean_monthly_winners": 0.126401,
+      "mean_monthly_losers": 0.104073,
+      "mean_monthly_spread": 0.022328,
+      "spread_tstat_naive": 1.617,
+      "spread_positive_months_pct": 57.43,
+      "first_half_mean_spread": 0.013453,
+      "second_half_mean_spread": 0.031203,
+      "note": "naive t-stat ignores overlap/autocorrelation; research-level signal test, no costs"
+    }
+  },
+  "hk": {
+    "run_dir": "<run-dir-removed>",
+    "n_codes_with_data": 85,
+    "evaluation_start": "2014-08-01",
+    "evaluation_end": "2026-11-25",
+    "full": {
+      "start": "2014-08-01",
+      "end": "2026-11-25",
+      "total_return": 1.965496,
+      "cagr": 0.092263,
+      "max_drawdown": -0.276881,
+      "sharpe": 0.6207
+    },
+    "first_half": {
+      "start": "2014-08-01",
+      "end": "2020-09-25",
+      "total_return": 0.946063,
+      "cagr": 0.114301,
+      "max_drawdown": -0.276881,
+      "sharpe": 0.7884
+    },
+    "second_half": {
+      "start": "2020-09-28",
+      "end": "2026-11-25",
+      "total_return": 0.513937,
+      "cagr": 0.069672,
+      "max_drawdown": -0.272893,
+      "sharpe": 0.4731
+    },
+    "calendar_year_returns": {
+      "2014": -0.049767,
+      "2015": 0.080803,
+      "2016": 0.054371,
+      "2017": 0.434813,
+      "2018": -0.202725,
+      "2019": 0.249459,
+      "2020": 0.513235,
+      "2021": 0.012089,
+      "2022": -0.094126,
+      "2023": 0.014507,
+      "2024": 0.296099,
+      "2025": 0.228037,
+      "2026": -0.147548
+    },
+    "decile_spread_test": {
+      "months": 153,
+      "first_month": "2014-02-28",
+      "last_month": "2026-10-31",
+      "mean_monthly_winners": 0.016435,
+      "mean_monthly_losers": 0.006701,
+      "mean_monthly_spread": 0.009734,
+      "spread_tstat_naive": 1.368,
+      "spread_positive_months_pct": 54.9,
+      "first_half_mean_spread": 0.008183,
+      "second_half_mean_spread": 0.011264,
+      "note": "naive t-stat ignores overlap/autocorrelation; research-level signal test, no costs"
+    },
+    "decile_spread_test_h6": {
+      "months": 148,
+      "first_month": "2014-02-28",
+      "last_month": "2026-05-31",
+      "mean_monthly_winners": 0.114478,
+      "mean_monthly_losers": 0.064477,
+      "mean_monthly_spread": 0.050001,
+      "spread_tstat_naive": 2.62,
+      "spread_positive_months_pct": 52.03,
+      "first_half_mean_spread": 0.041956,
+      "second_half_mean_spread": 0.058046,
+      "note": "naive t-stat ignores overlap/autocorrelation; research-level signal test, no costs"
+    }
+  }
+}

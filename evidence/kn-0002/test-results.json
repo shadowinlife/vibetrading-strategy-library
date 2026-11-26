@@ -1,0 +1,105 @@
+{
+  "data_sources": {
+    "market_cap": "World Bank CM.MKT.LCAP.CD, USA, listed domestic companies, current US$",
+    "gdp": "World Bank NY.GDP.MKTP.CD, USA, current US$",
+    "lastupdated": {
+      "mcap": "2026-11-11",
+      "gdp": "2026-11-11"
+    },
+    "returns_primary": "yfinance ^SP500TR (S&P 500 Total Return), year-end closes",
+    "returns_secondary": "yfinance ^GSPC (price only, dividends excluded)"
+  },
+  "ratio_range_pct": {
+    "min": 36.65,
+    "max": 212.25,
+    "y2024": 212.25,
+    "y2000": 147.38,
+    "y1980": 47.59
+  },
+  "test_total_return": {
+    "label": "SP500TR_total_return",
+    "n": 29,
+    "first_year": 1988,
+    "last_year": 2016,
+    "pearson_r": -0.5972,
+    "spearman_r": -0.5291,
+    "ols_slope_per_pct_point": -0.000981,
+    "ols_slope_tstat": -3.869,
+    "quintile_buckets": {
+      "1": {
+        "n": 6,
+        "ratio_min": 51.8761,
+        "ratio_max": 70.5033,
+        "mean_fwd_cagr": 0.1487
+      },
+      "2": {
+        "n": 6,
+        "ratio_min": 76.5624,
+        "ratio_max": 104.1388,
+        "mean_fwd_cagr": 0.1175
+      },
+      "3": {
+        "n": 5,
+        "ratio_min": 105.0461,
+        "ratio_max": 125.562,
+        "mean_fwd_cagr": 0.0964
+      },
+      "4": {
+        "n": 6,
+        "ratio_min": 130.3828,
+        "ratio_max": 141.6442,
+        "mean_fwd_cagr": 0.0803
+      },
+      "5": {
+        "n": 6,
+        "ratio_min": 142.3808,
+        "ratio_max": 153.4329,
+        "mean_fwd_cagr": 0.064
+      }
+    },
+    "note": "overlapping 10y windows; naive t-stat inflated; research-level"
+  },
+  "test_price_only": {
+    "label": "GSPC_price_only",
+    "n": 42,
+    "first_year": 1975,
+    "last_year": 2016,
+    "pearson_r": -0.5942,
+    "spearman_r": -0.4953,
+    "ols_slope_per_pct_point": -0.000665,
+    "ols_slope_tstat": -4.673,
+    "quintile_buckets": {
+      "1": {
+        "n": 9,
+        "ratio_min": 36.6543,
+        "ratio_max": 47.5902,
+        "mean_fwd_cagr": 0.1068
+      },
+      "2": {
+        "n": 8,
+        "ratio_min": 49.7803,
+        "ratio_max": 67.5464,
+        "mean_fwd_cagr": 0.132
+      },
+      "3": {
+        "n": 8,
+        "ratio_min": 69.718,
+        "ratio_max": 104.1388,
+        "mean_fwd_cagr": 0.0938
+      },
+      "4": {
+        "n": 8,
+        "ratio_min": 105.0461,
+        "ratio_max": 133.6127,
+        "mean_fwd_cagr": 0.0619
+      },
+      "5": {
+        "n": 9,
+        "ratio_min": 137.0184,
+        "ratio_max": 153.4329,
+        "mean_fwd_cagr": 0.0565
+      }
+    },
+    "note": "overlapping 10y windows; naive t-stat inflated; research-level"
+  }
+}

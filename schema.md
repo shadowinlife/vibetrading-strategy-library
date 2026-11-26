@@ -135,7 +135,7 @@ status: candidate
 
 - `validated` 缺少 `evidence`，或 evidence 条目缺字段，校验不通过。
 - `blocked_by_data` 与 `blocked_by_permission` 的缺口说明写在 `limitations` 或正文中，不能只在状态里体现。
-- 验证流水线当前挂起。新条目只能写 `candidate` 或 `research_only`，不得凭空写 `validated`。
+- 验证流水线已恢复（2026-11-26）。新录入条目仍从 `candidate` 或 `research_only` 起步，不得凭空写 `validated`；`validated` 只能在验证阶段流转且必须附 evidence。
 
 ## 7. 引用完整性
 

@@ -1,0 +1,12 @@
+{
+  "source": "yfinance",
+  "codes": ["SPY.US"],
+  "start_date": "2014-06-01",
+  "end_date": "2026-11-25",
+  "warmup_bars": 80,
+  "interval": "1D",
+  "initial_cash": 1000000,
+  "engine": "daily",
+  "position_adjustment": "hold",
+  "slippage_us": 0.0005
+}

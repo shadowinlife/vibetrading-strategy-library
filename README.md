@@ -53,7 +53,7 @@ vibetrading-strategy-library/
 | `blocked_by_data` | 缺数据无法验证 | 必须说明缺什么数据，不能当成否定结论 |
 | `blocked_by_permission` | 缺权限无法验证 | 必须说明缺什么权限，不能当成否定结论 |
 
-当前约束：验证流水线挂起。新种子条目一律为 `candidate` 或 `research_only`，不得声称做过新的验证。唯一例外：引用 escape-top 已验证信号时，可注明"其子信号两融背离(margin_divergence)/波动扩张(volatility_atr_expansion)已在镜像仓通过 7 门验证"。除此之外不加任何已验证表述。
+验证流水线已恢复（2026-11-26），首轮 9 条种子条目判定见各条目状态与 evidence（5 条 validated、4 条 research_only，证据随仓入库于 [evidence/](evidence/)）。新录入条目仍从 `candidate` 起步，状态流转只在验证阶段发生且必须附证据。引用 escape-top 已验证信号时，可注明"其子信号两融背离(margin_divergence)/波动扩张(volatility_atr_expansion)已在镜像仓通过 7 门验证"；本库条目的已验证表述一律以条目自身 status 与 evidence 为准。
 
 escape-top 参考（镜像仓公开技能文件）：https://github.com/shadowinlife/vibetrading-opencode-instruct/blob/main/skills/escape-top-microstructure/SKILL.md
 
@@ -63,7 +63,7 @@ escape-top 参考（镜像仓公开技能文件）：https://github.com/shadowin
 起草 candidate
   → python3 library.py register <file>   # 字段校验 + id 冲突检查
   → git 评审入库
-  → 独立验证阶段（当前挂起）
+  → 独立验证阶段（2026-11-26 已恢复）
   → validated / rejected / blocked_by_data / blocked_by_permission
 ```
 
@@ -142,8 +142,8 @@ python3 -m unittest discover -s tests -v
 1. 按 [schema.md](schema.md) 起草条目，状态写 `candidate`，`intended_use` 与 `limitations` 必须写实。
 2. 本地运行 `python3 library.py register <file>`，按报告修到可入库。
 3. 提交 PR 或走 git 评审，评审关注来源真实性、适用边界与引用完整性。
-4. 合并入库。验证是独立阶段，当前挂起，合并不会把条目变成 `validated`。
-5. 验证恢复后，按验证结论流转状态并补 evidence。
+4. 合并入库。验证是独立阶段（2026-11-26 已恢复），合并本身不会把条目变成 `validated`。
+5. 验证阶段按结论流转状态并补 evidence（validated 必须附 evidence 数组，artifact 指向随仓入库的证据文件）。
 
 ## 引导技能与镜像集成
 
@@ -154,7 +154,7 @@ python3 -m unittest discover -s tests -v
 
 ## 诚实声明
 
-种子条目的来源真实可查，但验证流水线当前挂起。所有种子条目为 `candidate` 或 `research_only`，未经本库的新验证，仅供参考，不构成投资建议。库提供判断框架与历史经验，不提供当前市场数字；当前数字必须由量化工具（VT）取数。
+种子条目的来源真实可查。验证流水线已于 2026-11-26 恢复并完成首轮 9 条判定：5 条 validated（附随仓证据）、4 条 research_only（未验证，仅供参考）；逐条判定与局限见各条目及 [evidence/](evidence/)。validated 不等于推荐，引用必须连同 limitations；不构成投资建议。库提供判断框架与历史经验，不提供当前市场数字；当前数字必须由量化工具（VT）取数。
 
 ## License
 

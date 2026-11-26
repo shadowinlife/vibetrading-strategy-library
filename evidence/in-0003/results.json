@@ -1,0 +1,98 @@
+{
+  "turnover_concentration": {
+    "source": "sina stock_zh_a_spot (via akshare), live snapshot",
+    "date": "2026-11-26",
+    "n_names_with_amount": 5577,
+    "total_amount_yuan": 1182593550543.0,
+    "total_amount_wan_yi": 1.1826,
+    "top5pct_count": 279,
+    "top5pct_amount_share": 0.445,
+    "top10_amount_share": 0.0779,
+    "top1pct_amount_share": 0.2011,
+    "caliber_note": "sina 成交额 unit=yuan; one-day sample; historical daily cross-section unavailable from free sources here"
+  },
+  "sse_margin": {
+    "rows": 2000,
+    "start": "2018-08-24",
+    "end": "2026-11-25",
+    "latest_rzye_yuan": 1109013697095.0,
+    "latest_rzye_wan_yi": 1.109
+  },
+  "margin_divergence": {
+    "scope": "Shanghai market only (SSE margin aggregate vs Shanghai Composite)",
+    "window_days": 120,
+    "merged_days": 2000,
+    "start": "2018-08-24",
+    "end": "2026-11-25",
+    "divergence_days_total": 244,
+    "divergence_days_last_250": 30,
+    "latest_flag": false,
+    "latest_growth_gap_20d_pp": -4.29,
+    "recent_10d": {
+      "2026-11-12 00:00:00": {
+        "margin": 1177935693951.0,
+        "index": 3655.83,
+        "divergence_flag": false,
+        "growth_gap_20d_pp": -5.525
+      },
+      "2026-11-13 00:00:00": {
+        "margin": 1169263907994.0,
+        "index": 3634.353,
+        "divergence_flag": false,
+        "growth_gap_20d_pp": -4.868
+      },
+      "2026-11-16 00:00:00": {
+        "margin": 1159812862911.0,
+        "index": 3602.57,
+        "divergence_flag": false,
+        "growth_gap_20d_pp": -4.442
+      },
+      "2026-11-17 00:00:00": {
+        "margin": 1151988956740.0,
+        "index": 3584.579,
+        "divergence_flag": false,
+        "growth_gap_20d_pp": -4.389
+      },
+      "2026-11-18 00:00:00": {
+        "margin": 1148698155776.0,
+        "index": 3587.832,
+        "divergence_flag": false,
+        "growth_gap_20d_pp": -5.267
+      },
+      "2026-11-19 00:00:00": {
+        "margin": 1141377708663.0,
+        "index": 3577.617,
+        "divergence_flag": false,
+        "growth_gap_20d_pp": -6.267
+      },
+      "2026-11-20 00:00:00": {
+        "margin": 1120768038403.0,
+        "index": 3533.793,
+        "divergence_flag": false,
+        "growth_gap_20d_pp": -5.176
+      },
+      "2026-11-23 00:00:00": {
+        "margin": 1118933062961.0,
+        "index": 3538.948,
+        "divergence_flag": false,
+        "growth_gap_20d_pp": -5.087
+      },
+      "2026-11-24 00:00:00": {
+        "margin": 1119532603899.0,
+        "index": 3548.369,
+        "divergence_flag": false,
+        "growth_gap_20d_pp": -6.039
+      },
+      "2026-11-25 00:00:00": {
+        "margin": 1109013697095.0,
+        "index": 3476.47,
+        "divergence_flag": false,
+        "growth_gap_20d_pp": -4.29
+      }
+    },
+    "unit_note": "SSE rzye unit=yuan (akshare stock_margin_sse); index=Shanghai Composite close"
+  },
+  "two_market_aggregate": {
+    "error": "Response ended prematurely"
+  }
+}

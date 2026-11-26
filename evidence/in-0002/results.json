@@ -1,0 +1,43 @@
+{
+  "source": "World Bank public API, fetched 2026-11-26",
+  "caliber": "listed domestic companies mcap / nominal GDP, both current US$, year-end 2024",
+  "markets": {
+    "us": {
+      "country": "USA",
+      "mcap_2024_usd": 62185685320000,
+      "gdp_2024_usd": 29298013000000,
+      "ratio_pct": 212.25,
+      "lastupdated": {
+        "mcap": "2026-11-11",
+        "gdp": "2026-11-11"
+      }
+    },
+    "ashare": {
+      "country": "CHN",
+      "mcap_2024_usd": 11755757950000,
+      "gdp_2024_usd": 18729668435848,
+      "ratio_pct": 62.77,
+      "lastupdated": {
+        "mcap": "2026-11-11",
+        "gdp": "2026-11-11"
+      }
+    },
+    "hk": {
+      "country": "HKG",
+      "mcap_2024_usd": 4549720760000,
+      "gdp_2024_usd": 408368682415.423,
+      "ratio_pct": 1114.12,
+      "lastupdated": {
+        "mcap": "2026-11-11",
+        "gdp": "2026-11-11"
+      }
+    }
+  },
+  "crosschecks": {
+    "sp500_pool_mcap_usd": 68856983774732.07,
+    "sp500_pool_vs_wb_us_pct": 110.73,
+    "note": "S&P500 pool is a large-cap subset (not full market); ratio to WB total shows coverage; dates differ (live vs 2024 year-end)",
+    "ashare_live_total_mcap_yi_yuan": 1096943.49,
+    "ashare_live_total_mcap_wan_yi": 109.6943
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "date": "20261125",
+  "sse_rzye_yuan": 1109013697095.0,
+  "szse_rzye_yuan": 1005270999999.9999,
+  "total_rzye_yuan": 2114284697095.0,
+  "total_rzye_wan_yi": 2.1143,
+  "note": "SSE unit yuan (stock_margin_sse), SZSE unit 亿元 (stock_margin_szse) x1e8; both 2026-11-25"
+}
