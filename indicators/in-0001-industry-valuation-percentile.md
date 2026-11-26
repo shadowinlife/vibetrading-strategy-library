@@ -41,7 +41,7 @@ evidence:
     artifact: evidence/in-0001/results.json
     date: 2026-11-26
   - summary: "官方交叉核对：cninfo 货币金融服务静态 PE=8.07，公式复核 Σ总市值/Σ净利润=126678.74/15694.31=8.0716 一致；当前静态 PE 在 2023-12→2026-11 月度序列（35 点）中分位 97.14%（短窗口读数，如实标注）"
-    artifact: evidence/in-0001/bank-pe-history-cninfo.csv
+    artifact: evidence/in-0001/bank_pe_history_cninfo.csv
     date: 2026-11-26
 created: 2026-11-25
 updated: 2026-11-26

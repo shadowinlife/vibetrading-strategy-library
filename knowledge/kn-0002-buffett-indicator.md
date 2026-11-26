@@ -18,7 +18,7 @@ evidence:
     artifact: evidence/kn-0002/test-results.json
     date: 2026-11-26
   - summary: "比率序列样本：1980=47.59%、2000=147.38%、2024=212.25%（历史极端高位）；序列与 forward pairs 原始数据随证据入库"
-    artifact: evidence/kn-0002/us-buffett-ratio-annual.csv
+    artifact: evidence/kn-0002/us_buffett_ratio_annual.csv
     date: 2026-11-26
 created: 2026-11-25
 updated: 2026-11-26
