@@ -1,0 +1,16 @@
+{
+  "interval": "1D",
+  "engine": "daily",
+  "initial_cash": 1000000,
+  "source": "yfinance",
+  "codes": [
+    "SPY.US",
+    "AGG.US"
+  ],
+  "start_date": "2013-06-01",
+  "end_date": "2026-11-26",
+  "position_adjustment": "rebalance",
+  "slippage_us": 0.0005,
+  "evaluation_start_date": "2014-09-01",
+  "rebalance_mask": "MS"
+}

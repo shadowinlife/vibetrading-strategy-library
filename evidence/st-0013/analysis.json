@@ -1,0 +1,155 @@
+{
+  "run": "st0013-main",
+  "evaluation_window": [
+    "2014-09-02",
+    "2026-11-25"
+  ],
+  "engine_metrics": {
+    "total_return": 0.439960087400558,
+    "annual_return": 0.0303015773182799,
+    "max_drawdown": -0.337172085744727,
+    "sharpe": 0.301617458520556,
+    "calmar": 0.0899,
+    "trade_count": 13.0,
+    "profit_factor": 2.028,
+    "win_rate": 0.5384615384615384,
+    "avg_holding_days": 96.1,
+    "benchmark_return": 3.372322,
+    "benchmark_kind": "equal_weight",
+    "benchmark_label": "equal-weight basket (SPY.US)",
+    "rebalance_executed_bars": 0.0,
+    "dropped_target_adjustment_count": 0.0,
+    "position_adjustment": "hold",
+    "rebalance_tolerance": 0.0
+  },
+  "strategy_subperiods": {
+    "first_half": {
+      "start": "2014-09-02",
+      "end": "2020-10-13",
+      "total_return": 0.017899,
+      "cagr": 0.002906,
+      "max_drawdown": -0.337172,
+      "sharpe": 0.0917
+    },
+    "second_half": {
+      "start": "2020-10-14",
+      "end": "2026-11-25",
+      "total_return": 0.414639,
+      "cagr": 0.058378,
+      "max_drawdown": -0.206908,
+      "sharpe": 0.5868
+    }
+  },
+  "strategy_year_returns": {
+    "2014": 0.023034,
+    "2015": -0.007515,
+    "2016": 0.07792,
+    "2017": 0.091843,
+    "2018": -0.093155,
+    "2019": 0.211212,
+    "2020": -0.127789,
+    "2021": 0.121153,
+    "2022": -0.063592,
+    "2023": 0.22568,
+    "2024": 0.143143,
+    "2025": -0.047012,
+    "2026": -0.095614
+  },
+  "benchmarks_buy_and_hold": {
+    "SPY.US": {
+      "total_return": 3.380169,
+      "cagr": 0.128372,
+      "max_drawdown": -0.337172,
+      "sharpe": 0.7787,
+      "subperiods": {
+        "first_half": {
+          "start": "2014-09-02",
+          "end": "2020-10-13",
+          "total_return": 0.973603,
+          "cagr": 0.117623,
+          "max_drawdown": -0.337172,
+          "sharpe": 0.7034
+        },
+        "second_half": {
+          "start": "2020-10-14",
+          "end": "2026-11-25",
+          "total_return": 1.23341,
+          "cagr": 0.140461,
+          "max_drawdown": -0.244964,
+          "sharpe": 0.8678
+        }
+      },
+      "convention": "entry at first evaluation bar open, zero costs, same ohlcv artifact"
+    }
+  },
+  "variant_sell_in_may": {
+    "engine_metrics": {
+      "total_return": 0.8499087082444081,
+      "annual_return": 0.051651762755853,
+      "max_drawdown": -0.3371719996126321,
+      "sharpe": 0.4294005355535689,
+      "calmar": 0.1532,
+      "trade_count": 13.0,
+      "profit_factor": 3.2727,
+      "win_rate": 0.6923076923076923,
+      "avg_holding_days": 115.2,
+      "benchmark_return": 3.372322,
+      "benchmark_kind": "equal_weight",
+      "benchmark_label": "equal-weight basket (SPY.US)",
+      "rebalance_executed_bars": 0.0,
+      "dropped_target_adjustment_count": 0.0,
+      "position_adjustment": "hold",
+      "rebalance_tolerance": 0.0
+    },
+    "subperiods": {
+      "first_half": {
+        "start": "2014-09-02",
+        "end": "2020-10-13",
+        "total_return": 0.267048,
+        "cagr": 0.039474,
+        "max_drawdown": -0.337172,
+        "sharpe": 0.333
+      },
+      "second_half": {
+        "start": "2020-10-14",
+        "end": "2026-11-25",
+        "total_return": 0.460014,
+        "cagr": 0.063858,
+        "max_drawdown": -0.187552,
+        "sharpe": 0.545
+      }
+    },
+    "months_held": [
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "month_effect_stats": {
+    "n_months": 147,
+    "bull_months_mean": 0.008629,
+    "other_months_mean": 0.012679,
+    "bull_n": 61,
+    "other_n": 86,
+    "welch_t": -0.5574,
+    "p": 0.578306,
+    "caveat": "~144 monthly observations, low power; calendar months overlap across years; naive t; skill default months have no literature anchor",
+    "by_month_mean": {
+      "1": 0.010998,
+      "2": 0.001296,
+      "3": -0.002808,
+      "4": 0.01949,
+      "5": 0.019305,
+      "6": 0.013646,
+      "7": 0.031283,
+      "8": 0.005961,
+      "9": -0.012638,
+      "10": 0.01373,
+      "11": 0.031608,
+      "12": 0.000137
+    }
+  }
+}

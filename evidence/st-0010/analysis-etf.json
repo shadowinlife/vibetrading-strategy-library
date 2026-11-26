@@ -1,0 +1,82 @@
+{
+  "run": "st0010-etf-510050",
+  "evaluation_window": [
+    "2018-08-24",
+    "2026-11-26"
+  ],
+  "engine_metrics": {
+    "total_return": 0.1903772429615762,
+    "annual_return": 0.0221896889651371,
+    "max_drawdown": -0.4077175588595271,
+    "sharpe": 0.2120114171919101,
+    "calmar": 0.0544,
+    "trade_count": 88.0,
+    "profit_factor": 1.301,
+    "win_rate": 0.5681818181818182,
+    "avg_holding_days": 41.5,
+    "benchmark_return": 0.1456,
+    "benchmark_kind": "equal_weight",
+    "benchmark_label": "equal-weight basket (510050.SH)",
+    "rebalance_executed_bars": 174.0,
+    "dropped_target_adjustment_count": 0.0,
+    "position_adjustment": "rebalance",
+    "rebalance_tolerance": 0.0
+  },
+  "strategy_subperiods": {
+    "first_half": {
+      "start": "2018-08-24",
+      "end": "2022-10-10",
+      "total_return": 0.097463,
+      "cagr": 0.022781,
+      "max_drawdown": -0.334657,
+      "sharpe": 0.2174
+    },
+    "second_half": {
+      "start": "2022-10-10",
+      "end": "2026-11-26",
+      "total_return": 0.076132,
+      "cagr": 0.01793,
+      "max_drawdown": -0.191942,
+      "sharpe": 0.1962
+    }
+  },
+  "strategy_year_returns": {
+    "2018": -0.093913,
+    "2019": 0.351617,
+    "2020": 0.241057,
+    "2021": -0.084849,
+    "2022": -0.184084,
+    "2023": -0.084609,
+    "2024": 0.14539,
+    "2025": 0.12539,
+    "2026": -0.093594
+  },
+  "benchmarks_buy_and_hold": {
+    "510050.SH": {
+      "total_return": 0.135157,
+      "cagr": 0.015471,
+      "max_drawdown": -0.44317,
+      "sharpe": 0.1788,
+      "subperiods": {
+        "first_half": {
+          "start": "2018-08-24",
+          "end": "2022-10-10",
+          "total_return": 0.02497,
+          "cagr": 0.005992,
+          "max_drawdown": -0.355434,
+          "sharpe": 0.1341
+        },
+        "second_half": {
+          "start": "2022-10-10",
+          "end": "2026-11-26",
+          "total_return": 0.107502,
+          "cagr": 0.025039,
+          "max_drawdown": -0.215865,
+          "sharpe": 0.2384
+        }
+      },
+      "convention": "entry at first evaluation bar open, zero costs, same ohlcv artifact"
+    }
+  },
+  "note": "510050.SH live-proxy comparison, VT china_a engine (T+1, 100-share lots, commission 0.025% min 5 CNY, transfer fee 0.001%, ETF stamp-tax exempt, slippage 0.1%/side); sina ETF daily UNADJUSTED (dividends excluded, declared); signal from archived SSE margin snapshot + sina index, flip-date mask execution"
+}
