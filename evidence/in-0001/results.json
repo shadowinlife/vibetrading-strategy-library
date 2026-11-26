@@ -1,0 +1,81 @@
+{
+  "tencent_spot": {
+    "rows": 5581,
+    "total_reported": 5581,
+    "total_mcap_yi_yuan": 1096943.49,
+    "total_mcap_wan_yi": 109.6943
+  },
+  "bank_pool": {
+    "n": 38,
+    "codes": [
+      "600036",
+      "002142",
+      "601838",
+      "601166",
+      "600926",
+      "600919",
+      "601009",
+      "601939",
+      "000001",
+      "601963",
+      "600000",
+      "002966",
+      "601577",
+      "601998",
+      "601328",
+      "601398",
+      "601229",
+      "601288",
+      "601988",
+      "601665",
+      "600015",
+      "002948",
+      "601187",
+      "601169",
+      "601128",
+      "601658",
+      "600908",
+      "601997",
+      "601528",
+      "603323",
+      "002807",
+      "600928",
+      "600016",
+      "601818",
+      "601916",
+      "601860",
+      "001227",
+      "002936"
+    ]
+  },
+  "bank_aggregates": {
+    "n_banks": 38,
+    "n_pe_valid": 38,
+    "n_pb_valid": 38,
+    "total_mcap_yi_yuan": 180707.23,
+    "pe_ttm_aggregate": 8.1848,
+    "pb_aggregate": 0.6717,
+    "dividend_yield_pct": 4.1037,
+    "bps_report_dates": [
+      "2026-09-30"
+    ],
+    "fetch_failures": [],
+    "caliber": "aggregate method; mcap unit 亿元 (tencent zsz); PE excludes pe_ttm<=0; PB uses latest 每股净资产_调整前 x shares; dividends = implemented ex-date in trailing 12m"
+  },
+  "cninfo_crosscheck": {
+    "cninfo_static_pe_weighted": 8.07,
+    "cninfo_total_mcap_yi": 126678.7404,
+    "cninfo_net_profit_yi": 15694.3085,
+    "formula_check_pe": 8.0716,
+    "n_companies": 45,
+    "n_included": 45
+  },
+  "percentile": {
+    "current_pe_static": 8.07,
+    "history_points": 35,
+    "history_start": "2023-12-29",
+    "history_end": "2026-11-25",
+    "current_percentile_in_window": 97.14,
+    "window_note": "cninfo free history depth ~2023-12 onward, monthly sampled; NOT the 10y daily window the entry suggests"
+  }
+}

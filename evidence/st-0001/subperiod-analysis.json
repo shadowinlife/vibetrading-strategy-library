@@ -1,0 +1,179 @@
+{
+  "us": {
+    "run_dir": "<run-dir-removed>",
+    "evaluation_start": "2014-09-24",
+    "evaluation_end": "2026-11-25",
+    "full": {
+      "start": "2014-09-24",
+      "end": "2026-11-25",
+      "total_return": 0.159294,
+      "cagr": 0.01222,
+      "max_drawdown": -0.039016,
+      "sharpe": 0.6662,
+      "trades_opened": 26
+    },
+    "first_half": {
+      "start": "2014-09-24",
+      "end": "2020-10-23",
+      "total_return": 0.07322,
+      "cagr": 0.011689,
+      "max_drawdown": -0.025521,
+      "sharpe": 0.6491,
+      "trades_opened": 14
+    },
+    "second_half": {
+      "start": "2020-10-26",
+      "end": "2026-11-25",
+      "total_return": 0.083204,
+      "cagr": 0.01323,
+      "max_drawdown": -0.039016,
+      "sharpe": 0.7085,
+      "trades_opened": 12
+    },
+    "calendar_year_returns": {
+      "2014": -0.006739,
+      "2015": -0.004025,
+      "2016": 0.014958,
+      "2017": 0.031812,
+      "2018": 0.005154,
+      "2019": 0.012669,
+      "2020": 0.026865,
+      "2021": 0.035154,
+      "2022": -0.034478,
+      "2023": 0.022107,
+      "2024": 0.022836,
+      "2025": 0.018774,
+      "2026": 0.004707
+    },
+    "trade_columns": [
+      "timestamp",
+      "code",
+      "side",
+      "price",
+      "qty",
+      "reason",
+      "pnl",
+      "holding_days",
+      "holding_bars",
+      "return_pct",
+      "event"
+    ]
+  },
+  "hk": {
+    "run_dir": "<run-dir-removed>",
+    "evaluation_start": "2014-09-25",
+    "evaluation_end": "2026-11-25",
+    "full": {
+      "start": "2014-09-25",
+      "end": "2026-11-25",
+      "total_return": 0.20795,
+      "cagr": 0.015649,
+      "max_drawdown": -0.089143,
+      "sharpe": 0.4601,
+      "trades_opened": 23
+    },
+    "first_half": {
+      "start": "2014-09-25",
+      "end": "2020-10-23",
+      "total_return": 0.213646,
+      "cagr": 0.03237,
+      "max_drawdown": -0.050286,
+      "sharpe": 0.8524,
+      "trades_opened": 11
+    },
+    "second_half": {
+      "start": "2020-10-27",
+      "end": "2026-11-25",
+      "total_return": -0.009768,
+      "cagr": -0.001614,
+      "max_drawdown": -0.086749,
+      "sharpe": -0.0348,
+      "trades_opened": 12
+    },
+    "calendar_year_returns": {
+      "2014": -0.027223,
+      "2015": 0.026403,
+      "2016": 0.049762,
+      "2017": 0.137392,
+      "2018": -0.009526,
+      "2019": 0.011476,
+      "2020": 0.008668,
+      "2021": -0.020311,
+      "2022": -0.027975,
+      "2023": -0.018215,
+      "2024": 0.027443,
+      "2025": 0.03397,
+      "2026": 0.0
+    },
+    "trade_columns": [
+      "timestamp",
+      "code",
+      "side",
+      "price",
+      "qty",
+      "reason",
+      "pnl",
+      "holding_days",
+      "holding_bars",
+      "return_pct",
+      "event"
+    ]
+  },
+  "crypto": {
+    "run_dir": "<run-dir-removed>",
+    "evaluation_start": "2017-12-29",
+    "evaluation_end": "2026-11-24",
+    "full": {
+      "start": "2017-12-29",
+      "end": "2026-11-24",
+      "total_return": 1.125933,
+      "cagr": 0.088401,
+      "max_drawdown": -0.13726,
+      "sharpe": 0.8326,
+      "trades_opened": 27
+    },
+    "first_half": {
+      "start": "2017-12-29",
+      "end": "2022-06-12",
+      "total_return": 0.855572,
+      "cagr": 0.148969,
+      "max_drawdown": -0.13726,
+      "sharpe": 1.0426,
+      "trades_opened": 11
+    },
+    "second_half": {
+      "start": "2022-06-12",
+      "end": "2026-11-24",
+      "total_return": 0.145702,
+      "cagr": 0.031025,
+      "max_drawdown": -0.069528,
+      "sharpe": 0.5653,
+      "trades_opened": 16
+    },
+    "calendar_year_returns": {
+      "2017": 0.007744,
+      "2018": -0.103075,
+      "2019": 0.252793,
+      "2020": 0.250644,
+      "2021": 0.273943,
+      "2022": -0.049669,
+      "2023": 0.135399,
+      "2024": 0.055278,
+      "2025": -0.006115,
+      "2026": -0.007376
+    },
+    "trade_columns": [
+      "timestamp",
+      "code",
+      "side",
+      "price",
+      "qty",
+      "reason",
+      "pnl",
+      "holding_days",
+      "holding_bars",
+      "return_pct",
+      "event"
+    ]
+  }
+}

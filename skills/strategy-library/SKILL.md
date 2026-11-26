@@ -58,7 +58,7 @@ python3 library.py show kn-0001
 - `rejected`：不得作为决策依据，只能用于说明失败经验。
 - `blocked_by_data` / `blocked_by_permission`：说明缺什么数据或权限，不要当成否定结论。
 
-引用 escape-top 时，唯一允许的已验证表述是："其子信号两融背离(margin_divergence)/波动扩张(volatility_atr_expansion)已在镜像仓通过 7 门验证"。除此之外，不得声称任何条目做过新验证。
+引用 escape-top 时，允许的已验证表述是："其子信号两融背离(margin_divergence)/波动扩张(volatility_atr_expansion)已在镜像仓通过 7 门验证"。本库条目自身的验证状态一律以条目 frontmatter 的 status 与 evidence 为准（2026-11-26 首轮验证后，部分条目已 validated）；不得声称条目做过其 evidence 之外的验证。
 
 ## 4. 组合协议（CRITICAL）
 
@@ -103,4 +103,4 @@ st-0002（validated）给出减仓规则，evidence 见条目内引用。
 2. 运行 `python3 library.py register <file>` 做字段校验与 id 冲突检查。
 3. 通过后走 git 评审入库，`register` 不移动文件。
 
-验证是独立阶段，当前挂起。不要在新条目里写 `validated`，不要声称做过验证；等验证恢复后再流转状态并补 evidence。
+验证是独立阶段，已于 2026-11-26 恢复（首轮 9 条判定见各条目状态）。新条目仍从 `candidate` 起草，不要凭空写 `validated`；状态流转只在验证阶段发生，`validated` 必须附 evidence（summary/artifact/date，artifact 指向随仓入库的证据文件）。

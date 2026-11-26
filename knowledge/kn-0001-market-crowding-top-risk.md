@@ -13,9 +13,9 @@ sources:
     url: https://github.com/shadowinlife/vibetrading-opencode-instruct/blob/main/skills/escape-top-microstructure/SKILL.md
     date: 2026-08-18
 intended_use: A 股大盘与组合层面的顶部风险预警、拥挤度判断与仓位风控辅助；与估值类条目（kn-0003）组合使用。
-limitations: 本条目整体为 research_only，集成判定未在本库独立复验；依赖 ClickHouse/Tushare 数据（当前 worker 环境无 ClickHouse，计算受限）；仅适用 A 股；信号是决策辅助，不是交易指令。
+limitations: 本条目整体为 research_only：集成框架（RED/YELLOW/GREEN）未在本库独立复验；2026-11-26 首轮验证仅对两融背离子信号做了沪市口径事件研究（触发日后 60 日指数平均 -1.80% vs 非触发日 +1.78%，方向支持，重叠事件/单市场/单信号族，非集成验证）；数据依赖 ClickHouse/Tushare（本环境无），免费源仅部分可得（见 in-0003 limitations）；仅适用 A 股；信号是决策辅助，不是交易指令。引用必须标注"未验证，仅供参考"。
 created: 2026-11-25
-updated: 2026-11-25
+updated: 2026-11-26
 ---
 
 # 市场拥挤/过热与顶部风险（A 股）
@@ -33,6 +33,12 @@ A 股成交集中度抬升、两融加杠杆与价格/成交出现背离等过�
 镜像仓 escape-top 框架将约 15 个信号族经 7 门验证（覆盖度/选择性/方向性/统计分离/稳健性/子周期/相关性）分级后，集成输出 RED/YELLOW/GREEN 市场状态判定。
 
 **验证状态（引用纪律）**：其子信号两融背离（margin_divergence）/波动扩张（volatility_atr_expansion）已在镜像仓通过 7 门验证，证据见来源链接的[技能文件](https://github.com/shadowinlife/vibetrading-opencode-instruct/blob/main/skills/escape-top-microstructure/SKILL.md)；其余信号族为 RESEARCH_ONLY 或 BLOCKED_BY_DATA（如 winner_rate_pressure 依赖的 stk_cyq_perf 已停止同步），引用时必须标注其验证分类。本条目作为集成框架整体未在本库独立复验，故标 research_only。
+
+## 验证记录（2026-11-26，research_only 维持）
+
+- **做了什么**：对两融背离子信号（in-0003 沪市序列，2018-08→2026-11，244 个触发日）做事件研究：触发日后 20 日指数平均 -0.31% vs 非触发日 +0.49%（差 -0.80pp）；后 60 日 -1.80% vs +1.78%（差 -3.58pp，触发日后负收益占比 67.6% vs 44.0%）。方向支持"背离→顶部风险"含义。
+- **没做什么**：集成框架（约 15 信号族 7 门分级 + RED/YELLOW/GREEN）未独立复验；成交集中度族无历史序列（免费源限制）；事件研究为重叠事件、单市场、单信号族，naive 对照不构成显著性证明。
+- **判定**：维持 research_only。子信号方向证据已存档（[evidence/kn-0001/](../evidence/kn-0001/)），集成主张仍待完整数据与独立复验。
 
 ## 用法
 

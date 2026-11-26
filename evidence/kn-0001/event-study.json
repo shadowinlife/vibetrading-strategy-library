@@ -1,0 +1,31 @@
+{
+  "forward_20d": {
+    "n_event_days": 244,
+    "n_nonevent_days": 1736,
+    "event_mean_pct": -0.311,
+    "nonevent_mean_pct": 0.488,
+    "all_mean_pct": 0.39,
+    "event_median_pct": -0.073,
+    "event_negative_share_pct": 51.23,
+    "nonevent_negative_share_pct": 49.14,
+    "diff_pp": -0.8
+  },
+  "forward_60d": {
+    "n_event_days": 244,
+    "n_nonevent_days": 1696,
+    "event_mean_pct": -1.798,
+    "nonevent_mean_pct": 1.78,
+    "all_mean_pct": 1.33,
+    "event_median_pct": -1.404,
+    "event_negative_share_pct": 67.62,
+    "nonevent_negative_share_pct": 44.04,
+    "diff_pp": -3.578
+  },
+  "scope": "Shanghai only; margin_divergence family only; overlapping events inflate significance; not the full integration",
+  "sample": {
+    "start": "2018-08-24",
+    "end": "2026-11-25",
+    "days": 2000,
+    "flag_days": 244
+  }
+}

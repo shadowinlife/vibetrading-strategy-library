@@ -2,7 +2,7 @@
 id: kn-0002
 type: knowledge
 title: 巴菲特指标（股市总市值/GDP）与长期估值
-status: candidate
+status: validated
 markets: [us, ashare, hk]
 asset_classes: [equity]
 horizon: 长期（10 年以上回报预期）
@@ -12,12 +12,27 @@ sources:
     url: https://fortune.com/2001/12/10/warren-buffett-stock-market/
     date: 2001-12-10
 intended_use: 以股市总市值/GDP 比率锚定市场长期估值贵贱与未来长期回报预期，作为长期资产配置与极端估值警示的判断框架。
-limitations: candidate，未验证；原文基于美国 GNP 口径与 2001 年前的历史经验；历史阈值随利率体制与利润占 GDP 比重变化可能失效；不构成投资建议。
+limitations: 已验证（2026-11-26，美国历史序列自有实证，方向性主张获支持）：实证仅覆盖美国（1975-2024 比率 vs 前向 10 年收益），A 股/港股未做前向收益检验；重叠 10 年窗口使 naive t 值夸大，未做 Newey-West 校正；市值用世界银行"上市本国公司"口径；70–80%/200% 经验阈值未做机械验证（2024 年 212% 高位的前向收益尚未走完）；利率体制与利润占 GDP 比重结构变化可能抬升比率中枢使历史阈值漂移；原文为 GNP 口径，GDP 替代有细微差异；不构成投资建议。
+evidence:
+  - summary: "美国市值/GDP（世界银行同口径）1975-2024 年度序列 vs 前向 10 年 S&P500 总收益（^SP500TR，1988-2016 起始年，n=29）：Pearson -0.597、Spearman -0.529；五分位单调——最低比率组（52-70%）前向 10 年年化 14.87%，最高组（142-153%）6.40%；价格口径稳健性（^GSPC，1975-2016，n=42）r=-0.594、斜率 naive t=-4.67。高比率→低长期回报的方向获自有实证支持"
+    artifact: evidence/kn-0002/test-results.json
+    date: 2026-11-26
+  - summary: "比率序列样本：1980=47.59%、2000=147.38%、2024=212.25%（历史极端高位）；序列与 forward pairs 原始数据随证据入库"
+    artifact: evidence/kn-0002/us_buffett_ratio_annual.csv
+    date: 2026-11-26
 created: 2026-11-25
-updated: 2026-11-25
+updated: 2026-11-26
 ---
 
 # 巴菲特指标（股市总市值/GDP）与长期估值
+
+**验证声明：已于 2026-11-26 完成自有实证验证（美国历史序列 vs 前向长期收益），方向性主张获支持，status=validated。证据见 frontmatter evidence 与 [evidence/kn-0002/](../evidence/kn-0002/)。引用时连同 limitations（仅美国、重叠窗口、阈值未机械验证）一起引用。**
+
+## 验证记录（2026-11-26）
+
+- **方法**：世界银行 CM.MKT.LCAP.CD / NY.GDP.MKTP.CD 算美国 1975-2024 年度比率；对照前向 10 年 S&P500 总收益（^SP500TR，1988 年起）与价格收益（^GSPC，1975 年起）双口径；相关+OLS+五分位分组。
+- **结果**：总收益口径 r=-0.60（n=29），五分位单调（低比率组前向年化 14.9% → 高比率组 6.4%）；价格口径 r=-0.59（n=42）方向一致。"极端高位→长期回报低、极端低位→长期回报高"获支持。
+- **判定**：validated（方向性主张）；阈值机械性与跨市场适用性未验证，见 limitations。
 
 ## 主张
 

@@ -1,0 +1,95 @@
+{
+  "source": "Shiller ie_data.xls (econ.yale.edu/~shiller/data/ie_data.xls), fetched 2026-11-26",
+  "coverage": {
+    "start": "1881-01-01",
+    "end": "2023-01-01",
+    "months": 1713
+  },
+  "percentile_window_months": 120,
+  "test_5y": {
+    "label": "forward_5y_real_TR",
+    "n": 1534,
+    "first": "1890-01-01",
+    "last": "2018-01-01",
+    "pearson_r": 0.0286,
+    "spearman_r": 0.0144,
+    "ols_slope_per_pct_point": 6.7e-05,
+    "ols_slope_tstat_naive": 1.118,
+    "quintile_buckets": {
+      "1": {
+        "n": 314,
+        "pct_min": 0.0,
+        "pct_max": 14.2857,
+        "mean_fwd_cagr": 0.0712
+      },
+      "2": {
+        "n": 301,
+        "pct_min": 15.1261,
+        "pct_max": 38.6555,
+        "mean_fwd_cagr": 0.0483
+      },
+      "3": {
+        "n": 310,
+        "pct_min": 39.4958,
+        "pct_max": 68.0672,
+        "mean_fwd_cagr": 0.0824
+      },
+      "4": {
+        "n": 306,
+        "pct_min": 68.9076,
+        "pct_max": 92.437,
+        "mean_fwd_cagr": 0.0912
+      },
+      "5": {
+        "n": 303,
+        "pct_min": 93.2773,
+        "pct_max": 100.0,
+        "mean_fwd_cagr": 0.0533
+      }
+    },
+    "note": "overlapping windows inflate naive t-stat; aggregate US market, not industry cross-section"
+  },
+  "test_10y": {
+    "label": "forward_10y_real_TR",
+    "n": 1474,
+    "first": "1890-01-01",
+    "last": "2013-01-01",
+    "pearson_r": -0.1098,
+    "spearman_r": -0.1078,
+    "ols_slope_per_pct_point": -0.000168,
+    "ols_slope_tstat_naive": -4.24,
+    "quintile_buckets": {
+      "1": {
+        "n": 296,
+        "pct_min": 0.0,
+        "pct_max": 12.605,
+        "mean_fwd_cagr": 0.0814
+      },
+      "2": {
+        "n": 299,
+        "pct_min": 13.4454,
+        "pct_max": 36.1345,
+        "mean_fwd_cagr": 0.0647
+      },
+      "3": {
+        "n": 298,
+        "pct_min": 36.9748,
+        "pct_max": 66.3866,
+        "mean_fwd_cagr": 0.0627
+      },
+      "4": {
+        "n": 287,
+        "pct_min": 67.2269,
+        "pct_max": 91.5966,
+        "mean_fwd_cagr": 0.0708
+      },
+      "5": {
+        "n": 294,
+        "pct_min": 92.437,
+        "pct_max": 100.0,
+        "mean_fwd_cagr": 0.0556
+      }
+    },
+    "note": "overlapping windows inflate naive t-stat; aggregate US market, not industry cross-section"
+  }
+}

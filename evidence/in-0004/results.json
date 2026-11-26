@@ -1,0 +1,40 @@
+{
+  "us": {
+    "pool": "sp500",
+    "pool_size": 503,
+    "n_with_price_data": 503,
+    "turnover_series_start": "2013-01-02",
+    "turnover_series_end": "2026-11-25",
+    "turnover_days": 3497,
+    "top5pct_amount_share_latest": 0.5061,
+    "top5pct_amount_share_mean": 0.4217,
+    "top5pct_amount_share_min": 0.2657,
+    "top5pct_amount_share_max": 0.6677,
+    "top10_amount_share_latest": 0.3738,
+    "mcap_n_fetched": 503,
+    "mcap_fetch_failures": [],
+    "top5pct_mcap_share_current": 0.541,
+    "top10_mcap_share_current": 0.3991,
+    "total_pool_mcap": 68856983774732.06,
+    "caliber": "amount=volume*close (estimate); pool not full market; mcap=current snapshot only"
+  },
+  "hk": {
+    "pool": "hsi",
+    "pool_size": 85,
+    "n_with_price_data": 85,
+    "turnover_series_start": "2013-01-02",
+    "turnover_series_end": "2026-11-25",
+    "turnover_days": 3409,
+    "top5pct_amount_share_latest": 0.3213,
+    "top5pct_amount_share_mean": 0.3589,
+    "top5pct_amount_share_min": 0.1676,
+    "top5pct_amount_share_max": 0.8395,
+    "top10_amount_share_latest": 0.5122,
+    "mcap_n_fetched": 85,
+    "mcap_fetch_failures": [],
+    "top5pct_mcap_share_current": 0.2895,
+    "top10_mcap_share_current": 0.5453,
+    "total_pool_mcap": 37396751300058.695,
+    "caliber": "amount=volume*close (estimate); pool not full market; mcap=current snapshot only"
+  }
+}
