@@ -16,8 +16,8 @@ data_source: |
   legulegu 现成序列（2026-11-28 补录）：/api/stockdata/marketcap-gdp/get-marketcap-gdp?token=（marketcap-gdp 页），
   日频，实测 5256 点 2005-04-08→2026-11-27；字段 marketCap/gdp（亿元）/close（沪深300对照）；
   分母用**上年度** GDP（ACCESS.md 口径事实）；样本 2005-04-08 marketCap=38470.47、gdp=161840.16（比率≈23.77%）。
-  ClickHouse 映射：legulegu.series，无参数端点省略 param 段，series_id 如 get-marketcap-gdp:marketCap、
-  get-marketcap-gdp:gdp（ch-legulegu-sync 管道并行建设中，仅引用约定，不引用既有表数据）。
+  ClickHouse 映射：legulegu.series，无参数端点 param 段为 -（占位，不省略），series_id 如 get-marketcap-gdp:-:marketCap、
+  get-marketcap-gdp:-:gdp（ch-legulegu-sync 管道并行建设中，仅引用约定，不引用既有表数据）。
 computation: |
   1. 取目标市场全部上市公司总市值并求和（统一币种；注明总股本口径或自由流通口径）；
   2. 取同一国家/地区最近年度名义 GDP（世界银行 NY.GDP.MKTP.CD，统一换算为与市值相同币种）；
@@ -56,7 +56,7 @@ updated: 2026-11-28
 - 市值口径必须声明：总股本市值 vs 自由流通市值；是否含境外上市本国公司。不同口径数值差异可达数十个百分点。
 - GDP 用名义值（current prices），与市值同为当期价格，无需平减。
 - 世界银行 NY.GDP.MKTP.CD 为公开数据（来源 API 链接已核实可访问，返回美国 2020–2024 年 GDP 现值美元序列）；其目录页 data.worldbank.org/indicator/NY.GDP.MKTP.CD 对自动化抓取返回 403（访问受限），数据本身经 API 核实。
-- legulegu 现成 A 股序列（2026-11-28 补录，与本条目同指标，不另立条目）：marketcap-gdp 页端点 get-marketcap-gdp，日频 2005-04-08→2026-11-27（5256 点），marketCap/gdp 单位亿元，close 为沪深300对照；**分母为上年度 GDP**（ACCESS.md 口径事实），跨年跳变须标注。样本 2005-04-08：38470.47/161840.16≈23.77%。CH 映射 legulegu.series（series_id=get-marketcap-gdp:marketCap / :gdp，管道建设中仅引用约定）。
+- legulegu 现成 A 股序列（2026-11-28 补录，与本条目同指标，不另立条目）：marketcap-gdp 页端点 get-marketcap-gdp，日频 2005-04-08→2026-11-27（5256 点），marketCap/gdp 单位亿元，close 为沪深300对照；**分母为上年度 GDP**（ACCESS.md 口径事实），跨年跳变须标注。样本 2005-04-08：38470.47/161840.16≈23.77%。CH 映射 legulegu.series（series_id=get-marketcap-gdp:-:marketCap / :-:gdp，管道建设中仅引用约定）。
 
 ## 计算步骤
 

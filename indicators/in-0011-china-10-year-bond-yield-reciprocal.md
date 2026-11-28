@@ -19,8 +19,8 @@ data_source: |
   样本 2005-01-31：debtInterestRate=4.9、reciprocalRate=20.4082、marketPe=27.36、hs300PeMiddle=0.0（缺失）；
   2021-08-30：debtInterestRate=2.873、reciprocalRate=34.8068、marketPe=33.6、hs300PeMiddle=25.52。
   页面 meta（2026-11-27）：A股市盈率中位数 31.77，10年国债收益率 1.597。
-  ClickHouse 映射：legulegu.series，无参数端点省略 param 段，series_id 如
-  china-10-year-bond-yield-data:debtInterestRate（ch-legulegu-sync 管道并行建设中，仅引用约定）。
+  ClickHouse 映射：legulegu.series，无参数端点 param 段为 -（占位，不省略），series_id 如
+  china-10-year-bond-yield-data:-:debtInterestRate（ch-legulegu-sync 管道并行建设中，仅引用约定）。
 computation: |
   1. GET /stockdata/china-10-year-bond-yield-data?token=<MD5(当天 YYYY-MM-DD)>；
   2. 解析月频序列；hs300PeMiddle=0.0 的行按缺失处理，不得当作真实零值；
@@ -51,7 +51,7 @@ updated: 2026-11-28
 - 字段关系已用样本验证：reciprocalRate = 100/debtInterestRate（4.9→20.4082；2.873→34.8068）。
 - marketPe 为 A 股 PE 中位数（页面 meta 2026-11-27 读数 31.77）；hs300PeMiddle 为沪深300 PE 中位数，早期行 0.0 是缺失不是零。
 - 频率以接口日期序列为准：**月频**（263 点，2005-01-31→2026-11-27）。
-- ClickHouse 映射：`legulegu.series`，series_id=`china-10-year-bond-yield-data:<field>`（无参数端点省略 param 段；管道建设中，仅引用约定）。
+- ClickHouse 映射：`legulegu.series`，series_id=`china-10-year-bond-yield-data:-:<field>`（无参数端点 param 段为 -（占位，不省略）；管道建设中，仅引用约定）。
 
 ## 计算步骤
 

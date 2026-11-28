@@ -16,8 +16,8 @@ data_source: |
   频率：日频（实测 728 点，2023-11-27→2026-11-27，约 3 年——匿名窗口疑似 3 年，全历史深度未验证）。
   字段：tradeDate/turnover1d/turnover7d/turnover30d/shClose/szClose/hs300Close/cybClose/zz500Close。
   换手率分子分母口径（成交额/流通市值或总市值）未随接口声明。
-  ClickHouse 映射：legulegu.series，无参数端点省略 param 段，series_id 如
-  market-turnover-rate:turnover1d（ch-legulegu-sync 管道并行建设中，仅引用约定）。
+  ClickHouse 映射：legulegu.series，无参数端点 param 段为 -（占位，不省略），series_id 如
+  market-turnover-rate:-:turnover1d（ch-legulegu-sync 管道并行建设中，仅引用约定）。
 computation: |
   1. GET /api/stockdata/market-turnover-rate?token=<MD5(当天 YYYY-MM-DD)>；
   2. 解析日频序列（tradeDate 为日期字段名，与其他端点的 date 不同）；
@@ -46,7 +46,7 @@ updated: 2026-11-28
 - 附五个指数收盘对照：上证/深证/沪深300/创业板/中证500。
 - 频率以接口日期序列为准：日频；窗口 2023-11-27→2026-11-27（728 点，约 3 年）。
 - 分子分母口径未声明。
-- ClickHouse 映射：`legulegu.series`，series_id=`market-turnover-rate:<field>`（管道建设中，仅引用约定）。
+- ClickHouse 映射：`legulegu.series`，series_id=`market-turnover-rate:-:<field>`（管道建设中，仅引用约定）。
 
 ## 计算步骤
 

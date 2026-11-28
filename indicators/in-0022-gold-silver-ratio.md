@@ -16,8 +16,8 @@ data_source: |
   字段：date/gold/silver/ratio。样本 gold=37.7（1968-04-01）为美元/盎司量级（布雷顿森林体系末期官方价区间），
   推断为国际现货金银价（美元/盎司）；底层价格来源未随接口声明。
   markets 标签说明：指标本体为国际贵金属（美元计价），schema 闭集内取 us 标签，非美股专属指标。
-  ClickHouse 映射：legulegu.series，无参数端点省略 param 段，series_id 如
-  gold-silver-ratio:ratio（ch-legulegu-sync 管道并行建设中，仅引用约定）。
+  ClickHouse 映射：legulegu.series，无参数端点 param 段为 -（占位，不省略），series_id 如
+  gold-silver-ratio:-:ratio（ch-legulegu-sync 管道并行建设中，仅引用约定）。
 computation: |
   1. GET /api/stockdata/gold-silver-ratio?token=<MD5(当天 YYYY-MM-DD)>；
   2. 解析日频 gold/silver/ratio；
@@ -47,7 +47,7 @@ updated: 2026-11-28
 - 频率以接口日期序列为准：日频，1968-04-01→2026-11-27（14716 点，约 58 年）。
 - 价格量级推断为国际现货美元/盎司；底层来源未声明。
 - 1968–1971 官方价时期与浮动汇率时期机制不同，跨体制比较须分段。
-- ClickHouse 映射：`legulegu.series`，series_id=`gold-silver-ratio:<field>`（管道建设中，仅引用约定）。
+- ClickHouse 映射：`legulegu.series`，series_id=`gold-silver-ratio:-:<field>`（管道建设中，仅引用约定）。
 
 ## 计算步骤
 

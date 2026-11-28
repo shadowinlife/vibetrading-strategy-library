@@ -17,8 +17,8 @@ data_source: |
   参数事实：a-risk-premium 与 hsi-risk-premium 两页探测到同一端点同一响应（样本逐字节同构），
   恒指变体的区分参数未被捕获——本条目仅覆盖已验证的沪深300序列，恒指风险溢价未验证。
   端点名中 tcjr 含义未随接口声明。另有 /download 端点返回非 JSON（57823 字节），未采用。
-  ClickHouse 映射：legulegu.series，无参数端点省略 param 段，series_id 如
-  hs300-tcjr-risk-premium:riskPremium（ch-legulegu-sync 管道并行建设中，仅引用约定）。
+  ClickHouse 映射：legulegu.series，无参数端点 param 段为 -（占位，不省略），series_id 如
+  hs300-tcjr-risk-premium:-:riskPremium（ch-legulegu-sync 管道并行建设中，仅引用约定）。
 computation: |
   1. GET /api/stockdata/hs300-tcjr-risk-premium?token=<MD5(当天 YYYY-MM-DD)>；
   2. 解析日频 date/close/riskPremium 序列；
@@ -52,7 +52,7 @@ updated: 2026-11-28
 - 字段：riskPremium（%，样本点 3.7138/1.1366）、close（沪深300收盘，2006-03-01=1056.62 与指数历史量级一致）。
 - 覆盖：5014 点日频，2006-03-01→2026-10-16。**末端滞后约 6 周**（相对其他系列的 2026-11-27）。
 - ERP 具体公式（盈利收益率口径、无风险利率期限、tcjr 是否口径调整）未随接口声明，均为待验证项。
-- ClickHouse 映射：`legulegu.series`，series_id=`hs300-tcjr-risk-premium:riskPremium`（无参数端点省略 param 段；管道建设中，仅引用约定）。
+- ClickHouse 映射：`legulegu.series`，series_id=`hs300-tcjr-risk-premium:-:riskPremium`（无参数端点 param 段为 -（占位，不省略）；管道建设中，仅引用约定）。
 
 ## 计算步骤
 

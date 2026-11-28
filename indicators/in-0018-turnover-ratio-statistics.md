@@ -18,8 +18,8 @@ data_source: |
   字段：belowPermill8/belowPercent1/belowPercent3/belowPercent5/belowPercent10/totalCompany/close。
   样本 2006-12-01：belowPermill8=17、belowPercent1=29、belowPercent3=615、belowPercent5=990、belowPercent10=1238、
   totalCompany=1296、close=2102.05（上证综指量级，对照指数未随接口声明）。
-  ClickHouse 映射：legulegu.series，无参数端点省略 param 段，series_id 如
-  market-turn-over-ratio-statistics-data:belowPercent1（ch-legulegu-sync 管道并行建设中，仅引用约定）。
+  ClickHouse 映射：legulegu.series，无参数端点 param 段为 -（占位，不省略），series_id 如
+  market-turn-over-ratio-statistics-data:-:belowPercent1（ch-legulegu-sync 管道并行建设中，仅引用约定）。
 computation: |
   1. GET /stockdata/market-turn-over-ratio-statistics-data?token=<MD5(当天 YYYY-MM-DD)>；
   2. 解析日频序列；各阈值家数除以 totalCompany 得占比；
@@ -49,7 +49,7 @@ updated: 2026-11-28
 - 样本（2006-12-01）：1296 只中 1238 只换手 <10%、990 只 <5%、615 只 <3%、29 只 <1%、17 只 <0.8%。
 - 频率以接口日期序列为准：日频，2006-12-01→2026-11-27（4849 点）。
 - 阈值含义与换手率分母口径未随接口声明，按字段名推断。
-- ClickHouse 映射：`legulegu.series`，series_id=`market-turn-over-ratio-statistics-data:<field>`（管道建设中，仅引用约定）。
+- ClickHouse 映射：`legulegu.series`，series_id=`market-turn-over-ratio-statistics-data:-:<field>`（管道建设中，仅引用约定）。
 
 ## 计算步骤
 

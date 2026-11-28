@@ -22,8 +22,8 @@ data_source: |
   页面 meta 2026-11-27：大盘 45.66%、创业板 49.10%，站点预警阈值 50%。深证分量（szshares-congestion）未验证。
   两融分量替代来源：/stockdata/margin-trading-data?token=（分交易所日频，金额亿元/融券卖出量万股，
   匿名窗口实测 2025-09-01→2026-11-26；详见 in-0014）。
-  ClickHouse 映射：legulegu.series，无参数端点省略 param 段，series_id 如 ashares-congestion:<field>、
-  cyshares-congestion:<field>、margin-trading-data:<exchangeId>:rzye（ch-legulegu-sync 管道并行建设中，仅引用约定）。
+  ClickHouse 映射：legulegu.series，无参数端点 param 段为 -（占位，不省略），series_id 如 ashares-congestion:-:<field>、
+  cyshares-congestion:-:<field>、margin-trading-data:<exchangeId>:rzye（ch-legulegu-sync 管道并行建设中，仅引用约定）。
 computation: |
   1. 取全市场个股日成交额，降序排序，取前 5% 个股成交额求和，除以全市场成交额得集中度；
   2. 取两融融资余额/融资买入额日度序列（Tushare margin 汇总或镜像 ClickHouse 表）；

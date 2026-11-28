@@ -19,7 +19,7 @@ data_source: |
   明示"北向2024年8月19日起为成交额，此前为历史净流入；南向展示净流入"。
   频率：日频（页面 meta 与 items 结构推断，未采样验证）。
   子页面 hu-gu-tong（沪股通）/shen-gu-tong（深股通）/gang-gu-tong-hu/shen（港股通分通道）未单独验证。
-  ClickHouse 映射：legulegu.series，无参数端点省略 param 段，series_id 如
+  ClickHouse 映射：legulegu.series，无参数端点 param 段为 -（占位，不省略），series_id 如
   hu-shen-gang-tong-data:<channel>:<field>（channel/field 待采样后定；ch-legulegu-sync 管道并行建设中，仅引用约定）。
 computation: |
   1. GET /stockdata/hu-shen-gang-tong-data?token=<MD5(当天 YYYY-MM-DD)>；

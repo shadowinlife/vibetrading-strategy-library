@@ -17,8 +17,8 @@ data_source: |
   频率：月频（月份索引）。
   statistics 子页（券商金股组合月度汇总）自有数据端点未验证——探测捕获的是共享组件
   （below-net-asset-statistics-data / market-turn-over-ratio-statistics-data），不属于本指标。
-  ClickHouse 映射：legulegu.series，无参数端点省略 param 段，series_id 如
-  broker-recommend-regression-month:month（绩效字段待补测后扩展；ch-legulegu-sync 管道并行建设中，仅引用约定）。
+  ClickHouse 映射：legulegu.series，无参数端点 param 段为 -（占位，不省略），series_id 如
+  broker-recommend-regression-month:-:month（绩效字段待补测后扩展；ch-legulegu-sync 管道并行建设中，仅引用约定）。
 computation: |
   1. GET /api/stockdata/broker-recommend-regression-month?token=<MD5(当天 YYYY-MM-DD)>；
   2. 得可用月份清单（YYYYMM）；
@@ -50,7 +50,7 @@ updated: 2026-11-28
 - 页面 meta：汇总各大券商月度金股组合表现，对比当月收益、超额收益、最佳金股及胜率。
 - 已验证端点只返回月份索引：80 个 YYYYMM（202611→202003，降序），覆盖 2020-03→2026-11。
 - 绩效数据端点未被捕获；statistics 子页探测到的是全站共享组件，不是金股数据。
-- ClickHouse 映射：`legulegu.series`，series_id=`broker-recommend-regression-month:month`（绩效字段待补测；管道建设中，仅引用约定）。
+- ClickHouse 映射：`legulegu.series`，series_id=`broker-recommend-regression-month:-:month`（绩效字段待补测；管道建设中，仅引用约定）。
 
 ## 计算步骤
 

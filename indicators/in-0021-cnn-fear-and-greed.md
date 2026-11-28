@@ -15,8 +15,8 @@ data_source: |
   原始来源：CNN Business Fear & Greed Index（https://edition.cnn.com/markets/fear-and-greed）。
   频率：日频（实测 1483 点，2021-01-04→2026-11-25；转引窗口自 2021 年起，更早历史未提供）。
   字段：date/score/close。样本 2021-01-04 score=50.0；2021-10-18 score=47.0。
-  ClickHouse 映射：legulegu.series，无参数端点省略 param 段，series_id 如
-  cnn-fear-and-greed:score（转引系列落库须带原始来源标签；ch-legulegu-sync 管道并行建设中，仅引用约定）。
+  ClickHouse 映射：legulegu.series，无参数端点 param 段为 -（占位，不省略），series_id 如
+  cnn-fear-and-greed:-:score（转引系列落库须带原始来源标签；ch-legulegu-sync 管道并行建设中，仅引用约定）。
 computation: |
   1. GET /api/stockdata/cnn-fear-and-greed?token=<MD5(当天 YYYY-MM-DD)>；
   2. 解析日频 score 序列；
@@ -48,7 +48,7 @@ updated: 2026-11-28
 - 转引系列纪律：原始来源 CNN Business Fear & Greed Index，legulegu 仅为转引渠道；引用必须同时给出原始来源。
 - score 0–100，综合市场动量/宽度/波动/避险需求等 7 分项（CNN 公开口径）；close 为标普500对照。
 - 频率以接口日期序列为准：日频，2021-01-04→2026-11-25（1483 点）；转引窗口约 5 年。
-- ClickHouse 映射：`legulegu.series`，series_id=`cnn-fear-and-greed:<field>`（带原始来源标签；管道建设中，仅引用约定）。
+- ClickHouse 映射：`legulegu.series`，series_id=`cnn-fear-and-greed:-:<field>`（带原始来源标签；管道建设中，仅引用约定）。
 
 ## 计算步骤
 

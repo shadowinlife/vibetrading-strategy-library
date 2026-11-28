@@ -16,8 +16,8 @@ data_source: |
   ratio/dates/hs300Close（序列与对照）、latestRatio/latestDate、percentile、upper/lower/secondaryLower/secondaryAnchorDate、
   maxRatio/minRatio、change/trend/signals/verdict、maskFromDate/maskedDays、windowYears、vip。
   频率：日频（按两融族口径与 dates 字段推断，未采样验证）。
-  ClickHouse 映射：legulegu.series，无参数端点省略 param 段，series_id 如
-  margin-guarantee-ratio:ratio（分位带/信号为站点衍生字段，落库须标注衍生口径；ch-legulegu-sync 管道并行建设中，仅引用约定）。
+  ClickHouse 映射：legulegu.series，无参数端点 param 段为 -（占位，不省略），series_id 如
+  margin-guarantee-ratio:-:ratio（分位带/信号为站点衍生字段，落库须标注衍生口径；ch-legulegu-sync 管道并行建设中，仅引用约定）。
 computation: |
   1. GET /api/stockdata/margin-guarantee-ratio?token=<MD5(当天 YYYY-MM-DD)>；
   2. 解析 dates/ratio 序列与 hs300Close 对照；
@@ -47,7 +47,7 @@ updated: 2026-11-28
 - 接口是"序列 + 站点衍生分析"的复合 dict：ratio/dates/hs300Close 是数据，percentile/upper/lower/signals/verdict/trend 是站点自算衍生字段。
 - **2015-05~06 官方未披露**（ACCESS.md 口径事实）；maskFromDate/maskedDays 键表明接口对缺口做了 masking。
 - windowYears 键提示站点分位带使用滚动窗口，长度未采样。
-- ClickHouse 映射：`legulegu.series`，series_id=`margin-guarantee-ratio:<field>`（衍生字段须标注；管道建设中，仅引用约定）。
+- ClickHouse 映射：`legulegu.series`，series_id=`margin-guarantee-ratio:-:<field>`（衍生字段须标注；管道建设中，仅引用约定）。
 
 ## 计算步骤
 

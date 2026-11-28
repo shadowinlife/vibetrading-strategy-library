@@ -20,7 +20,7 @@ data_source: |
   页面变体：marketId=000016.SH/000300.XSHG/000905.SH/1（后三个未测）。
   页面 meta（2026-11-27）：全部A股破净股数量 615；站点称破净比例"一定程度反映市场交易热度，是市场的先行指标"。
   ClickHouse 映射：legulegu.series，series_id 约定 <endpoint_slug>:<param>:<field>，
-  如 below-net-asset-statistics-data:000016.SH:belowNetAsset、below-net-asset-statistics-data::belowNetAsset（空参实例；
+  如 below-net-asset-statistics-data:000016.SH:belowNetAsset、below-net-asset-statistics-data:-:belowNetAsset（空参实例，param 段为 -；
   ch-legulegu-sync 管道并行建设中，仅引用约定）。
 computation: |
   1. 选 marketId（已验证：000016.SH 与空值全A池；其他变体须先探测）；
@@ -58,7 +58,7 @@ updated: 2026-11-28
 
 - 样本：000016.SH 池 2005-01-05 belowNetAsset=1/49；全A池同日 36/1352。页面 meta 2026-11-27 全A破净 615 家。
 - 站点观点（引用其口径）：破净比例一定程度反映交易热度，"是市场的先行指标"——未验证。
-- ClickHouse 映射：`legulegu.series`，series_id=`below-net-asset-statistics-data:<marketId>:<field>`（空参实例 param 段为空；管道建设中，仅引用约定）。
+- ClickHouse 映射：`legulegu.series`，series_id=`below-net-asset-statistics-data:<marketId>:<field>`（空参实例 param 段为 -，normalize 对空值同样落 -；管道建设中，仅引用约定）。
 
 ## 计算步骤
 

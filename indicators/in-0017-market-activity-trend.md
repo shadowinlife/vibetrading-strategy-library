@@ -20,8 +20,8 @@ data_source: |
   up0To3=648、up3To5=844、up5To7=1061、up7To10=1276、up10To20=1196、description="SSS"。
   与 market-activity 页 meta（2026-11-27：435 家涨停/5025 家上涨/181 家下跌）逐项一致——日度页展示的是收盘快照。
   历史日度序列端点 marketData/getHistoryData?marketId=... 未测（untested_cap）。
-  ClickHouse 映射：legulegu.series，无参数端点省略 param 段，series_id 如
-  market-activity-trend-data:totalUp（日内序列落库须带时点；ch-legulegu-sync 管道并行建设中，仅引用约定）。
+  ClickHouse 映射：legulegu.series，无参数端点 param 段为 -（占位，不省略），series_id 如
+  market-activity-trend-data:-:totalUp（日内序列落库须带时点；ch-legulegu-sync 管道并行建设中，仅引用约定）。
 computation: |
   1. GET /stockdata/market-activity-trend-data?token=<MD5(当天 YYYY-MM-DD)>；
   2. epoch 毫秒转 Asia/Shanghai 时点；
@@ -56,7 +56,7 @@ updated: 2026-11-28
   涨跌幅分档（up0To3…up10To20、down0To3…down10To20）、priceStop/pricePaused、description。
 - 样本收盘点（2026-11-27）：5224 只中 5025 涨/181 跌，涨停 435（realLimitUp=425、stLimitUp=9），上涨 10%~20% 档 1196 只——极端普涨日样本。
 - description="SSS"：等级标签，体系未声明。
-- ClickHouse 映射：`legulegu.series`，series_id=`market-activity-trend-data:<field>`（日内时点须保留；管道建设中，仅引用约定）。
+- ClickHouse 映射：`legulegu.series`，series_id=`market-activity-trend-data:-:<field>`（日内时点须保留；管道建设中，仅引用约定）。
 
 ## 计算步骤
 

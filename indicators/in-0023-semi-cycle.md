@@ -15,8 +15,8 @@ data_source: |
   dates/latestDate/shipment3MA/smhXlpYoY/user/vip。
   频率：未采样（出货量为月度统计，推断月频；须以 dates 数组核实）。
   markets 标签说明：shipment 为全球半导体统计、SMH 为美股 ETF，闭集内取 us；对 A 股半导体板块为间接周期参照。
-  ClickHouse 映射：legulegu.series，无参数端点省略 param 段，series_id 如
-  semi-cycle:shipment3MA（ch-legulegu-sync 管道并行建设中，仅引用约定）。
+  ClickHouse 映射：legulegu.series，无参数端点 param 段为 -（占位，不省略），series_id 如
+  semi-cycle:-:shipment3MA（ch-legulegu-sync 管道并行建设中，仅引用约定）。
 computation: |
   1. GET /api/stockdata/semi-cycle?token=<MD5(当天 YYYY-MM-DD)>；
   2. 采样 dates/shipment3MA/smhXlpYoY 确定频率与字段语义；
@@ -45,7 +45,7 @@ updated: 2026-11-28
 - 复合 dict：dates + shipment3MA（出货量 3 月均线，推断）+ smhXlpYoY（SMH 相关同比，推断）+ latestDate。
 - 顶层键来自 catalog.json 实测；内部值未采样，一切字段级语义待验证。
 - 出货量统计通常为月度（SIA 全球半导体销售口径常见），本接口来源未声明。
-- ClickHouse 映射：`legulegu.series`，series_id=`semi-cycle:<field>`（管道建设中，仅引用约定）。
+- ClickHouse 映射：`legulegu.series`，series_id=`semi-cycle:-:<field>`（管道建设中，仅引用约定）。
 
 ## 计算步骤
 

@@ -16,8 +16,8 @@ data_source: |
   points/hs300（序列与对照）、latestMv/latestDeposit/latestRatio/latestPctRank/updatedDate、
   regStart/r2/sigma/sigmaK/mid/upper/lower/topBands/bottomBands/maskStartDate、user/vip。
   频率：未采样（市值日频、存款月频，比值频率须以 points 核实）。
-  ClickHouse 映射：legulegu.series，无参数端点省略 param 段，series_id 如
-  market-cap-deposit-ratio:ratio（回归通道为站点衍生字段，落库须标注；ch-legulegu-sync 管道并行建设中，仅引用约定）。
+  ClickHouse 映射：legulegu.series，无参数端点 param 段为 -（占位，不省略），series_id 如
+  market-cap-deposit-ratio:-:ratio（回归通道为站点衍生字段，落库须标注；ch-legulegu-sync 管道并行建设中，仅引用约定）。
 computation: |
   1. GET /api/stockdata/market-cap-deposit-ratio?token=<MD5(当天 YYYY-MM-DD)>；
   2. 采样 points 确定频率与分子分母字段；
@@ -46,7 +46,7 @@ updated: 2026-11-28
 - 通用定义：A股总市值 / 存款余额，衡量权益资产相对银行储蓄的规模位置（"存款搬家"叙事的可量化锚）。
 - 接口是"序列 + 站点回归分析"复合 dict：points/hs300 为数据，regStart/r2/sigma/sigmaK/mid/upper/lower/topBands/bottomBands 为站点回归通道，latestPctRank 为站点分位。
 - 顶层键来自 catalog.json 实测；内部值未采样。
-- ClickHouse 映射：`legulegu.series`，series_id=`market-cap-deposit-ratio:<field>`（衍生字段标注；管道建设中，仅引用约定）。
+- ClickHouse 映射：`legulegu.series`，series_id=`market-cap-deposit-ratio:-:<field>`（衍生字段标注；管道建设中，仅引用约定）。
 
 ## 计算步骤
 
