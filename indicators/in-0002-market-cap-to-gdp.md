@@ -13,6 +13,11 @@ data_source: |
   市值：VT 市值工具（screen_market 全市场榜单聚合，或 get_market_data / 财务工具的市值字段求和）；
   GDP：世界银行公开数据 NY.GDP.MKTP.CD（GDP, current US$），公开 API 可查
   （示例：https://api.worldbank.org/v2/country/USA/indicator/NY.GDP.MKTP.CD?format=json）。
+  legulegu 现成序列（2026-11-28 补录）：/api/stockdata/marketcap-gdp/get-marketcap-gdp?token=（marketcap-gdp 页），
+  日频，实测 5256 点 2005-04-08→2026-11-27；字段 marketCap/gdp（亿元）/close（沪深300对照）；
+  分母用**上年度** GDP（ACCESS.md 口径事实）；样本 2005-04-08 marketCap=38470.47、gdp=161840.16（比率≈23.77%）。
+  ClickHouse 映射：legulegu.series，无参数端点省略 param 段，series_id 如 get-marketcap-gdp:marketCap、
+  get-marketcap-gdp:gdp（ch-legulegu-sync 管道并行建设中，仅引用约定，不引用既有表数据）。
 computation: |
   1. 取目标市场全部上市公司总市值并求和（统一币种；注明总股本口径或自由流通口径）；
   2. 取同一国家/地区最近年度名义 GDP（世界银行 NY.GDP.MKTP.CD，统一换算为与市值相同币种）；
@@ -27,8 +32,11 @@ sources:
   - title: 世界银行公开 API：GDP (current US$)，NY.GDP.MKTP.CD（美国示例查询，数据更新至 2026-11-11）
     url: https://api.worldbank.org/v2/country/USA/indicator/NY.GDP.MKTP.CD?format=json
     date: 2026-11-25
+  - title: 乐咕乐股网：股市总市值/GDP（marketcap-gdp，巴菲特指标，A股日频序列，分母为上年度GDP）
+    url: https://www.legulegu.com/stockdata/marketcap-gdp
+    date: 2026-11-28
 intended_use: 市场整体长期估值贵贱的单一比率度量，供 kn-0002（巴菲特指标）与长期回报预期判断使用。
-limitations: 已验证（2026-11-26，世界银行同口径完整样本）：市值端用 CM.MKT.LCAP.CD"上市本国公司"口径（不含境外上市本国公司、总股本口径），与条目 data_source 建议的 VT 全市场榜单聚合口径不同，数值会有差异；GDP 年度数据滞后且会修订（本次 lastupdated 2026-11-11）；跨国证券化率结构差异使横向比较失真（港股 1114% 为结构性高位，非异常）；原文为美国 GNP 口径，GDP 替代存在细微差异；实时全市场市值交叉核对受东财 push2 限流影响，美股用 S&P500 池（非全市场）、A 股用腾讯全市场快照，日期与世行 2024 年末不同，仅作量级核对。
+limitations: 已验证（2026-11-26，世界银行同口径完整样本）：市值端用 CM.MKT.LCAP.CD"上市本国公司"口径（不含境外上市本国公司、总股本口径），与条目 data_source 建议的 VT 全市场榜单聚合口径不同，数值会有差异；GDP 年度数据滞后且会修订（本次 lastupdated 2026-11-11）；跨国证券化率结构差异使横向比较失真（港股 1114% 为结构性高位，非异常）；原文为美国 GNP 口径，GDP 替代存在细微差异；实时全市场市值交叉核对受东财 push2 限流影响，美股用 S&P500 池（非全市场）、A 股用腾讯全市场快照，日期与世行 2024 年末不同，仅作量级核对。legulegu 补充来源（2026-11-28）：A股日频序列分母用**上年度** GDP，跨年时比率跳变是口径使然；市值端为站点第三方自动采集（不保证准确），与世行 CM.MKT.LCAP.CD 口径（上市本国公司）不同，数值不可直接互换；该序列仅覆盖 A 股。
 evidence:
   - summary: "三市场完整样本（世界银行同口径，2024 年末，当年美元）：US=62.19T/29.30T=212.25%、CN=11.76T/18.73T=62.77%、HK=4.55T/0.408T=1114.12%；与公开口径量级一致（美国历史高位、中国中位、港股结构性极高）"
     artifact: evidence/in-0002/results.json
@@ -37,7 +45,7 @@ evidence:
     artifact: evidence/in-0002/results.json
     date: 2026-11-26
 created: 2026-11-25
-updated: 2026-11-26
+updated: 2026-11-28
 ---
 
 # 股市总市值/GDP（巴菲特指标）
@@ -48,6 +56,7 @@ updated: 2026-11-26
 - 市值口径必须声明：总股本市值 vs 自由流通市值；是否含境外上市本国公司。不同口径数值差异可达数十个百分点。
 - GDP 用名义值（current prices），与市值同为当期价格，无需平减。
 - 世界银行 NY.GDP.MKTP.CD 为公开数据（来源 API 链接已核实可访问，返回美国 2020–2024 年 GDP 现值美元序列）；其目录页 data.worldbank.org/indicator/NY.GDP.MKTP.CD 对自动化抓取返回 403（访问受限），数据本身经 API 核实。
+- legulegu 现成 A 股序列（2026-11-28 补录，与本条目同指标，不另立条目）：marketcap-gdp 页端点 get-marketcap-gdp，日频 2005-04-08→2026-11-27（5256 点），marketCap/gdp 单位亿元，close 为沪深300对照；**分母为上年度 GDP**（ACCESS.md 口径事实），跨年跳变须标注。样本 2005-04-08：38470.47/161840.16≈23.77%。CH 映射 legulegu.series（series_id=get-marketcap-gdp:marketCap / :gdp，管道建设中仅引用约定）。
 
 ## 计算步骤
 
