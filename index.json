@@ -1241,10 +1241,12 @@
         "segments",
         "self",
         "series",
+        "slug",
         "stockdata",
         "sync",
         "token",
         "total",
+        "url",
         "valuation",
         "www"
       ]

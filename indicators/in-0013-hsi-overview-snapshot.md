@@ -17,7 +17,7 @@ data_source: |
   页面 meta：恒生指数、恒生科技、恒生医疗保健指数、恒生创新药指数、最新市盈率、股息率。
   频率：快照（接口无日期序列字段记录；更新时点未声明）。
   ClickHouse 映射：legulegu.series 约定上快照类可落为最新值行，series_id 如
-  hsi-overview-self-valuation:<group>:<field>（结构未采样，映射为预案；ch-legulegu-sync 管道并行建设中，仅引用约定）。
+  self-valuation:<group>:<field>（slug 取端点 URL 最后路径段；结构未采样，映射为预案；ch-legulegu-sync 管道并行建设中，仅引用约定）。
 computation: |
   1. GET self-valuation 端点取 groups/total；
   2. 需要明细时按 offset 分页拉取 segments 直至 nextOffset 耗尽；
